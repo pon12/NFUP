@@ -1,0 +1,24 @@
+
+state={
+	id=489
+	name="STATE_489" # Zulia
+	manpower = 1
+	
+	state_category = town
+	
+
+	history={
+		owner = SWE
+		buildings = {
+			infrastructure = 0
+		}
+		add_core_of = SWE
+
+	}
+
+	provinces={
+		1944 1997 2052 4526 5088 10855 12772 
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,24 @@
+
+state={
+	id=345
+	name="STATE_345"
+
+	history={
+		owner = SWE
+
+		buildings = {
+			infrastructure = 0
+
+		}
+		add_core_of = SWE
+
+	}
+
+	provinces={
+		1122 4008 4124 4127 7026 7143 10056 11810 
+	}
+	manpower=1
+	state_category=rural
+
+	local_supplies=0.0 
+}

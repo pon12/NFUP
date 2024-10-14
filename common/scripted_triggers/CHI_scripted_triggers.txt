@@ -1,0 +1,7 @@
+
+
+is_literally_china = {
+	OR = {
+		original_tag = CHI
+	}
+}

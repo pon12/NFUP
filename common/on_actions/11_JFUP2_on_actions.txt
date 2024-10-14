@@ -1,0 +1,36 @@
+on_actions = {
+on_startup = {
+effect = {
+if = {
+limit = {
+	has_game_rule = {rule = No_Asia_game_rule option = NO_ASIA_JA}
+			 }
+				SWE = {annex_country = { target = USA transfer_troops = no }}
+			SWE = {annex_country = { target = MEX transfer_troops = no }}
+			SWE = {annex_country = { target = JAP transfer_troops = no }}
+			SWE = {annex_country = { target = MAN transfer_troops = no }}
+			SWE = {annex_country = { target = SIA transfer_troops = no }}
+			SWE = {annex_country = { target = CHI transfer_troops = no }}
+			SWE = {annex_country = { target = RAJ transfer_troops = no }}
+			SWE = {transfer_state = 728}
+			SWE = {transfer_state = 671}
+			SWE = {transfer_state = 286}
+			SWE = {transfer_state = 741}
+			SWE = {transfer_state = 670}
+			ENG = {add_ideas = ENG_No_Asia_Test}
+			ENG = {annex_country = {target = IRE transfer_troops = yes}}
+			ENG = { every_core_state = {
+				add_extra_state_shared_building_slots = 3
+			} }
+			add_extra_state_shared_building_slots = 15}
+			
+}}
+
+
+
+}}
+
+
+
+
+# SWE = {annex_country = { target = GER transfer_troops = no }}
