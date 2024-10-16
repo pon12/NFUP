@@ -139,7 +139,7 @@ focus = {
 		}
 
 		available = {
-			neutrality > 0.6
+			neutrality > 0.55
 		}
 
 		bypass = {
@@ -167,6 +167,7 @@ focus = {
 				}
 			}
 			
+			custom_effect_tooltip = hun_test1
 			
 		}
 	}
@@ -278,6 +279,27 @@ focus = {
 		}
 	}
 	focus = {
+		id = HUN_home_defence2
+		icon = GFX_focus_POL_sanation_right
+		prerequisite = { focus = HUN_romanian_trade  }
+		prerequisite = {  focus = HUN_bulgarian_trade }
+		x = 0
+		y = 3
+		relative_position_id = HUN_end_the_regency
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+#
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = hun_home_defence
+		}
+	}
+	focus = {
 		id = HUN_suffrage_reforms
 		icon = GFX_focus_generic_treaty
 		prerequisite = { focus = HUN_romanian_trade focus = HUN_bulgarian_trade }
@@ -316,7 +338,7 @@ focus = {
 	}
 focus = {
 		id = HUN_mobelize_the_Nation
-		icon = GFX_goal_molotov_ribbentrop_pact
+		icon = GFX_focus_generic_reorient_production
 		prerequisite = { focus = HUN_renounce_the_treaty_of_trianon }
 		x = -2
 		y = 1
@@ -336,6 +358,7 @@ focus = {
 		}
 
 		bypass = {
+			has_idea = war_economy
 		}
 
 		cancel_if_invalid = yes
@@ -357,7 +380,7 @@ focus = {
 	}
 	focus = {
 		id = HUN_mobelize_the_Nation2
-		icon = GFX_goal_molotov_ribbentrop_pact
+		icon = GFX_focus_chi_army_reform
 		prerequisite = { focus = HUN_mobelize_the_Nation }
 		x = -2
 		y = 2
@@ -387,11 +410,39 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
+custom_effect_tooltip = HUN_mob_1
 			
-				add_war_support = 0.05
+
+				if = {
+					limit = {has_idea = disarmed_nation}
+					custom_effect_tooltip = HUN_mob_2
 				add_ideas = {limited_conscription}
-							
+				add_war_support = 0.05
+				
+				}
+				else_if = {
+					limit = {has_idea = volunteer_only}
+					custom_effect_tooltip = HUN_mob_3
+					add_ideas = {extensive_conscription}
+					add_war_support = 0.05
+				}	
+				else_if = {
+					limit = {has_idea = limited_conscription}
+					custom_effect_tooltip = HUN_mob_4
+					add_ideas = {service_by_requirement}
+					add_war_support = 0.05
+				}	
+				else_if = {
+					limit = {has_idea = extensive_conscription}
+					custom_effect_tooltip = HUN_mob_5
+					add_ideas = {service_by_requirement}
+					add_war_support = 0.07
+				}
+				else = {
+					custom_effect_tooltip = HUN_mob_6
+					add_war_support = 0.1
+					add_political_power = 50
+				}		
 
 					
 			
@@ -579,6 +630,26 @@ focus = {
 
 		completion_reward = {
 			add_ideas = HUN_ita_trade_deal
+		}
+	}
+	focus = {
+		id = HUN_production_of_tanks
+		icon = GFX_focus_generic_tank_production
+		prerequisite = { focus = HUN_italian_trade_deal  }
+	prerequisite = {  focus = HUN_crusade_against_bolshevism }
+		x = -1
+		y = 2
+		relative_position_id = HUN_befriend_italy
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+
+		completion_reward = {
+			add_ideas = HUN_tank_factorys
 		}
 	}
 focus = {

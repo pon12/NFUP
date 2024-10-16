@@ -11,8 +11,8 @@ ideas = {
 				trade_cost_for_target_factor = -0.2
 			}
 			modifier = {
-				industrial_factory_donations = 1
-		   	military_factory_donations = 1
+				industrial_factory_donations = 2
+		   	military_factory_donations = 2
 			}
 		}
 		HUN_interior_minestry = {
@@ -27,6 +27,51 @@ ideas = {
 				political_advisor_cost_factor = -0.10
 			}
 		}
+		HUN_tank_factorys ={
+			
+			picture = man_five_year_plan_tank
+
+			allowed = {
+				original_tag = HUN
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_lack_of_resource_penalty_factor = -0.1
+				production_speed_arms_factory_factor = 0.05
+			}
+	}
+		hun_home_defence= {
+			
+			picture = tur_coordinated_balkan_armed_forces
+
+			allowed = {
+				original_tag = HUN
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.05
+				special_forces_attack_factor = 0.1
+				special_forces_defence_factor = 0.05
+				conscription = 0.005
+			}
+	}
 	HUN_imp_guard = {
 			
 			picture = NORDIC_army_monarchist

@@ -10,5 +10,5 @@ tags={
 	"Military"
 	"Ideologies"
 }
-name="NFUP2"
-supported_version="1.14.7"
+name="NFUP - Dev"
+supported_version="1.14.10"
