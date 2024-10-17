@@ -141,3 +141,8 @@ hun_home_defence:0 "Hungarian Home Defence"
 HUN_home_defence2:0 "Home Defence"
 HUN_tank_factorys:0 "Tank Factorys"
 HUN_production_of_tanks:0 "Mass Produce Tanks"
+
+
+#Japan
+JAP_nationalize_civilian_industry:0 "Expand the Civilian Sector"
+CHI_debuff_idea:0 "China Debuff (Gamerules)"

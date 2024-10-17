@@ -300,17 +300,18 @@ CASUAL_STUFF = {
 finland_focus = {
 	name = "Finland Focus Tree"
 	group = "MODDED_FOCI"					
-	icon = "GFX_decision_hol_draw_up_staff_plans"			
+	icon = "GFX_decision_hol_draw_up_staff_plans"	
 	default = {	
+		name = "HORST_ENABLE_VANILLA_FINLAND" 
+		text = "Finland Vanilla Focus Tree"
+		desc = "Vanilla Focus Tree for Finland"	
+	}		
+	option = {	
 		name = "HORST_ENABLE_MOD_FINLAND"
 		text = "Finland Modded Focus Tree"
 		desc = "Clicking this option will give Finland a powerful new focus tree that was created by Leo"	
 	}
-	option = {	
-		name = "HORST_ENABLE_VANILLA_FINLAND" 
-		text = "Finland Vanilla Focus Tree"
-		desc = "Vanilla Focus Tree for Finland"	
-	}
+	
 }
 No_Asia_game_rule = {
 	name = "No Asia"
@@ -325,6 +326,21 @@ No_Asia_game_rule = {
 		name = "NO_ASIA_JA" 
 		text = "Ja"
 		desc = "No Asia"	
+	}
+}
+CHi_debuff_game_rule = {
+	name = "China Debuff"
+	group = "MODDED_FOCI"					
+	icon = "GFX_decision_hol_draw_up_staff_plans"			
+	default = {	
+		name = "CHI_Debuff"
+		text = "China Debuff"
+		desc = "China wird schneller Kapitulieren und -20 attack/defence bekommen."	
+	}
+	option = {	
+		name = "CHI_Debuff_No" 
+		text = "Kein China Debuff"
+		desc = ""	
 	}
 }
 hosttool_game_rule = {

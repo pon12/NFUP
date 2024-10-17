@@ -27,6 +27,27 @@ ideas = {
 				political_advisor_cost_factor = -0.10
 			}
 		}
+		CHI_debuff_idea ={
+			
+			picture = man_five_year_plan_tank
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				surrender_limit = -0.30
+				army_attack_factor = -0.15
+				army_defence_factor = -0.15
+			}
+	}
 		HUN_tank_factorys ={
 			
 			picture = man_five_year_plan_tank
