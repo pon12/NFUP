@@ -706,18 +706,19 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = { has_country_flag = FIN_winter_war_ongoing_flag }
+			SOV = { has_completed_focus = SOV_Winter_War }
+			NOT = {has_war_with = SOV}
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INTERNATIONAL_TRADE }
 
 		completion_reward = {
 
-			GER = {
-				country_event = { id = AAT_finland_continuation_war.01 hours = 8 random_hours = 4 }
-			}
+			#GER = {
+			#	country_event = { id = AAT_finland_continuation_war.01 hours = 8 random_hours = 4 }
+			#}
 
-			custom_effect_tooltip = if_they_accept_tt
+			#custom_effect_tooltip = if_they_accept_tt
 			effect_tooltip = {
 				FIN_pact_for_continuation_war_start = yes
 
@@ -781,7 +782,7 @@ focus_tree = {
 					producer = GER
 				}
 			}
-			custom_effect_tooltip = FIN_pact_for_continuation_war_fin_focus_tt
+		#custom_effect_tooltip = FIN_pact_for_continuation_war_fin_focus_tt
 		}
 	}
 	
@@ -870,6 +871,34 @@ focus_tree = {
 
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = GER_nikolaus_von_falkenhorst
+		}
+	}
+	focus = {
+		id = FIN_join_barbarossa
+		icon = GFX_focus_SOV_socialism_in_one_country
+		prerequisite = { focus = FIN_cooperation_with_germany }
+		x = 4
+		y = 1
+		relative_position_id = FIN_cooperation_with_germany
+		cost = 3
+		available = {
+			SOV = { has_completed_focus = SOV_Winter_War }
+			NOT = {has_war_with = SOV}
+			GER = {has_war_with = SOV}
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			declare_war_on = {
+				target = SOV
+			}
+			GER = {add_to_faction = FIN}
+			add_timed_idea = {
+				idea = FIN_contin_war
+				days =  300
+			}
+			
 		}
 	}
 	

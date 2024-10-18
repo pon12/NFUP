@@ -623,12 +623,45 @@ focus_tree = {
 			add_ideas = BRA_war_bonds
 		}
 	}
+	focus = {
+		id = BRA_join_the_war
+		icon = GFX_focus_generic_total_war
+		x = 1
+		y = 1
+		relative_position_id = BRA_address_labor_disputes
+		prerequisite = { focus = BRA_address_labor_disputes }
+		cost = 1
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_game_rule = {rule = No_Asia_game_rule option = NO_ASIA_JA}
+			date > 1940.06.1
+		}
+			
+		
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			ENG = {add_to_faction = BRA}
+			add_to_war = {
+				targeted_alliance = ENG
+				enemy = GER
+			}
+			add_to_war = {
+				targeted_alliance = ENG
+				enemy = ITA
+			}
+			
+		}
+	}
 
 	focus = {
 		id = BRA_invite_foreign_companies
 		icon = GFX_focus_generic_american_investments
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = BRA_address_labor_disputes
 		prerequisite = { focus = BRA_address_labor_disputes }
 		cost = 5

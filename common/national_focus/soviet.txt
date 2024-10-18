@@ -5524,6 +5524,40 @@ focus = {
 		}
 	}
 	focus = {
+		id = SOV_Continuation_War
+		icon = GFX_focus_generic_attack_finland
+		prerequisite = { focus = SOV_Winter_War }
+		x = 2
+		y = 2
+		relative_position_id = SOV_the_comintern
+		cost = 5
+
+		available = {
+	
+			date > 1942.01.1
+			has_war_with = GER
+			NOT = {has_war_with = FIN}
+	
+		}
+
+		bypass = {
+		}
+		
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {
+			 declare_war_on = {
+                	target = FIN
+                    type = annex_everything
+            }
+			GER = {add_to_faction = FIN}
+			FIN = {add_timed_idea = {
+				idea = FIN_contin_war
+				days =  300
+			}}
+		}
+	}
+	focus = {
 		id = SOV_Bessarabia
 		icon = GFX_focus_generic_attack_romania
 		prerequisite = { focus = SOV_claims_in_baltic }
@@ -5571,7 +5605,7 @@ focus = {
 				has_war_with = ITA
 				has_war_with = JAP
 			}
-		
+			surrender_progress > 0.15
 		}
 		completion_reward = {
 			add_ideas = tot_economic_mobilisation
@@ -5586,6 +5620,9 @@ focus = {
 		y = 1
 		prerequisite = {
 			focus = SOV_Great_War
+		}
+		available = {
+			surrender_progress > 0.3
 		}
 		relative_position_id = SOV_Great_War
 
@@ -5606,6 +5643,9 @@ focus = {
 	y = 1
 	prerequisite = {
 		focus = SOV_Great_War
+	}
+	available = {
+		surrender_progress > 0.3
 	}
 	relative_position_id = SOV_Great_War
 
@@ -5633,7 +5673,7 @@ focus = {
 	}
 	relative_position_id = SOV_Tank_IC_Bonus
 	available = {
-		surrender_progress > 0.15
+		surrender_progress > 0.5
 	}
 	completion_reward = {
 		SOV_eco_modifier_tt = yes # tooltip
@@ -5655,7 +5695,9 @@ focus = {
 	relative_position_id = SOV_Mec_IC_Bonus
 	cost = 5
 	
-	available = { }
+	available = {
+		surrender_progress > 0.5
+	}
 	
 	completion_reward = {
 		every_controlled_state = {
@@ -5719,7 +5761,9 @@ focus = {
 	y = 1
 	relative_position_id = SOV_persian_corridor_nfu
 	cost = 5
-
+	available = {
+		surrender_progress > 0.6
+	}
 	completion_reward = {
 		# FROM IRAN FOCUS #
 		586 = {
@@ -5782,22 +5826,8 @@ focus = {
 	cost = 5
 
 	available = {
-		# surrender_progress > 0.4
-		if = {
-			limit = {
-				has_completed_focus = SOV_secure_new_conquests
-			}
-			surrender_progress > 0.25
-		}
-		else_if = {
-			limit = {
-				has_completed_focus = SOV_improve_stalin_line
-			}
-			surrender_progress > 0.25
-		}
-		else = {
-			surrender_progress > 0.25
-		}
+		 surrender_progress > 0.6
+		
 	}
 
 	cancel_if_invalid = no
@@ -5871,8 +5901,9 @@ focus = {
 	available_if_capitulated = no
 
 	available = {
-
-	}
+		surrender_progress > 0.6
+	   
+   }
 
 	completion_reward = {
 		# add_timed_idea = { idea = SOV_coordinate_industry_idea days = 270 }

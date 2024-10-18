@@ -107,6 +107,7 @@ ENG_No_Asia_Test:0 "No Asia"
  SOV_coordinate_industry_nfu:0 "Coordinate Industry"
  SOV_last_stand_of_communism_nfu:0 "Last Stand of Communism"
  SOV_american_tool_deliveries_nfu:0 "American Tool Deliveries"
+SOV_Continuation_War:0 "Continuation War"
 
 #SOV IDEAS
  SOV_Tank_IC_Reduction:0 "Tank Industry"
@@ -146,3 +147,10 @@ HUN_production_of_tanks:0 "Mass Produce Tanks"
 #Japan
 JAP_nationalize_civilian_industry:0 "Expand the Civilian Sector"
 CHI_debuff_idea:0 "China Debuff (Gamerules)"
+
+#FIN
+FIN_contin_war:0 "Continuation War"
+FIN_join_barbarossa:0 "RJoin Barbarossa!"
+
+#BRA
+BRA_join_the_war:0 "Join the War"
