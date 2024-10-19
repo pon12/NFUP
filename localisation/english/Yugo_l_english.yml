@@ -108,6 +108,7 @@ ENG_No_Asia_Test:0 "No Asia"
  SOV_last_stand_of_communism_nfu:0 "Last Stand of Communism"
  SOV_american_tool_deliveries_nfu:0 "American Tool Deliveries"
 SOV_Continuation_War:0 "Continuation War"
+SOV_development_of_tankograd_factories_tt2:0 "In Every State with atleast Y3! GMilitary Factorys!:\n Y1! GMilitary Factory! and Y1! YBuilding Slot! will appear.\nRThis Effect will only be applied to a maximum of Y10 States!!"
 
 #SOV IDEAS
  SOV_Tank_IC_Reduction:0 "Tank Industry"
@@ -154,3 +155,6 @@ FIN_join_barbarossa:0 "RJoin Barbarossa!"
 
 #BRA
 BRA_join_the_war:0 "Join the War"
+
+#AUSTRALIEN
+Australia_rats_tt:0 "YSpawn Infantry Units in Africa. !"

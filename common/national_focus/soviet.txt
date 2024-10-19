@@ -2404,43 +2404,62 @@ add_building_construction = {
 			}
 		}
 	}
-
+#GFX_goal_develop_tankograd_captainluck
 focus = {
-		id = SOV_development_of_tankograd
+	id = SOV_development_of_tankograd
 
-		icon = GFX_goal_develop_tankograd_captainluck
-		prerequisite = { focus = SOV_the_means_to_wage_war }
-		x = 1
-		y = 1
-		relative_position_id = SOV_the_means_to_wage_war
-		cost = 10
+	icon = GFX_goal_develop_tankograd_captainluck
+	prerequisite = { focus = SOV_the_means_to_wage_war }
+	x = 1
+	y = 1
+	relative_position_id = SOV_the_means_to_wage_war
+	cost = 10
 
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = SOV_fyp_controlled_factories_tier_4_tt
-				NOT = { num_of_controlled_factories < SOV_fyp_factory_requirement_tier_4 }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = SOV_fyp_controlled_factories_tier_1_tt
+			NOT = { num_of_controlled_factories < SOV_fyp_factory_requirement_tier_1 }
+		}
+		#TODO_Manu: This could require X num of factories to have been relocated
+	}
+	
+	search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP}
+
+	completion_reward = {
+		add_to_variable = { SOV_defense_industry_land_equipment_upgrade_xp_cost = -0.1 }
+		custom_effect_tooltip = SOV_development_of_tankograd_ns_tt
+
+		custom_effect_tooltip = SOV_development_of_tankograd_factories_tt2
+		#This is just for tooltip purposes#
+		
+
+		#Actual effects
+		effect_tooltip = {
+			every_owned_state = {
+				limit = {
+					#is_on_continent = asia
+					arms_factory > 2
+					
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
-			#TODO_Manu: This could require X num of factories to have been relocated
 		}
 		
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP}
-
-		completion_reward = {
-			add_to_variable = { SOV_defense_industry_land_equipment_upgrade_xp_cost = -0.1 }
-			custom_effect_tooltip = SOV_development_of_tankograd_ns_tt
-
-			custom_effect_tooltip = SOV_development_of_tankograd_factories_tt
-			#This is just for tooltip purposes
-			effect_tooltip = {
-				every_owned_state = {
+			
+			hidden_effect = {
+				
+			
+				random_owned_state = {
 					limit = {
-						is_on_continent = asia
+						#is_on_continent = asia
 						arms_factory > 2
-						free_building_slots = {
-							building = arms_factory
-							size > 1
-							include_locked = yes
-						}
+						
+						NOT = { has_state_flag = SOV_development_of_tankograd_flag }
 					}
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
@@ -2448,42 +2467,148 @@ focus = {
 						level = 1
 						instant_build = yes
 					}
+					set_state_flag = SOV_development_of_tankograd_flag
 				}
-			}
-
-			#Actual effects
-			set_temp_variable = { temp_targets_index = 0 }
-			while_loop_effect = {
-				limit = {
-					check_variable = { temp_targets_index = 10 compare = less_than }
-				}
-				hidden_effect = {
-					every_owned_state = {
-						limit = {
-							is_on_continent = asia
-							arms_factory > 2
-							free_building_slots = {
-								building = arms_factory
-								size > 1
-								include_locked = yes
-							}
-							NOT = { has_state_flag = SOV_development_of_tankograd_flag }
-						}
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = arms_factory
-							level = 1
-							instant_build = yes
-						}
-						set_state_flag = SOV_development_of_tankograd_flag
-						add_to_temp_variable = { SOV.temp_targets_index = 1 }
-						log = "Round [?SOV.temp_targets_index]"
+				random_owned_state = {
+					limit = {
+						#is_on_continent = asia
+						arms_factory > 2
+						
+						NOT = { has_state_flag = SOV_development_of_tankograd_flag }
 					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = SOV_development_of_tankograd_flag
 				}
-			}
-		}
-	}
-
+				random_owned_state = {
+					limit = {
+						#is_on_continent = asia
+						arms_factory > 2
+						
+						NOT = { has_state_flag = SOV_development_of_tankograd_flag }
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = SOV_development_of_tankograd_flag
+				}
+				random_owned_state = {
+					limit = {
+						#is_on_continent = asia
+						arms_factory > 2
+						
+						NOT = { has_state_flag = SOV_development_of_tankograd_flag }
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = SOV_development_of_tankograd_flag
+				}
+				random_owned_state = {
+					limit = {
+						#is_on_continent = asia
+						arms_factory > 2
+						
+						NOT = { has_state_flag = SOV_development_of_tankograd_flag }
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = SOV_development_of_tankograd_flag
+				}
+				random_owned_state = {
+					limit = {
+						#is_on_continent = asia
+						arms_factory > 2
+						
+						NOT = { has_state_flag = SOV_development_of_tankograd_flag }
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = SOV_development_of_tankograd_flag
+				}
+				random_owned_state = {
+					limit = {
+						#is_on_continent = asia
+						arms_factory > 2
+						
+						NOT = { has_state_flag = SOV_development_of_tankograd_flag }
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = SOV_development_of_tankograd_flag
+				}
+				random_owned_state = {
+					limit = {
+						#is_on_continent = asia
+						arms_factory > 2
+						
+						NOT = { has_state_flag = SOV_development_of_tankograd_flag }
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = SOV_development_of_tankograd_flag
+				}
+				random_owned_state = {
+					limit = {
+						#is_on_continent = asia
+						arms_factory > 2
+						
+						NOT = { has_state_flag = SOV_development_of_tankograd_flag }
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = SOV_development_of_tankograd_flag
+				}
+				random_owned_state = {
+					limit = {
+						#is_on_continent = asia
+						arms_factory > 2
+						
+						NOT = { has_state_flag = SOV_development_of_tankograd_flag }
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = SOV_development_of_tankograd_flag
+				}
+			
+		
+	}}
+}
+#
 	focus = {
 		id = SOV_merge_tank_and_materiel_plants
 

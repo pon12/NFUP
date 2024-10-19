@@ -12,7 +12,236 @@ add_namespace = AAT_finland_political
 add_namespace = AAT_finland_kinship_war
 add_namespace = AAT_finland_the_white_death
 
+country_event = {
+	id = AAT_finland_political.01
+	title = AAT_finland_political.01.t
+	desc = AAT_finland_political.01.desc
+	picture = GFX_report_event_FIN_svinhufvud_speech
 
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	#Ok
+	option = {
+		name = AAT_finland_political.01.a
+
+		FIN_kallio_becomes_country_leader = yes
+	}
+}
+
+# Term ended for Svinhufvud - Event for FIN
+country_event = {
+	id = AAT_finland_political.02
+	title = AAT_finland_political.02.t
+	desc = AAT_finland_political.02.desc
+	picture = GFX_report_event_FIN_svinhufvud_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		has_country_leader = {
+			ruling_only = yes
+			character = FIN_pehr_evind_svinhufvud
+		}
+	}
+	
+	#Re-elect!
+	option = {
+		name = AAT_finland_political.02.a
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 4
+				is_historical_focus_on = no
+			}
+			modifier = {
+				factor = 0
+				FIN_is_historical_ai = yes
+			}
+		}
+
+		add_political_power = -30
+	}
+
+	# Elect Kyosti Kallio!
+	option = {
+		name = AAT_finland_political.02.b
+
+		ai_chance = {
+			base = 10
+		}
+
+		FIN_kallio_becomes_country_leader = yes
+	}
+}
+
+# Motion of No Confidence against Kallio - Event for FIN
+country_event = {
+	id = AAT_finland_political.03
+	title = AAT_finland_political.01.t #intentional
+	desc = AAT_finland_political.03.desc
+	picture = GFX_report_event_FIN_kallio_president
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	#Ok
+	option = {
+		name = AAT_finland_political.03.a
+
+		FIN_ryti_becomes_country_leader = yes
+	}
+}
+
+# Death of Kyosti Kallio - Event for FIN
+country_event = {
+	id = AAT_finland_political.04
+	title = AAT_finland_political.04.t
+	desc = AAT_finland_political.04.desc
+	picture = GFX_report_event_FIN_kallio_president
+
+	trigger = {
+		has_country_leader = {
+			ruling_only = yes
+			character = FIN_kyosti_kallio
+		}
+		date > 1940.08.27
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	fire_only_once = yes
+	
+	#Ok
+	option = {
+		name = AAT_finland_political.04.a
+
+		FIN_ryti_becomes_country_leader = yes
+	}
+}
+
+# Resignation of Kallio - Event for FIN
+country_event = {
+	id = AAT_finland_political.05
+	title = AAT_finland_political.05.t
+	desc = AAT_finland_political.05.desc
+	picture = GFX_report_event_FIN_kallio_president
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	#Ok
+	option = {
+		name = AAT_finland_political.05.a
+
+		FIN_ryti_becomes_country_leader = yes
+	}
+}
+
+# Motion of No Confidence against Ryti - Event for FIN
+country_event = {
+	id = AAT_finland_political.06
+	title = AAT_finland_political.01.t #intentional
+	desc = AAT_finland_political.06.desc
+	picture = GFX_report_event_FIN_risto_ryti_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	#Ok
+	option = {
+		name = AAT_finland_political.06.a
+
+		FIN_paasikivi_becomes_country_leader = yes
+	}
+}
+
+# Mannerheim Appointed as President of a Military Government - Event for FIN
+country_event = {
+	id = AAT_finland_political.07
+	title = AAT_finland_political.07.t
+	desc = AAT_finland_political.07.desc
+	picture = GFX_report_event_FIN_mannerheim_president
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	#Ok
+	option = {
+		name = AAT_finland_political.07.a
+
+		FIN_mannerheim_becomes_country_leader = yes
+		add_war_support = 0.05
+	}
+}
+
+# Time to go back to a civilian government? - Event for FIN
+country_event = {
+	id = AAT_finland_political.08
+	title = AAT_finland_political.08.t
+	desc = AAT_finland_political.08.desc
+	picture = GFX_report_event_FIN_paasikivi_president
+
+	trigger = {
+		has_country_leader = {
+			ruling_only = yes
+			character = FIN_carl_mannerheim
+		}
+		has_war = no
+	}
+
+	mean_time_to_happen = {
+		days = 90
+	}
+
+	fire_only_once = yes
+	
+	#Mannerheim Resigns
+	option = {
+		name = AAT_finland_political.08.a
+
+		FIN_paasikivi_becomes_country_leader = yes
+		add_stability = 0.05
+	}
+
+	#Keep Mannerheim
+	option = {
+		name = AAT_finland_political.08.b
+
+		add_stability = -0.05
+		unlock_decision_tooltip = FIN_resignation_of_mannerheim
+		set_country_flag = FIN_resignation_of_mannerheim_available_flag
+	}
+}
+
+# Resignation of Mannerheim - Event for FIN
+country_event = {
+	id = AAT_finland_political.09
+	title = AAT_finland_political.05.t #intentional
+	desc = AAT_finland_political.09.desc
+	picture = GFX_report_event_FIN_paasikivi_president
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	#Mannerheim Resigns
+	option = {
+		name = AAT_finland_political.09.a
+
+		FIN_paasikivi_becomes_country_leader = yes
+	}
+}
 
  ######   #######  ##    ## ######## #### ##    ## ##     ##    ###    ######## ####  #######  ##    ##    ##      ##    ###    ########  
 ##    ## ##     ## ###   ##    ##     ##  ###   ## ##     ##   ## ##      ##     ##  ##     ## ###   ##    ##  ##  ##   ## ##   ##     ## 

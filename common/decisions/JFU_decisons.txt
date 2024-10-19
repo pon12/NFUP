@@ -989,6 +989,40 @@ GRE = {is_ai = yes}
 			annex_country = { target = NZL transfer_troops = yes }			
 		}
 	}
+	"Annex Indonesia" = {
+		icon = generic_operation
+		fire_only_once = yes
+		allowed = { tag = AST }
+		available = { HOL = { is_ai = yes } 
+	NOT = {7 = {is_controlled_by = HOL}}
+	date > 1939.01.1
+	}
+		cost = 0
+		complete_effect = {
+			
+				every_state = {
+					limit = {
+							is_core_of = HOL
+							is_controlled_by = HOL
+					}
+				
+				add_core_of = AST
+				}
+			AST = {give_resource_rights = {
+				receiver = ENG
+				state = 672
+			}}
+			AST = {give_resource_rights = {
+				receiver = ENG
+				state = 334
+			}}
+			AST = {give_resource_rights = {
+				receiver = ENG
+				state = 335
+			}}
+			annex_country = { target = HOL transfer_troops = no}			
+		}
+	}
 	"Annex South Africa" = {
 		icon = generic_operation
 		fire_only_once = yes

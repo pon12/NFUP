@@ -140,7 +140,19 @@ set_variable = { FIN_prioritize_heavy_industry_dec_cost = 50 } #Will be duplicat
 	set_demilitarized_zone = yes
 }
 
-
+if = {
+	limit = {
+		has_start_date < 1936.01.02
+	}
+	set_power_balance = {
+		id = FIN_power_balance
+		left_side = FIN_bad_side
+		right_side = FIN_good_side
+		set_value = -0.45 #Adding FIN_sisu_2 idea below
+	}
+	#SISU NS
+	add_ideas = FIN_sisu_2
+}
 
 if = {
 	limit = { has_dlc = "Man the Guns" }

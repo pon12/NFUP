@@ -3,7 +3,11 @@ state = {
 	name = "STATE_918" # Västerbotten
 	manpower = 1
 	state_category = rural
-
+	resources={
+		steel=50 # was: 35
+		tungsten=40
+		chromium = 80 # was: 10
+	}
 
 	history = {
 

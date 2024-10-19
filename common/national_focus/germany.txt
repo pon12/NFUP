@@ -8,7 +8,7 @@
 
 focus_tree = {
 	id = german_focus
-	
+	default = no
 	country = {
 		factor = 0
 		
@@ -18,7 +18,7 @@ focus_tree = {
 		}
 	}
 	
-	default = no
+	
 
 	focus = {
 		id = GER_four_year_plan
@@ -50,6 +50,7 @@ focus_tree = {
 		
 	}
 
+	
 	focus = {
 		id = GER_west_wall
 		icon = GFX_goal_generic_construct_military
@@ -1769,6 +1770,48 @@ focus_tree = {
 		}		
 	}
 	focus = {
+		id = GER_swedish_trade_agreement
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = GER_rhineland }
+		available = {
+			
+		}
+		relative_position_id = GER_rhineland
+		x = 2
+		y = 1
+		cost = 5
+		ai_will_do = {
+		}
+
+		completion_reward = {
+			
+				SWE = {give_resource_rights = {
+					receiver = GER
+					state = 918
+				}}
+			
+				random_owned_controlled_state = {
+					limit = { is_core_of = GER }
+					add_resource = {
+						type = chromium
+						amount = 10
+					}
+					add_resource = {
+						type = tungsten
+						amount = 10
+					}
+					add_resource = {
+						type = steel
+						amount = 10
+					}
+				}
+				
+
+				
+			
+		}
+	}
+	focus = {
 		id = GER_anschluss
 		icon = GFX_GER_ANSCHLUSS
 		prerequisite = { focus = GER_rhineland }
@@ -1814,15 +1857,15 @@ focus_tree = {
 		x = -2
 		y = 2
 		relative_position_id = GER_rhineland
-		cost = 1
+		cost = 1.5
 
 		completion_reward = {
-			#every_country = { 
-			#	limit = { 
-			#		axis = yes 
-			#	} 
-			#	add_war_support = 0.05	
-			#}			
+			every_country = { 
+				limit = { 
+					axis = yes 
+				} 
+				add_war_support = 0.03
+			}			
 		}
 	}
 
