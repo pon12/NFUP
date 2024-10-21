@@ -106,9 +106,15 @@ fire_only_once = yes
     cancel_trigger = {
         NOT = {has_war_with = FIN}
     }
+	highlight_states = {
+		highlight_state_targets = { state = 146 }
+		highlight_state_targets = { state = 147 }
+		highlight_state_targets = { state = 928 }
+		highlight_state_targets = { state = 111 }
+	}
     icon = mission_icon     
     is_good = no
-    days_mission_timeout = 100
+    days_mission_timeout = 120
     selectable_mission = no
     complete_effect = {
 	custom_effect_tooltip = SOV_finnland_win.tt
@@ -116,19 +122,21 @@ fire_only_once = yes
 		 set_country_flag = SOV_WW_udssr_win
 		 SOV = { transfer_state = 146 }
 		 SOV = { transfer_state = 147 }
-		 add_stability = 0.10
-			add_war_support = 0.10
+		 add_stability = 0.05
+			add_war_support = 0.1
 			add_political_power = 100
-			
+			722 = {set_demilitarized_zone = yes}
     }
     timeout_effect = {
 	custom_effect_tooltip = SOV_finnland_lose.tt
         set_country_flag = SOV_WW_udssr_lose
 			white_peace = FIN
-			add_stability = -0.10
-			add_war_support = -0.10
-			add_political_power = -50
-			
+			add_stability = -0.05
+			add_war_support = -0.05
+			add_political_power = -25
+			FIN = {add_stability = 0.05
+			add_war_support = 0.05
+			add_political_power = 50}
     }
 }
 
@@ -211,9 +219,9 @@ set_country_flag = SOV_WW_udssr_win
 		cost = 0
 
 
-highlight_states = {
-    highlight_state_targets = { state = 146 }
-}
+#highlight_states = {
+#    highlight_state_targets = { state = 146 }
+#}
 
 		complete_effect = {
 		custom_effect_tooltip = SOV_finnland_lose.tt
@@ -224,10 +232,13 @@ highlight_states = {
 set_country_flag = SOV_WW_udssr_lose
 			white_peace = FIN
 			SOV = { transfer_state = 146 }
-			add_stability = -0.05
-			add_war_support = -0.05
-			add_political_power = -25
-			
+			add_stability = -0.02
+			add_war_support = -0.02
+			add_political_power = -30
+			146 = {set_demilitarized_zone = yes}
+			FIN = {add_stability = 0.05
+			add_war_support = 0.05
+			add_political_power = 50}
 		}
 	}
 }

@@ -111,11 +111,11 @@ focus_tree = {
 		
 				completion_reward = {
 		
-		      255 = {
- add_extra_state_shared_building_slots = 5
+		      329 = {
+ add_extra_state_shared_building_slots = 6
 add_building_construction = {
                                 type = industrial_complex
-                                level = 5
+                                level = 2
                                 instant_build = yes
                             }
 } 
@@ -140,11 +140,27 @@ add_building_construction = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
-		complete_tooltip = {
-			every_state = {
-				limit = { 
-					has_state_flag = SOV_finish_five_year_plan_2IC 
+		completion_reward = {
+			random_owned_controlled_state = {
+	
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
 				}
+			}
+			random_owned_controlled_state = {
+	
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+	
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -154,114 +170,7 @@ add_building_construction = {
 			}
 		}
 
-		completion_reward = { #TODO_Manu: This is just copy-pasted from the old focus -> Is this what we want?
-			IF = {
-				limit = {
-					any_owned_state = {
-						is_controlled_by = ROOT 
-						industrial_complex > 0
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-						NOT = { has_state_flag = SOV_finish_five_year_plan_2IC }
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						industrial_complex > 0
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 5
-					add_building_construction = {
-						type = industrial_complex
-						level = 5
-						instant_build = yes
-					}
-					set_state_flag = SOV_finish_five_year_plan_2IC
-				}
-			}
-			ELSE = {
-				random_owned_controlled_state = {
-					limit = {
-						# industrial_complex > 0
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-					set_state_flag = SOV_finish_five_year_plan_2IC
-				}
-			}
-			IF = {
-				limit = {
-					check_variable = { num_owned_states > 1}
-					any_owned_state = {
-						is_controlled_by = ROOT 
-						industrial_complex > 0
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-						NOT = { has_state_flag = SOV_finish_five_year_plan_2IC }
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						industrial_complex > 0
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-						NOT = { has_state_flag = SOV_finish_five_year_plan_2IC }
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-					set_state_flag = SOV_finish_five_year_plan_2IC
-				}
-			}
-			ELSE_IF = {
-				limit = {
-					check_variable = { num_owned_states > 1 }
-				}
-				random_owned_controlled_state = {
-					limit = {
-						# industrial_complex > 0
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-						NOT = { has_state_flag = SOV_finish_five_year_plan_2IC }
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-					set_state_flag = SOV_finish_five_year_plan_2IC
-				}
-			}
-		}
+	
 	}
 
 	focus = {
@@ -306,10 +215,10 @@ add_building_construction = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 4
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = SOV_finish_five_year_plan_2IC
@@ -323,10 +232,10 @@ add_building_construction = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = SOV_finish_five_year_plan_2IC
@@ -1016,7 +925,7 @@ add_building_construction = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_national_specialists
-		cost = 5
+		cost = 6.5
 
 		bypass = {
 			408 = { #VLADIVOSTOK
@@ -1104,13 +1013,13 @@ add_building_construction = {
 				408 = { #VLADIVOSTOK
 					add_building_construction = {
 						type = infrastructure
-						level = 1
+						level = 2
 						instant_build = yes
 					}
-					add_extra_state_shared_building_slots = 6
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
-						level = 6
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -1209,7 +1118,7 @@ add_building_construction = {
 		x = 2
 		y = 0
 		relative_position_id = SOV_eastern_development
-		cost = 5
+		cost = 6.5
 
 		bypass = {
 			572 = { #CHELYABISNK
@@ -1297,13 +1206,13 @@ add_building_construction = {
 				572 = { #CHELYABISNK
 					add_building_construction = {
 						type = infrastructure
-						level = 1
+						level = 2
 						instant_build = yes
 					}
-					add_extra_state_shared_building_slots = 3
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
-						level = 3
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -1355,10 +1264,10 @@ add_building_construction = {
 						level = 1
 						instant_build = yes
 					}
-					add_extra_state_shared_building_slots = 5
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
-						level = 5
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -1403,7 +1312,7 @@ add_building_construction = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_eastern_development
-		cost = 10
+		cost = 7.2
 
 		available = {
 		}
@@ -1412,14 +1321,7 @@ add_building_construction = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		add_research_slot = 1
 		
-		255 = {
-		add_extra_state_shared_building_slots = 5
-				add_building_construction = {
-					type = arms_factory
-					level = 5
-					instant_build = yes
-				}
-	}
+		
 	}
 	}
 
@@ -5275,7 +5177,8 @@ focus = {
 
 		completion_reward = {
 			add_ideas = SOV_nkvd_nsb
-			SOV_paranoia_medium_increase_effect = yes
+			#SOV_paranoia_medium_increase_effect = yes
+			SOV_paranoia_medium_decrease_effect = yes
 		}
 	}
 
@@ -5325,7 +5228,7 @@ focus = {
 				ideology = communism
 				popularity = 0.1
 			}
-
+			
 			hidden_effect = {
 				SOV_unlock_propaganda_campaign_slot_effect = yes
 			}
@@ -5337,10 +5240,13 @@ focus = {
 		id = SOV_positive_heroism
 		icon = GFX_FOCUS_SOV_POSTIVE_HEROISM
 		prerequisite = { focus = SOV_expand_the_agitprop }
+		mutually_exclusive = {
+			focus = SOV_collectivist_propaganda
+		}
 		x = -2
 		y = 1
 		relative_position_id = SOV_expand_the_agitprop
-		cost = 5
+		cost = 10
 
 		available = {
 
@@ -5406,10 +5312,13 @@ focus = {
 		id = SOV_collectivist_propaganda
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = SOV_expand_the_agitprop }
-		x = 0
+		mutually_exclusive = {
+			focus = SOV_positive_heroism
+		}
+		x = 2
 		y = 1
 		relative_position_id = SOV_expand_the_agitprop
-		cost = 5
+		cost = 10
 
 		available = {
 
@@ -5474,9 +5383,9 @@ focus = {
 	focus = {
 		id = SOV_the_komsomol
 		icon = GFX_goal_komsomol_sheep
-		prerequisite = { focus = SOV_expand_the_agitprop }
-		x = 2
-		y = 1
+		prerequisite = { focus = SOV_positive_heroism focus = SOV_collectivist_propaganda }
+		x = 0
+		y = 2
 		relative_position_id = SOV_expand_the_agitprop
 		cost = 5
 
@@ -5487,12 +5396,12 @@ focus = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_PROPAGANDA}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 100
 			add_popularity = {
 				ideology = communism
 				popularity = 0.1
 			}
-
+			SOV_paranoia_medium_decrease_effect = yes
 			custom_effect_tooltip = unlock_propaganda_campaign_tt
 			unlock_decision_tooltip = SOV_propaganda_knowledge
 			
@@ -5505,7 +5414,7 @@ focus = {
 		id = SOV_patriarch_of_all_russia
 		icon = GFX_focus_SOV_patriarch_of_all_russia
 		prerequisite = { focus = SOV_war_heroes focus = SOV_socialist_realism }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = SOV_war_heroes
 		cost = 5

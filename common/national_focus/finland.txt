@@ -712,22 +712,26 @@ focus_tree = {
 		}
 
 		available = {
-			SOV = { has_completed_focus = SOV_Winter_War }
+			OR = {
+				SOV = { has_completed_focus = SOV_Winter_War }
+				date > 1940.6.1
+			}
+			
 			NOT = {has_war_with = SOV}
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INTERNATIONAL_TRADE }
 
 		completion_reward = {
-
+		
 			#GER = {
 			#	country_event = { id = AAT_finland_continuation_war.01 hours = 8 random_hours = 4 }
 			#}
 
 			#custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				FIN_pact_for_continuation_war_start = yes
-
+			
+				#FIN_pact_for_continuation_war_start = yes
+			
 				if = {
 					limit = {
 						has_dlc = "No Step Back"
@@ -787,7 +791,7 @@ focus_tree = {
 					amount = 300
 					producer = GER
 				}
-			}
+			
 		#custom_effect_tooltip = FIN_pact_for_continuation_war_fin_focus_tt
 		}
 	}
@@ -888,7 +892,10 @@ focus_tree = {
 		relative_position_id = FIN_cooperation_with_germany
 		cost = 3
 		available = {
-			SOV = { has_completed_focus = SOV_Winter_War }
+			OR = {
+				SOV = { has_completed_focus = SOV_Winter_War }
+				date > 1940.6.1
+			}
 			NOT = {has_war_with = SOV}
 			GER = {has_war_with = SOV}
 		}
