@@ -684,7 +684,7 @@ cost = 5
 	focus = {
 		id = AST_standard_gauge_railway
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 6
+		x = 7
 		y = 0
 
 		cost = 5
@@ -769,10 +769,83 @@ cost = 5
 	}
 
 	focus = {
+		id = AST_civ_1
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = AST_western_australian_government_railways }
+		x = 1
+		y = 2
+		relative_position_id = AST_standard_gauge_railway
+
+		cost = 5
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#
+	focus = {
+		id = AST_civ_2
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = AST_civ_1 }
+		x = 1
+		y = 3
+		relative_position_id = AST_standard_gauge_railway
+
+		cost = 5
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
 		id = AST_south_australian_housing_trust
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = AST_western_australian_government_railways }
-		x = 0
+		x = -1
 		y = 2
 		relative_position_id = AST_standard_gauge_railway
 
@@ -815,7 +888,7 @@ cost = 5
 		id = AST_department_of_supply_and_development
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = AST_western_australian_government_railways }
-		x = 2
+		x = 3
 		y = 2
 		relative_position_id = AST_standard_gauge_railway
 
@@ -858,7 +931,7 @@ cost = 5
 		id = AST_expand_lithgow_small_arms_factory
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = AST_south_australian_housing_trust }
-		x = 0
+		x = -1
 		y = 3
 		relative_position_id = AST_standard_gauge_railway
 
@@ -910,7 +983,7 @@ cost = 5
 		icon = GFX_goal_generic_production2
 		prerequisite = { focus = AST_department_of_supply_and_development }
 		prerequisite = { focus = AST_civil_construction_corps }
-		x = 2
+		x = 3
 		y = 3
 		relative_position_id = AST_standard_gauge_railway
 
@@ -1002,7 +1075,7 @@ cost = 5
 		id = AST_expand_the_northern_railway
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = AST_expand_lithgow_small_arms_factory }
-		x = 0
+		x = -1
 		y = 4
 		relative_position_id = AST_standard_gauge_railway
 
@@ -1037,7 +1110,7 @@ cost = 5
 		id = AST_australian_arms_production
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = AST_allied_works_council }
-		x = 2
+		x = 3
 		y = 4
 		relative_position_id = AST_standard_gauge_railway
 
@@ -1110,7 +1183,7 @@ cost = 5
 	focus = {
 		id = AST_establish_advisory_war_council
 		icon = GFX_goal_generic_demand_territory
-		x = 14
+		x = 17
 		y = 0
 
 		cost = 10
@@ -1241,7 +1314,7 @@ cost = 5
 		id = AST_army_inventions_directorate
 		icon = GFX_focus_research
 		prerequisite = { focus = AST_national_security_act }
-		x = -2
+		x = 0
 		y = 2
 		relative_position_id = AST_establish_advisory_war_council
 
@@ -1273,7 +1346,7 @@ cost = 5
 		id = AST_invest_in_victory
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = AST_national_security_act }
-		x = 0
+		x = -2
 		y = 2
 		relative_position_id = AST_establish_advisory_war_council
 
@@ -1345,21 +1418,39 @@ cost = 5
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
 							infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+							infantry = { x = 0 y = 4 }
 							infantry = { x = 1 y = 0 }
 							infantry = { x = 1 y = 1 }
 							infantry = { x = 1 y = 2 }
+							infantry = { x = 1 y = 3 }
+							infantry = { x = 1 y = 4 }
 							infantry = { x = 2 y = 0 }
 							infantry = { x = 2 y = 1 }
-							infantry = { x = 2 y = 2 }
-							infantry = { x = 3 y = 0 }
-							infantry = { x = 3 y = 1 }
+							anti_tank_brigade = {
+								x = 3
+								y = 0
+							}
+							
 						}
 						support = {
-					        recon = { x = 0 y = 0 }
-					        engineer = { x = 0 y = 1 }
-					        logistics_company = { x = 0 y = 2 }
+							recon = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+							artillery = {
+								x = 0
+								y = 2
+							}
+							anti_air = {
+								x = 0
+								y = 3
+							}
+							logistics_company = {
+								x = 0
+								y = 4
+							}
 						}
 					}
+					#
 					else = {
 						division_template = {
 							name = "Rats of Tobruk"
@@ -1368,36 +1459,51 @@ cost = 5
 								infantry = { x = 0 y = 0 }
 								infantry = { x = 0 y = 1 }
 								infantry = { x = 0 y = 2 }
+								infantry = { x = 0 y = 3 }
+								infantry = { x = 0 y = 4 }
 								infantry = { x = 1 y = 0 }
 								infantry = { x = 1 y = 1 }
 								infantry = { x = 1 y = 2 }
+								infantry = { x = 1 y = 3 }
+								infantry = { x = 1 y = 4 }
 								infantry = { x = 2 y = 0 }
 								infantry = { x = 2 y = 1 }
-								infantry = { x = 2 y = 2 }
-								infantry = { x = 3 y = 0 }
-								infantry = { x = 3 y = 1 }
+								anti_tank_brigade = {
+									x = 3
+									y = 0
+								}
+								
 							}
 							support = {
 						        recon = { x = 0 y = 0 }
 						        engineer = { x = 0 y = 1 }
+								artillery = {
+									x = 0
+									y = 2
+								}
+								anti_air = {
+									x = 0
+									y = 3
+								}
 							}
 						}
 					}
 				}
 
-				#Spawn unit in Africa
+				##Spawn unit in Africa
 				if = {
 					limit = {
 						any_country = {
 							is_in_faction_with = AST
-							controls_state = 273
+							controls_state = 451
 						}
 						any_country = {
 							is_in_faction_with = AST
-							controls_state = 552
+							controls_state = 447
 						}
 					}
-					load_oob = "AST_TFV_rats_africa"					
+					load_oob = "AST_TFV_rats_africa"	
+					#
 					else = {
 						if = {
 							limit = {
@@ -1664,7 +1770,7 @@ cost = 5
 	focus = {
 		id = AST_support_the_policy_of_appeasement
 		icon = GFX_goal_generic_improve_relations
-		x = 20
+		x = 24
 		y = 0
 
 		cost = 5
@@ -1682,8 +1788,9 @@ cost = 5
 		completion_reward = {			
 			modify_tech_sharing_bonus = {
  				id = commonwealth_research
- 				bonus = 0.03
+ 				bonus = 0.05
 			}
+			add_stability = 0.05
 			ENG = {
 				add_opinion_modifier = {
 					target = ROOT

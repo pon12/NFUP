@@ -157,6 +157,7 @@ FIN_join_barbarossa:0 "RJoin Barbarossa!"
 BRA_join_the_war:0 "Join the War"
 
 #AUSTRALIEN
-Australia_rats_tt:0 "YSpawn Infantry Units in Africa. !"
-
-#GITHUB TEST
+#Australia_rats_tt:0 "YSpawn! GInfantry Units! in YAfrica! or YAustralia!\n depending on the YSituation!.\n\n"
+Australia_rats_tt:0 "If the CAllies! control YDerna (![ITA.GetNameWithFlag]Y)! \nand YAlexandria (![ENG.GetNameWithFlag]Y)! \nThen Y4! GRats of Tobruk! will appear in £GFX_victory_points YTobruk! \nElse Y4! GRats of Tobruk! will appear in £GFX_victory_points YSydney!\n\n"
+AST_civ_1:0 "Encourage Entrepreneurship"
+AST_civ_2:0 "Expand Public Sector"
