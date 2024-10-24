@@ -541,7 +541,7 @@ focus_tree = {
 	focus = {
 		id = ROM_institute_royal_dictatorship
 		icon = GFX_focus_rom_royal_dictatorship
-		x = 7
+		x = 9
 		y = 0
 
 		cost = 10
@@ -663,7 +663,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = ROM_institute_royal_dictatorship
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 9
@@ -684,15 +684,173 @@ focus_tree = {
 			add_ideas = ROM_flexible_foreign_policy
 		}
 	}
+#
+	focus = {
+		id = ROM_the_kings_government
+		icon = GFX_focus_generic_monarchy_1
+		prerequisite = { focus = ROM_flexible_foreign_policy }
+		x = -2
+		y = 1
+		relative_position_id = ROM_flexible_foreign_policy
+
+		cost = 10
+		mutually_exclusive = {
+			focus = ROM_appoint_german_friendly_government
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			#Remove ideas or display tooltip warning that it will happen
+			
+			if = {
+				limit = { NOT = { has_idea = ROM_flexible_foreign_policy_2 } }
+				swap_ideas = {
+					remove_idea = ROM_flexible_foreign_policy
+					add_idea = ROM_flexible_foreign_policy_2
+				}
+			}
+			add_political_power = 100
+			add_popularity = {
+				popularity = 0.10
+				ideology = neutrality
+			}
+			add_stability = 0.1
+			
+			
+		}
+	}
+	focus = {
+		id = ROM_militarize_the_sentinels
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = ROM_the_kings_government }
+	
+		x = -1
+		y = 1
+		relative_position_id = ROM_the_kings_government
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = neutrality
+			
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			swap_ideas = {
+				add_idea = ROM_the_sentinel_of_the_motherland_2
+				remove_idea = ROM_the_sentinel_of_the_motherland
+			}	
+			add_popularity = {
+				popularity = 0.10
+				ideology = neutrality
+			}
+			add_war_support = 0.05		
+		}
+	}
+#
+	focus = {
+		id = ROM_kings_guard
+		icon = GFX_focus_generic_limited_social_mobilization
+		prerequisite = { focus = ROM_the_kings_government }
+	
+		x = 1
+		y = 1
+		relative_position_id = ROM_the_kings_government
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = neutrality
+			
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_ideas = HUN_imp_guard
+			add_popularity = {
+				popularity = 0.05
+				ideology = neutrality
+			}
+
+		}
+	}
+
+	focus = {
+		id = ROM_all_parties_must_end
+		icon = GFX_focus_rom_parties_end
+		prerequisite = { focus = ROM_militarize_the_sentinels }
+		prerequisite = { focus = ROM_kings_guard }
+		x = 0
+		y = 2
+		relative_position_id = ROM_the_kings_government
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = neutrality
+			custom_trigger_tooltip = {
+				tooltip = ROM_carol_current_leader_trigger
+				has_country_leader = { id = 550 }
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = -150
+			swap_ideas = {
+				add_idea = ROM_king_carol_ii_handled
+				remove_idea = ROM_king_carol_ii_hedonist
+			}
+			remove_country_leader_trait = hedonist
+		}
+	}
 
 	focus = {
 		id = ROM_appoint_german_friendly_government
 		icon = GFX_goal_support_fascism
 		prerequisite = { focus = ROM_flexible_foreign_policy }
-		x = 0
+		x = 3
 		y = 1
 		relative_position_id = ROM_flexible_foreign_policy
-
+		mutually_exclusive = {
+			focus = ROM_the_kings_government
+		}
 		cost = 10
 
 		cancel_if_invalid = yes
@@ -832,7 +990,7 @@ focus_tree = {
 		id = ROM_force_abdication
 		icon = GFX_focus_rom_abdicate
 		prerequisite = { focus = ROM_iron_guard  focus = ROM_national_christian_party}
-		x = 0				
+		x = 3			
 		y = 3
 		relative_position_id = ROM_flexible_foreign_policy
 
@@ -874,7 +1032,7 @@ focus_tree = {
 	focus = {
 		id = ROM_army_maneuvers
 		icon = GFX_goal_generic_army_doctrines
-		x = 13
+		x = 20
 		y = 0
 
 		cost = 5
@@ -1391,7 +1549,7 @@ focus_tree = {
 	focus = {
 		id = ROM_expand_the_galati_shipyards
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 15
+		x = 18
 		y = 0
 
 		cost = 5

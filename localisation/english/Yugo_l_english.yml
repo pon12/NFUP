@@ -161,3 +161,7 @@ BRA_join_the_war:0 "Join the War"
 Australia_rats_tt:0 "If the CAllies! control YDerna (![ITA.GetNameWithFlag]Y)! \nand YAlexandria (![ENG.GetNameWithFlag]Y)! \nThen Y4! GRats of Tobruk! will appear in £GFX_victory_points YTobruk! \nElse Y4! GRats of Tobruk! will appear in £GFX_victory_points YSydney!\n\n"
 AST_civ_1:0 "Encourage Entrepreneurship"
 AST_civ_2:0 "Expand Public Sector"
+
+#Romania
+ROM_kings_guard:0 "Karol´s Guard"
+ROM_the_kings_government:0 "The Kings Government"
