@@ -13,3 +13,8 @@ JFU_templates = {
 	visible = {
 	}	
 }
+JFU_SAF = {
+	icon = generic_political_actions
+	visible = {
+	}	
+}

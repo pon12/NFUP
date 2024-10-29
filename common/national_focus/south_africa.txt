@@ -63,6 +63,57 @@
 	#### WAR PREP SECTION ######
 	############################
 	shared_focus = ALLIES_commonwealth_of_nations
+
+	focus = {
+		id = SAF_seek_political_support
+		icon = GFX_goal_generic_demand_territory
+		x = 7
+		y = 0
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			SAF = { is_ai = no }
+		}	
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = SAF_Politcal_manuevering_i
+				}
+			}
+			
+			custom_effect_tooltip = SAF_tt_start_pm
+			set_variable = { SAF_1_Support = 10}
+			set_variable = { SAF_1_Influence = 20}
+			
+			add_to_variable = {
+				var_SAF_stab = 0.05
+			}
+			
+			set_variable = { SAF_2_Support = 50}
+			set_variable = { SAF_2_Influence = 60}
+
+			set_variable = { SAF_3_Support = 5}
+			set_variable = { SAF_3_Influence = 10}
+		}
+	}
+
 	focus = {
 		id = SAF_war_measures_act
 		icon = GFX_goal_generic_demand_territory
@@ -82,6 +133,7 @@
 				threat > 0.2
 				NOT = { has_government = democratic }
 			}
+			has_completed_focus = SAF_seek_political_support
 		}
 		
 		bypass = {
@@ -252,7 +304,7 @@
 		id = SAF_outlaw_strikes
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = SAF_work_for_all_poor }
-		x = 2
+		x = 4
 		y = 5
 		relative_position_id = SAF_war_measures_act
 
@@ -263,7 +315,24 @@
 		}
 
 		available = {
-
+			custom_trigger_tooltip = {
+				tooltip = SAF_3_influence_max_40
+				check_variable = {
+					SAF_3_Influence < 40
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = SAF_2_influence_min_50
+				check_variable = {
+					SAF_2_Influence > 50
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = SAF_1_support_min_30
+				check_variable = {
+					SAF_1_support > 30
+				}
+			}
 		}
 		
 		bypass = {
@@ -280,6 +349,14 @@
 				remove_idea = SAF_cheap_labor_2
 				add_idea = SAF_cheap_labor_3
 			}
+			custom_effect_tooltip =  SAF_tt_2_5_support 
+		add_to_variable = { SAF_2_Support = 5}
+		custom_effect_tooltip =  SAF_tt_1_5_support 
+		add_to_variable = { SAF_1_Support = 5}
+		custom_effect_tooltip =  SAF_tt_3_-10_support 
+		add_to_variable = { SAF_3_Support = -10}
+		custom_effect_tooltip =  SAF_tt_3_-10_influence
+		add_to_variable = { SAF_3_Influence = -10}
 		}
 	}
 
@@ -311,6 +388,7 @@
 				}
 			}
 			ENG = { has_war = no }
+			has_completed_focus = SAF_seek_political_support
 		}
 		
 		bypass = {
@@ -323,6 +401,12 @@
         search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 		add_political_power = 120
+		custom_effect_tooltip =  SAF_tt_2_10_support 
+		add_to_variable = { SAF_2_Support = 10}
+		custom_effect_tooltip = SAF_tt_3_5_support
+		add_to_variable = { SAF_3_Support = 5}
+		custom_effect_tooltip = SAF_tt_1_5_influence
+		add_to_variable = { SAF_3_Influence = 5}
 		}
 	}
 
@@ -361,6 +445,8 @@
          			bonus = 0.1  # we get 20% higher bonus from this group
     			}
 			}
+			custom_effect_tooltip =  SAF_tt_2_5_support 
+		add_to_variable = { SAF_2_Support = 5}
 		}
 	}
 
@@ -379,7 +465,12 @@
 		}
 
 		available = {
-
+			custom_trigger_tooltip = {
+				tooltip = SAF_1_influence_max_35
+				check_variable = {
+					SAF_1_Influence < 35
+				}
+			}
 		}
 		
 		bypass = {
@@ -397,6 +488,10 @@
 				add_idea = SAF_ossewabrandwag_2
 			}
 			remove_opinion_modifier = { target = ENG modifier = SAF_anti_british_sentiment }
+			custom_effect_tooltip =  SAF_tt_1_-10_support 
+		add_to_variable = { SAF_1_Support = -10}
+		custom_effect_tooltip =  SAF_tt_1_-5_influence
+		add_to_variable = { SAF_1_Influence = -5}
 		}
 	}
 
@@ -428,6 +523,8 @@
 
 		completion_reward = {
 			add_ideas = SAF_joint_air_training_scheme
+			custom_effect_tooltip =  SAF_tt_2_5_influence
+		add_to_variable = { SAF_2_Influence = 5}
 		}
 	}
 
@@ -478,7 +575,13 @@
 		}
 
 		available = {
-
+			
+			custom_trigger_tooltip = {
+				tooltip = SAF_1_influence_max_25
+				check_variable = {
+					SAF_1_Influence < 25
+				}
+			}
 		}
 		
 		bypass = {
@@ -492,6 +595,12 @@
 		
 		completion_reward = {
 			remove_ideas = SAF_ossewabrandwag_2
+			custom_effect_tooltip =  SAF_tt_3_5_support 
+		add_to_variable = { SAF_3_Support = 5}
+		custom_effect_tooltip =  SAF_tt_1_-10_support 
+		add_to_variable = { SAF_1_Support = -10}
+		custom_effect_tooltip =  SAF_tt_1_-10_influence
+		add_to_variable = { SAF_1_Influence = -10}
 		}
 	}
 
@@ -527,6 +636,10 @@
 			ENG = { 
 				country_event = tfv_south_africa.1
 			}
+			custom_effect_tooltip =  SAF_tt_2_10_influence
+		add_to_variable = { SAF_2_Influence = 10}
+		custom_effect_tooltip =  SAF_tt_2_-5_support
+		add_to_variable = { SAF_2_support = -5}
 		}
 	}
 
@@ -549,7 +662,12 @@
 		}
 
 		available = {
-
+			custom_trigger_tooltip = {
+				tooltip = SAF_3_influence_max_25
+				check_variable = {
+					SAF_3_Influence < 25
+				}
+			}
 		}
 		
 		bypass = {
@@ -563,6 +681,16 @@
 
 		completion_reward = {
 			add_ideas = SAF_cheap_labor_1
+			custom_effect_tooltip =  SAF_tt_2_5_support
+		add_to_variable = { SAF_2_support = 5}
+		custom_effect_tooltip =  SAF_tt_2_10_influence
+		add_to_variable = { SAF_2_Influence = 10}
+		custom_effect_tooltip =  SAF_tt_3_-10_support
+		add_to_variable = { SAF_3_support = -10}
+		custom_effect_tooltip =  SAF_tt_3_5_influence
+		add_to_variable = { SAF_3_Influence = 5}
+		custom_effect_tooltip =  SAF_tt_1_5_support
+		add_to_variable = { SAF_1_support = 5}
 		}
 	}
 
@@ -581,7 +709,12 @@
 		}
 
 		available = {
-
+			custom_trigger_tooltip = {
+				tooltip = SAF_3_influence_max_35
+				check_variable = {
+					SAF_3_Influence < 35
+				}
+			}
 		}
 		
 		bypass = {
@@ -598,6 +731,15 @@
 				remove_idea = SAF_cheap_labor_1
 				add_idea = SAF_cheap_labor_2
 			}
+			add_to_variable = {
+				var = var_SAF_resc
+				value = 0.1
+				tooltip = SAF_tt_test2
+			}
+			custom_effect_tooltip =  SAF_tt_2_5_influence
+		add_to_variable = { SAF_2_Influence = 5}
+		custom_effect_tooltip =  SAF_tt_3_5_influence
+		add_to_variable = { SAF_3_Influence = 5}
 		}
 	}
 
@@ -621,6 +763,12 @@
 
 		available = {
 			NOT = { has_country_flag = britain_enforced_our_loyalty }
+			custom_trigger_tooltip = {
+				tooltip = SAF_3_influence_min_20
+				check_variable = {
+					SAF_3_Influence > 20
+				}
+			}
 		}
 		
 		bypass = {
@@ -633,6 +781,17 @@
         search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_TFV_AUTONOMY}
 		completion_reward = {
 			add_ideas = SAF_voortrekker_monument
+			add_to_variable = {
+				var = var_SAF_consg
+				value = -0.1
+				tooltip = SAF_tt_test1_1
+			}
+			custom_effect_tooltip =  SAF_tt_2_-5_support
+		add_to_variable = { SAF_2_support = -5}
+			custom_effect_tooltip =  SAF_tt_3_5_influence
+		add_to_variable = { SAF_3_Influence = 5}
+		custom_effect_tooltip =  SAF_tt_3_10_support
+		add_to_variable = { SAF_3_support = 10}
 		}
 	}
 	############################
@@ -654,6 +813,7 @@
         search_filters = { FOCUS_FILTER_INDUSTRY }
 		available = {
 			SAF = { is_ai = no }
+			has_completed_focus = SAF_seek_political_support
 		}	
 		completion_reward = {
 
@@ -1000,6 +1160,7 @@
 		cost = 5
 		available = {
 			SAF = { is_ai = no }
+			has_completed_focus = SAF_seek_political_support
 		}	
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1377,6 +1538,7 @@
 		cost = 10
 		available = {
 			SAF = { is_ai = no }
+			has_completed_focus = SAF_seek_political_support
 		}	
 		cancel_if_invalid = yes
 		continue_if_invalid = no
