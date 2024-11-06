@@ -173,7 +173,7 @@ SAF_modifier_tt_test1:0 "8Support and Influence of Politcal Movements:!\ngOss
 SAF_Politcal_manuevering_i:0 "Politcal Maneuvering"
 JFU_SAF:0 "Politcal Maneuvering"
 SAF_seek_political_support:0 "Seek Political Support"
-SAF_tt_start_pm:0 "GEnables! the YDecisions! for the YPolitical Support! !"
+SAF_tt_start_pm:0 "GEnables! the YDecisions! for the YPolitical Support! !\n\n\n"
 SAF_D_PM_secure_british_trade_deal:0 "Secure British Trade Deal"
 SAF_D_PM_secure_german_trade_deal:0 "Secure German Trade Deal"
 SAF_D_PM_secure_american_trade_deal:0 "Secure American Trade Deal"
@@ -184,6 +184,9 @@ SAF_D_PM_more_rights_to_w:0 "Expand rights of the Minorety"
 SAF_D_PM_backroom_deals_1:0 "Backroom deals with Ossewabrandwag"
 SAF_D_PM_backroom_deals_2:0 "Backroom deals with British Loyalists"
 SAF_D_PM_backroom_deals_3:0 "Backroom deals with Equality Movement"
+
+SAF_expand_the_mining_industry2:0 "Financial Subsidies"
+SAF_expand_the_mining_industry3:0 "Nationalize the Industry"
 
 timeout_effect_tt:0 "g4Every 30 Days! for the YPoint differences! between YInfluence! and GSupport!\nY0.1 Stability! will be Gadded! if the GSupport! is Yhigher! than the YInflunece! and Rremoved! if YInfluence! is Yhigher! than GSupport! \nThe Min is -10 Stability and the Max ist +20 Stability!"
 
@@ -197,6 +200,7 @@ SAF_3_influence_max_25:0 "YInflunece! of 3Equality Movement! is 4less than 
 SAF_3_influence_max_35:0 "YInflunece! of 3Equality Movement! is 4less than !Y35!"
 SAF_3_influence_max_40:0 "YInflunece! of 3Equality Movement! is 4less than !Y40!"
 SAF_3_influence_min_20:0 "YInflunece! of 3Equality Movement! is 4more than !Y20!"
+SAF_3_influence_min_30:0 "YInflunece! of 3Equality Movement! is 4more than !Y30!"
 SAF_2_influence_min_60:0 "YInflunece! of tBritish Loyalists! is 4more than !Y60!"
 SAF_2_influence_max_50:0 "YInflunece! of tBritish Loyalists! is 4less than !Y50!"
 SAF_2_influence_min_50:0 "YInflunece! of tBritish Loyalists! is 4more than !Y50!"

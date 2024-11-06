@@ -70,7 +70,7 @@
 		x = 7
 		y = 0
 
-		cost = 1
+		cost = 0
 
 		ai_will_do = {
 			factor = 1
@@ -92,11 +92,11 @@
 	
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			hidden_effect = {
-				add_dynamic_modifier = {
-					modifier = SAF_Politcal_manuevering_i
-				}
-			}
+			#hidden_effect = {
+			#	add_dynamic_modifier = {
+			#		modifier = SAF_Politcal_manuevering_i
+			#	}
+			#}
 			
 			custom_effect_tooltip = SAF_tt_start_pm
 			set_variable = { SAF_1_Support = 10}
@@ -111,6 +111,9 @@
 
 			set_variable = { SAF_3_Support = 5}
 			set_variable = { SAF_3_Influence = 10}
+			add_dynamic_modifier = {
+				modifier = SAF_Politcal_manuevering_i
+			}
 		}
 	}
 
@@ -250,7 +253,24 @@
 		}
 
 		available = {
-
+			custom_trigger_tooltip = {
+				tooltip = SAF_1_influence_max_35
+				check_variable = {
+					SAF_1_Influence < 35
+				}
+			}
+			custom_trigger_tooltip = { 
+				tooltip = SAF_2_influence_min_50
+				check_variable = {
+					SAF_2_Influence > 50
+				}
+			}
+			custom_trigger_tooltip = { 
+				tooltip = SAF_3_influence_min_30
+				check_variable = {
+					SAF_3_Influence > 30
+				}
+			}
 		}
 		
 		bypass = {
@@ -266,6 +286,13 @@
 				remove_idea = SAF_history_of_segregation
 				add_idea = SAF_history_of_segregation_2
 			}
+			custom_effect_tooltip = SAF_tt_2_5_support
+			add_to_variable = { SAF_2_Support = 5}
+			custom_effect_tooltip = SAF_tt_1_-5_support
+			add_to_variable = { SAF_1_Support = -5}
+			custom_effect_tooltip = SAF_tt_3_5_influence
+			add_to_variable = { SAF_3_Influence = 5}
+
 		}
 	}
 
@@ -273,7 +300,7 @@
 		id = SAF_expand_the_cape_corps
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = SAF_reconstitute_the_cape_corps }
-		x = 0
+		x = -1
 		y = 5
 		relative_position_id = SAF_war_measures_act
 
@@ -284,7 +311,24 @@
 		}
 
 		available = {
-
+			custom_trigger_tooltip = {
+				tooltip = SAF_1_influence_max_25
+				check_variable = {
+					SAF_1_Influence < 25
+				}
+			}
+			custom_trigger_tooltip = { 
+				tooltip = SAF_2_influence_min_50
+				check_variable = {
+					SAF_2_Influence > 50
+				}
+			}
+			custom_trigger_tooltip = { 
+				tooltip = SAF_3_influence_min_30
+				check_variable = {
+					SAF_3_Influence > 30
+				}
+			}
 		}
 		
 		bypass = {
@@ -297,6 +341,12 @@
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			remove_ideas = SAF_history_of_segregation_2
+			custom_effect_tooltip = SAF_tt_2_5_support
+			add_to_variable = { SAF_2_Support = 5}
+			custom_effect_tooltip = SAF_tt_1_-10_support
+			add_to_variable = { SAF_1_Support = -10}
+			custom_effect_tooltip = SAF_tt_3_5_influence
+			add_to_variable = { SAF_3_Influence = 5}
 		}
 	}
 
@@ -857,6 +907,36 @@
 			}
 		}
 	}
+#
+	focus = {
+		id = SAF_expand_the_mining_industry2
+		icon = GFX_focus_DEN_no_regulations
+		prerequisite = { focus = SAF_expand_the_mining_industry }
+		x = -1
+		y = 1
+		relative_position_id = SAF_expand_the_mining_industry
+
+		cost = 5
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+        search_filters = { FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			895 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				#set_state_flag = SAF_expand_the_mining_industry_IC
+			}
+		}
+	}
+	
 
 	focus = {
 		id = SAF_heavy_engineering
@@ -888,6 +968,34 @@
 				technology = dispersed_industry3 
 				technology = dispersed_industry4 
 				technology = dispersed_industry5 
+			}
+		}
+	}
+	focus = {
+		id = SAF_expand_the_mining_industry3
+		icon = GFX_focus_DEN_heavy_regulations
+		prerequisite = { focus = SAF_heavy_engineering }
+		x = 1
+		y = 1
+		relative_position_id = SAF_heavy_engineering
+
+		cost = 5
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+        search_filters = { FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			541 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				#set_state_flag = SAF_expand_the_mining_industry_IC
 			}
 		}
 	}
