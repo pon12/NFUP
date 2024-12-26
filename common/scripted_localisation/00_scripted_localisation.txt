@@ -8,6 +8,7 @@
 # localization_key -> points to the localization key
 # that'll be used if trigger passes
 
+#MM: UNUSED after WW (replaced by GetKfdWagenNames)
 defined_text = { # Country
 	name = GetKdfWagenName
 	text = {
@@ -32,6 +33,7 @@ defined_text = { # Country
 	}
 }
 
+#MM: UNUSED after WW (replaced by GetReichsWerkeName)
 defined_text = { # Country
 	name = GetHermannGoringWerkeName
 	text = {
@@ -57,6 +59,24 @@ defined_text = { # Country
 	}
 	text = {
 		localization_key = GER_HERMANN_GORING_WERKE_NAME
+	}
+}
+
+defined_text = { # for PRC tree
+	name = GetManchuriaPuppet
+	text = {
+		trigger = {
+			MAN = {
+				OR = {
+					is_subject_of = JAP
+					has_cosmetic_tag = MAN_kwantung_army 
+				}
+			}
+		}
+		localization_key = PRC_provoke_japan_manchuria
+	}
+	text = {
+		localization_key = PRC_provoke_japan_korea
 	}
 }
 
@@ -327,6 +347,16 @@ defined_text = {
 }
 
 defined_text = {
+	name = GetLimitedRearmamentDesc
+	text = {
+		trigger = {
+			original_tag = ENG
+		}
+		localization_key = ENG_LIMITED_REARMAMENT_HISTORICAL
+	}
+}
+
+defined_text = {
 	name = GetRoyalTankRegimentName
 	text = {
 		trigger = {
@@ -433,6 +463,16 @@ defined_text = {
 			has_government = communism
 		}
 		localization_key = ENG_BSA_COMPANY_DESC_COMMUNIST
+	}
+}
+
+defined_text = {
+	name = GetGeneralRearmamentDesc
+	text = {
+		trigger = {
+			original_tag = ENG
+		}
+		localization_key = ENG_GENERAL_REARMAMENT_DESC_HISTORICAL
 	}
 }
 
@@ -578,6 +618,254 @@ defined_text = { # Country
 }
 
 defined_text = { # Country
+	name = GetCandidatesFascism2
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = { # Country
+	name = GetStrengthRatioBritain
+	text = {
+		trigger = {
+			if = {
+				limit = { ENG = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = ENG
+					ratio < 1
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = ENG
+					ratio > 0.9
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+			else_if = {
+				limit = { USA = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = USA
+					ratio < 1
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = USA
+					ratio > 0.9
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+		}
+		localization_key = Naval_treaty_90
+	}
+	text = {
+		trigger = {
+			if = {
+				limit = { ENG = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = ENG
+					ratio < 0.9
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = ENG
+					ratio > 0.75
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+			else_if = {
+				limit = { USA = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = USA
+					ratio < 0.9
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = USA
+					ratio > 0.75
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+		}
+		localization_key = Naval_treaty_75
+	}
+	text = {
+		trigger = {
+			if = {
+				limit = { ENG = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = ENG
+					ratio < 0.75
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = ENG
+					ratio > 0.5
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+			else_if = {
+				limit = { USA = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = USA
+					ratio < 0.75
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = USA
+					ratio > 0.5
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+		}
+		localization_key = Naval_treaty_50
+	}
+	text = {
+		trigger = {
+			if = {
+				limit = { ENG = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = ENG
+					ratio < 0.5
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+			else_if = {
+				limit = { USA = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = USA
+					ratio < 0.5
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+		}
+		localization_key = Naval_treaty_lower_than_50
+	}
+	text = {
+		trigger = {
+			if = {
+				limit = { ENG = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = ENG
+					ratio > 1
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+			else_if = {
+				limit = { USA = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = USA
+					ratio > 1
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+		}
+		localization_key = Naval_treaty_over_100
+	}
+}
+defined_text = { # Country
+	name = GetRelevantNavalTreatyNation
+	text = {
+		trigger = {
+			ENG = {
+				has_naval_treaty_trigger = yes
+			}
+		}
+		localization_key = ENG_Naval_treaty_nation
+	}
+	text = {
+		trigger = {
+			ENG = {
+				not = { has_naval_treaty_trigger = yes }
+			}
+			USA = {
+				has_naval_treaty_trigger = yes
+			}
+		}
+		localization_key = USA_Naval_treaty_nation
+	}
+}
+
+defined_text = { # Country
 	name = GetStresaMembers
 	text = {
 		trigger = {
@@ -611,15 +899,39 @@ defined_text = { # Country
 
 
 defined_text = {
-	name = GetSpanishRepublicFlagAndNameDef
-	text = {	#Gets tag from SPD (once SCW has started)
-		trigger = { 
-			country_exists = SPA
+	name = GetPortugueseShipsBuilder
+	text = { #ENG builder
+		trigger = {
+			OR = {
+				has_country_flag = POR_purchase_british_submarines_flag
+				has_country_flag = POR_purchase_british_destroyers_flag
+				has_country_flag = POR_purchase_british_light_cruiser_flag
+			}
 		}
-		localization_key = POR_Spanish_Republic_SPD
+		localization_key = POR_ENG_Ship_Builder
 	}
-	text = {	#Gets tag from SPR (before SCW starts)
-		localization_key = POR_Spanish_Republic_SPR
+	text = { #ITA builder
+		localization_key = POR_ITA_Ship_builder
+	}
+}
+
+defined_text = {
+	name = GetWargoalBasedOnGovernment
+	text = { #United Kingdom of Portugal and Brazil 
+		trigger = {
+			has_cosmetic_tag = KPB_kingdom_portugal_and_brazil
+		}
+		localization_key = POR_puppet_wargoal
+	}
+	text = { #Salazarist Portugal
+		trigger = {
+			NOT = { has_cosmetic_tag = KPB_kingdom_portugal_and_brazil }
+			has_government = neutrality
+		}
+		localization_key = POR_topple_government_wargoal
+	}
+	text = { #Fascist (else)
+		localization_key = POR_annex_wargoal
 	}
 }
 
@@ -1183,4 +1495,40 @@ defined_text = {
 		localization_key = governments_in_exile_exiled_desc
 	}
 
+}
+
+#USSR "Fall of London"
+defined_text = {
+	name = GetSOVIdeologyLondonDesc
+	text = {
+		trigger = {
+			SOV = {
+				has_government = communism
+			}
+		}
+		localization_key = get_SOV_ideology_london_desc
+	}
+	text = {
+		
+		localization_key = get_SOV_ideology_london_desc_alt
+		
+	}
+}
+
+#USSR "Fall of London" Response
+defined_text = {
+	name = GetSOVIdeologyLondonResponse
+	text = {
+		trigger = {
+			SOV = {
+				has_government = communism
+			}
+		}
+		localization_key = get_SOV_ideology_london_response
+	}
+	text = {
+		
+		localization_key = get_SOV_ideology_london_response_alt
+		
+	}
 }

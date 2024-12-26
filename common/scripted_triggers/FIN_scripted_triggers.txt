@@ -68,16 +68,28 @@ FIN_state_or_vp_name_should_change = {
 		AND = {
 			ROOT = { original_tag = FIN }
 			NOT = { FROM = { original_tag = FIN } } #Not civil wars
-
+			NOT = { FROM = { original_tag = KAR } } #Not if already Finnish
+		}
+		AND = {
+			ROOT = { original_tag = KAR }
+			NOT = { FROM = { original_tag = KAR } } #Not civil wars
+			NOT = { FROM = { original_tag = FIN } } #Not if already Finnish
 		}
 		AND = {
 			FROM = { original_tag = FIN }
 			NOT = { ROOT = { original_tag = FIN } } #Not civil wars
+			NOT = { ROOT = { original_tag = KAR } } #Not already Finnish
+		}
+		AND = {
+			FROM = { original_tag = KAR }
+			NOT = { ROOT = { original_tag = KAR } } #Not civil wars
+			NOT = { ROOT = { original_tag = FIN } } #Not already Finnish
 		}
 	}
 	OR = {
 		FROM.FROM = { state = 216 } # OLONETS (Petrozavodsk / Äänislinna)
 		FROM.FROM = { state = 213 } # MURMANSK / KUOLAN NIEMIMAA // (Murmansk / Muurmanski) (Kandalaksha / Kantalahti)
+		FROM.FROM = { state = 195 } # LENINGRAD / PIETARI // (Leningrad / Pietari)
 	}
 }
 
@@ -183,4 +195,28 @@ FIN_is_valid_occupier_country = {
 		NOT = { original_tag = PREV.PREV }
 		NOT = { is_in_faction_with = ROOT }
 	}
+}
+
+
+
+   ###    ####    ########  ##          ###    ##    ##  ######  
+  ## ##    ##     ##     ## ##         ## ##   ###   ## ##    ## 
+ ##   ##   ##     ##     ## ##        ##   ##  ####  ## ##       
+##     ##  ##     ########  ##       ##     ## ## ## ##  ######  
+#########  ##     ##        ##       ######### ##  ####       ## 
+##     ##  ##     ##        ##       ##     ## ##   ### ##    ## 
+##     ## ####    ##        ######## ##     ## ##    ##  ######  
+
+
+
+FIN_is_historical_ai = {
+}
+
+FIN_is_fascist_ai = {
+}
+
+FIN_is_communist_ai = {
+}
+
+FIN_is_democratic_ai = {
 }

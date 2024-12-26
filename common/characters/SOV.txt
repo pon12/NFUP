@@ -300,12 +300,12 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { trickster infantry_officer war_hero hill_fighter fortress_buster engineer ranger infantry_leader }
+			traits = { career_officer cavalry_officer politically_connected }
 			skill = 3
-			attack_skill = 5
-			defense_skill = 4
-			planning_skill = 5
-			logistics_skill = 5
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
 			legacy_id = 404
 		}
 	}
@@ -1369,23 +1369,29 @@ characters = {
 			}
 		}
 
-		advisor = {
-			cost = 100
-			slot = theorist
-			idea_token = igor_kurchatov
-			ledger = army
-			allowed = {
-				original_tag = SOV
+		scientist = {
+			traits = { scientist_trait_nuclear_specialist scientist_trait_fast_learner }
+			skills = {
+				specialization_nuclear = 2
+				specialization_naval = 2
 			}
-			research_bonus = {
-				nuclear = 0.150
-			}
-			traits = {
-				nuclear_scientist
-			}
-		}		
+		}	
 	}
+	SOV_abram_ioffe = {
+		name = SOV_abram_ioffe
+		portraits = {
+			army = {
+				large = GFX_portrait_SOV_abram_ioffe
+			}
+		}
 
+		scientist = {
+			traits = { scientist_trait_nuclear_power_expert }
+			skills = {
+				specialization_nuclear = 2
+			}
+		}
+	}
 	SOV_sergey_korolyov = {
 		name = SOV_sergey_korolyov
 		portraits = {
@@ -1394,21 +1400,60 @@ characters = {
 			}
 		}
 
-		advisor = {
-			cost = 100
-			slot = theorist
-			idea_token = sergei_korolev
-			ledger = air
-			allowed = {
-				original_tag = SOV
+		scientist = {
+			traits = { scientist_trait_rocketry_specialist scientist_trait_gifted_engineer }
+			skills = {
+				specialization_air = 2
 			}
-			research_bonus = {
-				rocketry = 0.150
+		}	
+	}
+
+	SOV_boris_stechkin = {
+		name = SOV_boris_stechkin
+		portraits = {
+			army = {
+				large = GFX_portrait_SOV_boris_stechkin
 			}
-			traits = {
-				rocket_scientist
+		}
+
+		scientist = {
+			traits = { scientist_trait_jet_expert scientist_trait_brilliant_theorist }
+			skills = {
+				specialization_air = 2
 			}
-		}		
+		}
+	}
+
+	SOV_arkady_nazarov = {
+		name = SOV_arkady_nazarov
+		portraits = {
+			army = {
+				large = GFX_portrait_SOV_arkady_nazarov
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_aircraft_specialist scientist_trait_fast_learner }
+			skills = {
+				specialization_air = 2
+			}
+		}
+	}
+
+	SOV_vladimir_kotelnikov = {
+		name = SOV_vladimir_kotelnikov
+		portraits = {
+			army = {
+				large = GFX_portrait_SOV_vladimir_kotelnikov
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_electronics_specialist }
+			skills = {
+				specialization_air = 2
+			}
+		}
 	}
 
 	SOV_pavel_zhigarev = {
@@ -1774,7 +1819,6 @@ characters = {
 				}
 			}
 			available = {
-				has_completed_focus = SOV_finish_the_five_year_plan 
 			}
 			
 			traits = {
@@ -2005,10 +2049,6 @@ characters = {
 			}
 		}
 		allowed_civil_war = {
-			OR = {
-				has_government = neutrality 
-				has_government = fascism
-			}
 		}
 
 		advisor = {
@@ -2018,9 +2058,7 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				OR = {
-					has_completed_focus = SOV_patriarch_of_all_russia
-				}
+				has_completed_focus = SOV_patriarch_of_all_russia
 			}
 			traits = {
 				patriarch_of_moscow_and_all_russia 

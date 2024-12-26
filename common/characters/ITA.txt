@@ -118,7 +118,6 @@ characters = {
 				original_tag = ITA			
 			}
 			available = {
-				has_government = fascism
 			}
 			traits = {
 				grand_battle_plan_expert
@@ -136,7 +135,6 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 1
 			legacy_id = 0
-			visible = { has_government = fascism }
 		}
 	}
 
@@ -325,7 +323,7 @@ characters = {
 			attack_skill = 1
 			defense_skill = 1
 			planning_skill = 2
-			logistics_skill = 3
+			logistics_skill = 2
 			legacy_id = 0
 		}
 	}
@@ -367,7 +365,6 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 1
 			legacy_id = 0
-			visible = { has_government = fascism }
 		}
 	}
 
@@ -388,7 +385,6 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 1
 			legacy_id = 0
-			visible = { has_government = fascism }
 		}
 	}
 
@@ -469,7 +465,6 @@ characters = {
 				original_tag = ITA			
 			}
 			available = {
-				has_government = fascism
 			}
 			traits = {
 				army_infantry_2
@@ -488,7 +483,6 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 1
 			legacy_id = 0
-			visible = { has_government = fascism }
 		}
 	}
 
@@ -509,7 +503,6 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 1
 			legacy_id = 0
-			visible = { has_government = fascism }
 		}
 	}
 
@@ -570,7 +563,6 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 1
 			legacy_id = 0
-			visible = { has_government = fascism }
 		}
 	}
 
@@ -591,7 +583,6 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 1
 			legacy_id = 0
-			visible = { has_government = fascism }
 		}
 	}
 
@@ -692,7 +683,6 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 1
 			legacy_id = 0
-			visible = { has_government = fascism }
 		}
 	}
 
@@ -753,7 +743,6 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 2
 			legacy_id = 0
-			visible = { has_government = fascism }
 		}
 	}
 
@@ -886,7 +875,7 @@ characters = {
 		navy_leader = {
 			traits = { battleship_adherent superior_tactician spotter }
 			skill = 3
-			attack_skill = 2
+			attack_skill = 5
 			defense_skill = 2
 			maneuvering_skill = 3
 			coordination_skill = 3
@@ -902,7 +891,20 @@ characters = {
 				large = GFX_portrait_ITA_alberto_da_zara
 			}
 		}
-		
+		advisor={
+			slot = navy_chief
+			idea_token = alberto_da_zara
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				navy_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
 		navy_leader = {
 			traits = { gentlemanly superior_tactician }
 			skill = 3
@@ -925,11 +927,25 @@ characters = {
 				large = GFX_portrait_ITA_prince_aimone
 			}
 		}
-		 
+		advisor={
+			slot = high_command
+			idea_token = prince_aimone
+			ledger = navy
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				navy_screen_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.700
+			}
+		}		 
 		navy_leader = {
 			traits = { gentlemanly inshore_fighter }
-			skill = 2
-			attack_skill = 2
+			skill = 4
+			attack_skill = 4
 			defense_skill = 2
 			maneuvering_skill = 2
 			coordination_skill = 2
@@ -996,8 +1012,8 @@ characters = {
 		}
 		
 		navy_leader = {
-			traits = { gunnery_expert battleship_adherent ironside }
-			skill = 2
+			traits = { gunnery_expert battleship_adherent ironside superior_tactician  }
+			skill = 3
 			attack_skill = 3
 			defense_skill = 1
 			maneuvering_skill = 2
@@ -1024,7 +1040,6 @@ characters = {
 				original_tag = ITA			
 			}
 			available = {
-				has_government = fascism
 			}
 			traits = { naval_theorist }
 		}
@@ -1037,7 +1052,6 @@ characters = {
 			maneuvering_skill = 3
 			coordination_skill = 1
 			legacy_id = 0
-			visible = { has_government = fascism }
 		}
 	}
 
@@ -1059,8 +1073,6 @@ characters = {
 			coordination_skill = 1
 			legacy_id = 0
 			visible = {
-				#has_government = fascism
-				#has_completed_focus = ITA_supermarina #Maybe Escort focus? Or maybe available from start
 			} 
 		}
 	}
@@ -1147,23 +1159,92 @@ characters = {
 			}
 		}
 
-		advisor = {
-			cost = 100
-			slot = theorist
-			idea_token = gaetano_crocco
-			ledger = air
-			allowed = {
-				original_tag = ITA			
-			}
-			research_bonus = {
-				rocketry = 0.150
-			}
-			traits = {
-				rocket_scientist
+		scientist = {
+			traits = { scientist_trait_rocketry_specialist }
+			skills = {
+				specialization_air = 2
 			}
 		}
 	}
-	
+	ITA_robert_longhi = {
+		name = ITA_robert_longhi
+		portraits = {
+			army = {
+				large = GFX_portrait_ITA_robert_longhi
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_jet_expert scientist_trait_gifted_engineer }
+			skills = {
+				specialization_air = 2
+			}
+		}
+	}
+
+	ITA_mario_castoldi = {
+		name = ITA_mario_castoldi
+		portraits = {
+			army = {
+				large = GFX_portrait_ITA_mario_castoldi
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_aircraft_specialist }
+			skills = {
+				specialization_air = 2
+			}
+		}
+	}
+
+	ITA_giovanni_giorgi = {
+		name = ITA_giovanni_giorgi
+		portraits = {
+			army = {
+				large = GFX_portrait_ITA_giovanni_giorgi
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_electronics_specialist }
+			skills = {
+				specialization_air = 2
+			}
+		}
+	}
+
+	ITA_filippo_bonfiglietti = {
+		name = ITA_filippo_bonfiglietti
+		portraits = {
+			army = {
+				large = GFX_portrait_ITA_filippo_bonfiglietti
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_surface_ship_specialist }
+			skills = {
+				specialization_naval = 2
+			}
+		}
+	}
+
+	ITA_curio_bernardis = {
+		name = ITA_curio_bernardis
+		portraits = {
+			army = {
+				large = GFX_portrait_ITA_curio_bernardis
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_submarine_specialist scientist_trait_bright }
+			skills = {
+				specialization_naval = 2
+			}
+		}
+	}	
 	ITA_romeo_bernotti = {
 		name = ITA_romeo_bernotti
 		portraits = {
@@ -1242,7 +1323,6 @@ characters = {
 				original_tag = ITA			
 			}
 			available = {
-				has_government = fascism
 			}
 			traits = {
 				navy_chief_naval_aviation_2
@@ -1269,7 +1349,7 @@ characters = {
 				original_tag = ITA			
 			}
 			available = {
-				ITA_government_is_somewhat_fascist = yes
+				
 			}
 			traits = {
 				navy_chief_commerce_raiding_2
@@ -1393,7 +1473,6 @@ characters = {
 				original_tag = ITA			
 			}
 			available = {
-				has_government = fascism
 			}
 			traits = {
 				air_tactical_bombing_2
@@ -1421,7 +1500,6 @@ characters = {
 				original_tag = ITA			
 			}
 			available = {
-				has_government = fascism
 			}
 			traits = {
 				air_air_combat_training_2
@@ -1449,7 +1527,6 @@ characters = {
 				original_tag = ITA			
 			}
 			available = {
-				has_government = fascism
 			}
 			traits = {
 				air_bomber_interception_2
@@ -1477,7 +1554,6 @@ characters = {
 				original_tag = ITA			
 			}
 			available = {
-				has_government = fascism
 			}
 			traits = {
 				navy_naval_air_defense_1
@@ -1505,10 +1581,6 @@ characters = {
 				original_tag = ITA			
 			}
 			available = {
-				OR = {
-					has_government = fascism
-					has_government = neutrality
-				}
 				has_completed_focus = ITA_army_leaders
 			}
 			traits = {
@@ -1547,9 +1619,8 @@ characters = {
 				NOT = {
 					has_country_leader_with_trait = mussolini_minister_of_foreign_affairs
 				}
-				ITA_government_is_somewhat_fascist = yes
 			}
-			cost = 75
+			cost = 150
 			traits = {
 				hierarch_minister_of_foreign_affairs
 			}
@@ -1592,16 +1663,8 @@ characters = {
 				NOT = {
 					has_country_leader_with_trait = mussolini_minister_of_justice
 				}
-				ITA_government_is_somewhat_fascist = yes
-				if =  {
-					limit = { 
-						has_dlc = "By Blood Alone"
-					}
-					ITA_is_advisor_available = yes
-				}
 			}
-			
-			cost = 75
+			cost = 150
 			traits = {
 				hierarch_minister_of_justice 
 			}
@@ -1643,7 +1706,7 @@ characters = {
 					has_country_leader_with_trait = mussolini_minister_of_education
 				}
 			}
-			cost = 75
+			cost = 150
 			traits = {
 				hierarch_minister_of_education # Hierarch / Minister of Education
 			}
@@ -1684,9 +1747,8 @@ characters = {
 				NOT = {
 					has_country_leader_with_trait = mussolini_minister_of_corporations
 				}
-				ITA_government_is_really_fascist = yes
 			}
-			cost = 75
+			cost = 150
 			traits = {
 				hierarch_minister_of_corporations # Leader of Blackshirts and Military Police
 			}
@@ -1730,7 +1792,7 @@ characters = {
 				original_tag = ITA			
 			}
 			available = {
-				ITA_government_is_really_fascist = yes
+				
 			}
 			traits = {
 				army_regrouping_2
@@ -1749,7 +1811,7 @@ characters = {
 			}
 			available = {
 				has_intelligence_agency = yes
-				ITA_government_is_really_fascist = yes
+				
 			}
 			traits = {
 				head_of_intelligence 
@@ -1764,7 +1826,7 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 1
 			legacy_id = 0
-			visible = { ITA_government_is_really_fascist = yes }
+			visible = {  }
 		}
 	}
 
@@ -1783,7 +1845,7 @@ characters = {
 				original_tag = ITA			
 			}
 			available = {
-				ITA_government_is_somewhat_fascist = yes
+				
 			}
 			traits = {
 				prince_of_terror
@@ -1806,7 +1868,7 @@ characters = {
 				original_tag = ITA			
 			}
 			available = {
-				ITA_government_is_really_fascist = yes
+				
 			}
 			traits = {
 				war_industrialist 
@@ -1829,7 +1891,7 @@ characters = {
 				original_tag = ITA			
 			}
 			available = {
-				ITA_government_is_somewhat_fascist = yes
+				
 			}
 			traits = {
 				quartermaster_general 
@@ -1852,7 +1914,7 @@ characters = {
 				original_tag = ITA			
 			}
 			available = {
-				ITA_government_is_really_fascist = yes
+				
 			}
 			traits = {
 				armaments_organizer
@@ -1875,8 +1937,6 @@ characters = {
 				original_tag = ITA			
 			}
 			available = {
-				has_government = fascism
-				NOT = { has_completed_focus = ITA_pact_of_steel }
 			}
 			traits = {
 				financial_expert
@@ -1899,7 +1959,7 @@ characters = {
 				original_tag = ITA			
 			}
 			available = {
-				ITA_government_is_somewhat_fascist = yes
+				
 			}
 			traits = {
 				silent_workhorse
@@ -1922,7 +1982,6 @@ characters = {
 				original_tag = ITA			
 			}
 			available = {
-				has_government = fascism
 			}
 			traits = {
 				editor
@@ -1945,7 +2004,7 @@ characters = {
 				original_tag = ITA			
 			}
 			available = {
-				ITA_government_is_really_fascist = yes
+				
 			}
 			traits = {
 				ideological_crusader 
@@ -1970,7 +2029,7 @@ characters = {
 				original_tag = ITA			
 			}
 			available = {
-				ITA_government_is_really_fascist = yes
+				
 			}
 			traits = {
 				backroom_backstabber 
@@ -1993,7 +2052,7 @@ characters = {
 				original_tag = ITA			
 			}
 			available = {
-				ITA_government_is_really_fascist = yes
+				
 			}
 			traits = {
 				fascist_demagogue 

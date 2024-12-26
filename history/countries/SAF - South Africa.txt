@@ -5,22 +5,6 @@ set_variable = {
 }
 
 oob = "SAF_1936"
-if = {
-	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "SAF_1936_air_bba"
-	else = {
-		set_air_oob = "SAF_1936_air_legacy"
-		set_technology = {
-			early_fighter = 1
-			cv_early_fighter = 1
-			cv_naval_bomber1 = 1
-			naval_bomber1 = 1
-			early_bomber = 1
-			CAS1 = 1
-
-		}
-	}
-}
 set_research_slots = 3
 set_stability = 0.6
 set_war_support = 0.1
@@ -102,13 +86,10 @@ if = {
 
 
 recruit_character = SAF_j_b_m_hertzog
-recruit_character = SAF_d_f_malan
 recruit_character = SAF_george_edwin_brink
 recruit_character = SAF_guy_hallifax
-recruit_character = SAF_pierre_oliver_knoll
 recruit_character = SAF_pierre_van_ryneveld
 recruit_character = SAF_s_p_le_roux
-recruit_character = SAF_marinus_van_osterkamp
 recruit_character = SAF_robert_palmer
 recruit_character = SAF_leonard_beyers
 recruit_character = SAF_c_de_weenburg_du_toit
@@ -117,7 +98,7 @@ recruit_character = SAF_j_f_van_rensburg
 recruit_character = SAF_e_g_jansen
 recruit_character = SAF_nicolaas_havenga
 recruit_character = SAF_sir_patrick_duncan
-#recruit_character = SAF_jan_smuts
+recruit_character = SAF_jan_smuts
 
 
 set_convoys = 100

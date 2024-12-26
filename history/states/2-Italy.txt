@@ -13,16 +13,22 @@ state = {
 			infrastructure = 4
 			air_base = 8
 			arms_factory = 1
-			industrial_complex = 8
-			dockyard = 5
+			industrial_complex = 4
 			11751 = {
 				naval_base = 5
 			}
 			11846 = {
 				naval_base = 2
-			}	
+			}
+            9904 = {
+                landmark_colosseum = {
+                    level = 1
+                    allowed = {
+                        has_dlc = "Gotterdammerung"
+                    }
+                }
+            }
 		}
-		add_extra_state_shared_building_slots = 9
 		add_core_of = ITA
 	}
 

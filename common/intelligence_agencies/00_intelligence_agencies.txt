@@ -43,8 +43,29 @@ intelligence_agency = {
 	picture = GFX_intelligence_agency_logo_ger
 	names = { "Abwehr" }
 	
-	default = { tag = GER }
-	available = { original_tag = GER }
+	default = { 
+		tag = GER 
+		NOT = { has_government = communism }
+	}
+	available = { 
+		original_tag = GER 
+		NOT = { has_government = communism }
+	}
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_GER_stasi
+	names = { "Stasi" }
+	
+	default = { 
+		tag = GER 
+		has_government = communism 
+	}
+	available = { 
+		original_tag = GER 
+		has_government = communism 
+	}
 }
 
 intelligence_agency = {
@@ -88,8 +109,45 @@ intelligence_agency = {
 	picture = GFX_intelligence_agency_logo_bel
 	names = { "ADIV" "SGRS" }
 	
-	default = { tag = BEL }
-	available = { original_tag = BEL }
+	default = { 
+		tag = BEL 
+		NOT = { has_dlc = "Gotterdammerung" }
+	}
+	available = { 
+		original_tag = BEL 
+		NOT = { has_dlc = "Gotterdammerung" } 
+	}
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_BEL_vsse
+	names = { "VSSE" }
+	
+	default = { 
+		tag = BEL 
+		always = no
+	}
+	available = { 
+		original_tag = BEL 
+		has_dlc = "Gotterdammerung"
+	}
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_BEL_giss
+	names = { "Veiligheid van de Staat" }
+	
+	default = {
+		tag = BEL 
+		has_dlc = "Gotterdammerung"
+	}
+	available = { 
+		original_tag = BEL 
+		has_dlc = "Gotterdammerung"
+	}
+		
 }
 
 intelligence_agency = {
@@ -167,6 +225,7 @@ intelligence_agency = {
 	available = { original_tag = MAN }
 }
 
+
 intelligence_agency = {
 	
 	picture = GFX_intelligence_agency_logo_fin
@@ -175,7 +234,6 @@ intelligence_agency = {
 	default = { tag = FIN }
 	available = { original_tag = FIN }
 }
-
 intelligence_agency = {
 	
 	picture = GFX_intelligence_agency_logo_gre
@@ -247,47 +305,97 @@ intelligence_agency = {
 
 intelligence_agency = {
 	
-	picture = GFX_intelligence_agency_logo_SWI_swi_buero_ha
-	names = { "Buero Ha" }
-	
-	available = { 
-		tag = SWI
-		NOT = {
-			has_government = fascism
-		}
-	}
-	
-	default = { 		
-		tag = SWI
-		NOT = {
-			has_government = fascism
-		}
-	} 
-}
-
-intelligence_agency = {
-	
-	picture = GFX_intelligence_agency_logo_SWI_swi_buero_ha
-	names = { "Federal Police" }
-	
-	available = { 
-		tag = SWI
-
-	}
-	
-	default = { 		
-		tag = SWI
-	} 
-}
-
-intelligence_agency = {
-	
 	picture = GFX_intelligence_agency_logo_DEN_sipo
 	names = { "Sikkerhedspolitiet" }
 
 	default = { tag = DEN }
 	available = { original_tag = DEN }
 }
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_CAN_royal_canadian_mounted_police
+	names = { "Royal Canadian Mounted Police" }
+
+	default = { tag = CAN }
+	available = { original_tag = CAN }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_CHL_policia_de_investigaciones_de_chile
+	names = { "Policía de Investigaciones de Chile" }
+	
+	default = { tag = CHL }
+	available = { original_tag = CHL }
+}
+
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_HUN_IH
+	names = { "VKF 2" } # Információs Hivatal
+	
+	default = { 
+		tag = HUN 
+		NOT = { has_government = communism }
+	} 
+	available = { 
+		original_tag = HUN 
+		NOT = { has_government = communism }
+	}
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_HUN_AVH
+	names = { "Államvédelmi Hatóság" }
+	
+	default = { 
+		tag = HUN 
+		has_government = communism
+	} 
+	available = { 
+		original_tag = HUN 
+		has_government = communism
+	}
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_BRA_communist
+	names = { "EICI" }
+	
+	available = { 
+		tag = BRA
+		has_government = communism
+	}
+	
+	default = { 		
+		tag = BRA
+		has_government = communism
+	}
+}
+
+
+
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_BRA_neutrality
+	names = { "Departamento de Ordem" }
+	
+	available = { 
+		tag = BRA
+		NOT = { has_government = communism }
+	}
+	
+	default = { 		
+		tag = BRA
+		NOT = { has_government = communism }
+	} 
+}
+
+
+
 
 
 intelligence_agency = {
@@ -373,4 +481,5 @@ intelligence_agency = {
 	
 	default = { always = yes } 
 }
+
 

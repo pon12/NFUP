@@ -60,33 +60,17 @@ JAP_intervene_in_china = {
 		icon = jap_conquer_china
 
 		available = {	
-			CHI = {
-				has_capitulated = no
-				exists = yes
-			}
 			date > 1938.09.01
 		}
 
 		visible = {
-			has_completed_focus = JAP_secure_china
-			any_enemy_country = {
-				is_literally_china = yes
-			}
-			event_target:WTT_current_china_leader = {
-				NOT = { is_puppet_of = JAP }
-			}
+			has_completed_focus = JAP_intervene_in_china
+			has_war_with = CHI
 		}
 
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				is_historical_focus_on = yes
-				date < 1944.1.1
-				controls_state = 609 #East Heibei, to ensure that Japan hasn't been kicked off the mainland
-				factor = 0
-			}
 		}
 
 		cost = 50
@@ -138,13 +122,13 @@ JAP_intervene_in_china = {
 		days_mission_timeout = 360
 		
 		timeout_effect = {
-			add_stability = -0.05
+			add_stability = -0.25
 			add_war_support = -0.15
 		}
 
 		complete_effect = {
-			add_stability = 0.03
-			add_war_support = 0.07
+			add_stability = 0.05
+			add_war_support = 0.1
 		}
 	}
 
@@ -157,56 +141,21 @@ JAP_interservice_rivalry = {
 		icon = generic_tank
 
 		available = {
-			NOT = {
-				has_country_flag = JAP_war_conferences_cd
-			}
-			NOT = {
-				has_country_flag = JAP_steel_for_ships
-			}
+			NOT = { has_country_flag = JAP_war_conferences_cd }
+			NOT = {	has_country_flag = JAP_steel_for_ships }
 		}
 		visible = {
-			NOT = {
-				has_country_flag = JAP_steel_for_ships
-			}
+			NOT = { has_country_flag = JAP_steel_for_ships }
 		}
 		cost = 30
 		fire_only_once = yes
 		days_remove = -1
-		ai_will_do = {
-			factor = 4
-		}
 		complete_effect = {
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
+			282 = {
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -220,62 +169,28 @@ JAP_interservice_rivalry = {
 		icon = generic_naval
 
 		available = {
-			NOT = {
-				has_country_flag = JAP_war_conferences_cd
-			}
-			NOT = {
-				has_country_flag = JAP_steel_for_guns
-			}
+			NOT = { has_country_flag = JAP_war_conferences_cd }
+			NOT = {	has_country_flag = JAP_steel_for_guns }
 		}
 		visible = {
-			NOT = {
-				has_country_flag = JAP_steel_for_guns
-			}
+			NOT = {	has_country_flag = JAP_steel_for_guns }
 		}
 		cost = 30
 		fire_only_once = yes
 		days_remove = -1
-		ai_will_do = {
-			factor = 1
-		}
 		complete_effect = {
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 4
+			282 = {
+				add_extra_state_shared_building_slots = 8
 				add_building_construction = {
 					type = dockyard
-					level = 4
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = dockyard
-					level = 4
+					level = 8
 					instant_build = yes
 				}
 			}
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
 			JAP_interservice_rivalry_towards_navy = yes
 			set_country_flag = JAP_steel_for_ships
+			set_country_flag = JAP_war_conferences_cd_mission
 		}
 	}
 	JAP_prioritize_army_aircraft_construction = {
@@ -283,28 +198,15 @@ JAP_interservice_rivalry = {
 		icon = generic_tank
 
 		available = {
-			NOT = {
-				has_country_flag = JAP_war_conferences_cd
-			}
-			NOT = {
-				has_country_flag = JAP_prioritize_naval_aircraft_construction
-			}
+			NOT = { has_country_flag = JAP_war_conferences_cd }
+			NOT = {	has_country_flag = JAP_prioritize_naval_aircraft_construction }
 		}
 		visible = {
-			NOT = {
-				has_country_flag = JAP_prioritize_naval_aircraft_construction
-			}
+			NOT = {	has_country_flag = JAP_prioritize_naval_aircraft_construction }
 		}
 		cost = 30
 		fire_only_once = yes
 		days_remove = -1
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				date < 1938.9.1
-			}
-		}
 		complete_effect = {
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
 			add_ideas = JAP_prioritize_army_aircraft_construction
@@ -317,17 +219,11 @@ JAP_interservice_rivalry = {
 		icon = generic_naval
 
 		available = {
-			NOT = {
-				has_country_flag = JAP_war_conferences_cd
-			}
-			NOT = {
-				has_country_flag = JAP_prioritize_army_aircraft_construction
-			}
+			NOT = { has_country_flag = JAP_war_conferences_cd }
+			NOT = {	has_country_flag = JAP_prioritize_army_aircraft_construction }
 		}
 		visible = {
-			NOT = {
-				has_country_flag = JAP_prioritize_army_aircraft_construction
-			}
+			NOT = {	has_country_flag = JAP_prioritize_army_aircraft_construction }
 		}
 		cost = 30
 		fire_only_once = yes
@@ -344,6 +240,7 @@ JAP_interservice_rivalry = {
 			add_ideas = JAP_prioritize_naval_aircraft_construction
 			JAP_interservice_rivalry_towards_navy = yes
 			set_country_flag = JAP_prioritize_naval_aircraft_construction
+			set_country_flag = JAP_war_conferences_cd_mission
 		}
 	}
 	JAP_everybody_serves = {
@@ -380,6 +277,7 @@ JAP_interservice_rivalry = {
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
 			JAP_interservice_rivalry_towards_army = yes
 			set_country_flag = JAP_everybody_serves
+			set_country_flag = JAP_war_conferences_cd_mission
 		}
 	}
 	JAP_draft_exemptions = {
@@ -417,6 +315,7 @@ JAP_interservice_rivalry = {
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
 			JAP_interservice_rivalry_towards_navy = yes
 			set_country_flag = JAP_draft_exemptions
+			set_country_flag = JAP_war_conferences_cd_mission
 		}
 	}
 	JAP_raiding_regiments = {
@@ -453,6 +352,7 @@ JAP_interservice_rivalry = {
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
 			set_country_flag = JAP_raiding_regiments
 			JAP_interservice_rivalry_towards_army = yes
+			set_country_flag = JAP_war_conferences_cd_mission
 		}
 	}
 	JAP_special_air_landing_force = {
@@ -490,6 +390,7 @@ JAP_interservice_rivalry = {
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
 			set_country_flag = JAP_special_air_landing_force
 			JAP_interservice_rivalry_towards_navy = yes
+			set_country_flag = JAP_war_conferences_cd_mission
 		}
 	}
 	JAP_favor_army = {
@@ -546,8 +447,9 @@ JAP_interservice_rivalry = {
 		}
 		
 		complete_effect = {
-			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
+			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 90 }
 			JAP_interservice_rivalry_towards_army = yes
+			set_country_flag = JAP_war_conferences_cd_mission_short
 		}
 	}
 	JAP_favor_navy = {
@@ -604,8 +506,35 @@ JAP_interservice_rivalry = {
 		}
 		
 		complete_effect = {
-			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
+			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 90 }
 			JAP_interservice_rivalry_towards_navy = yes
+			set_country_flag = JAP_war_conferences_cd_mission_short
 		}
+	}
+	JAP_war_conferences_cd_mission = {
+    	activation = { has_country_flag = JAP_war_conferences_cd_mission }
+		available = { has_war = yes }
+    	allowed = { tag = JAP }
+    	cancel_trigger = { has_war = yes }
+    	icon = mission_icon
+		selectable_mission = no
+    	is_good = no
+		fire_only_once = no
+    	days_mission_timeout = 178
+   		complete_effect = {}
+    	timeout_effect = { clr_country_flag = JAP_war_conferences_cd_mission }		
+	}
+	JAP_war_conferences_cd_mission_short = {
+    	activation = { has_country_flag = JAP_war_conferences_cd_mission_short }
+		available = { has_war = yes }
+    	allowed = { tag = JAP }
+    	cancel_trigger = { has_war = yes }
+    	icon = mission_icon
+		selectable_mission = no
+    	is_good = no
+		fire_only_once = no
+    	days_mission_timeout = 88
+   		complete_effect = {}
+    	timeout_effect = { clr_country_flag = JAP_war_conferences_cd_mission_short }		
 	}
 }

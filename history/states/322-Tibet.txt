@@ -2,6 +2,7 @@ state={
 	id=322
 	name="STATE_322"
 
+
 	history={
 		owner = SWE
 		buildings = {
@@ -13,7 +14,7 @@ state={
 	}
 
 	provinces={
-		2010 2093 4994 5011 7926 8068 10755 10918 
+		  1961     
 	}
 	manpower=1
 	buildings_max_level_factor=1.000

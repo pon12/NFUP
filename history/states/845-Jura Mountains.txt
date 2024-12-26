@@ -6,7 +6,6 @@ state={
 	state_category = large_town
 	history={
 		owner = SWE
-
 		buildings = {
 			infrastructure = 0
 		}

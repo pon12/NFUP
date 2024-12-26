@@ -78,11 +78,13 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			cat_light_armor
 			mio_cat_tech_light_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}	
 
 	basic_light_tank = { #Panzer I
@@ -163,11 +165,13 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			cat_light_armor
 			mio_cat_tech_light_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}	
 	
 	basic_light_td = {
@@ -222,10 +226,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_light_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	basic_light_art = {
@@ -257,10 +263,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_light_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	basic_light_spaa = {
@@ -292,10 +300,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_light_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 
 	improved_light_tank = { #Panzer II
@@ -372,11 +382,13 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			cat_light_armor
 			mio_cat_tech_light_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	improved_light_td = {
@@ -422,10 +434,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_light_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	improved_light_art = {
@@ -456,10 +470,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_light_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	improved_light_spaa = {
@@ -485,10 +501,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_light_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 
 	amphibious_tank = { #SchwimmPanzer II
@@ -520,17 +538,12 @@ technologies = {
 		
 		ai_will_do = {
 			base = 0.5
-			
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
 			modifier = {
 				OR = {
 					original_tag = USA
 					original_tag = JAP
 				}
-				factor = 2
+				factor = 3
 			}
 			modifier = {
 				not = {
@@ -543,11 +556,13 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			tp_tech
 			mio_cat_tech_light_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 
 	amphibious_tank_2 = { #tauchPanzer III
@@ -589,11 +604,13 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			tp_tech
 			mio_cat_tech_light_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	advanced_light_tank = { #Leopard
@@ -640,11 +657,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			cat_light_armor
 			mio_cat_tech_light_armor_and_modules
 		}
+		special_project_specialization = { specialization_land }
 	}
 	
 	advanced_light_td = {
@@ -678,10 +696,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_light_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	advanced_light_art = {
@@ -698,10 +718,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_light_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	advanced_light_spaa = {
@@ -718,10 +740,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_light_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	basic_medium_tank = { #Panzer III
@@ -792,11 +816,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			cat_medium_armor
 			mio_cat_tech_medium_armor_and_modules
 		}
+		special_project_specialization = { specialization_land }
 	}
 	
 	basic_medium_td = {
@@ -858,10 +883,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_medium_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	basic_medium_art = {
@@ -910,10 +937,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_medium_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	basic_medium_spaa = {
@@ -947,10 +976,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_medium_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	improved_medium_tank = { #Panzer IV
@@ -1024,11 +1055,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			cat_medium_armor
 			mio_cat_tech_medium_armor_and_modules
 		}
+		special_project_specialization = { specialization_land }
 	}
 	
 	improved_medium_td = {
@@ -1090,10 +1122,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_medium_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	improved_medium_art = {
@@ -1137,10 +1171,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_medium_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	improved_medium_spaa = {
@@ -1170,10 +1206,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_medium_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	advanced_medium_tank = { #Panther
@@ -1226,11 +1264,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			cat_medium_armor
 			mio_cat_tech_medium_armor_and_modules
 		}
+		special_project_specialization = { specialization_land }
 	}
 	
 	advanced_medium_td = {
@@ -1291,10 +1330,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_medium_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	advanced_medium_art = {
@@ -1339,10 +1380,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_medium_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	advanced_medium_spaa = {
@@ -1368,10 +1411,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_medium_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	main_battle_tank = { #E-50
@@ -1380,7 +1425,7 @@ technologies = {
 			modern_tank_equipment_1
 		}	
 		enable_subunits = {
-			#modern_armor
+			modern_armor
 		}
 		
 		research_cost = 2.5
@@ -1422,6 +1467,7 @@ technologies = {
 			cat_medium_armor
 			mio_cat_tech_medium_armor_and_modules
 		}
+		special_project_specialization = { specialization_land }
 	}
 	
 	modern_td = {
@@ -1457,10 +1503,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_medium_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	modern_art = {
@@ -1470,7 +1518,7 @@ technologies = {
 		}
 
 		enable_subunits = {
-			#modern_sp_artillery_brigade
+			modern_sp_artillery_brigade
 		}
 	
 		research_cost = 0.5
@@ -1496,10 +1544,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_medium_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	modern_spaa = {
@@ -1509,7 +1559,7 @@ technologies = {
 		}
 
 		enable_subunits = {
-			#modern_sp_anti_air_brigade
+			modern_sp_anti_air_brigade
 		}
 	
 		research_cost = 0.5
@@ -1520,10 +1570,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_medium_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	basic_heavy_tank = { #Grosstraktor
@@ -1617,11 +1669,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			cat_heavy_armor
 			mio_cat_tech_heavy_armor_and_modules
 		}
+		special_project_specialization = { specialization_land }
 	}
 	
 	basic_heavy_td = {
@@ -1651,10 +1704,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_heavy_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	basic_heavy_art = {
@@ -1684,10 +1739,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_heavy_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 
 	
@@ -1717,10 +1774,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_heavy_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	improved_heavy_tank = { #Tiger
@@ -1788,11 +1847,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			cat_heavy_armor
 			mio_cat_tech_heavy_armor_and_modules
 		}
+		special_project_specialization = { specialization_land }
 	}
 	
 	improved_heavy_td = {
@@ -1818,10 +1878,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_heavy_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	improved_heavy_art = {
@@ -1847,10 +1909,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_heavy_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 
 	
@@ -1877,10 +1941,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_heavy_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	advanced_heavy_tank = { #King Tiger
@@ -1932,11 +1998,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			cat_heavy_armor
 			mio_cat_tech_heavy_armor_and_modules
 		}
+		special_project_specialization = { specialization_land }
 	}
 	
 	advanced_heavy_td = {
@@ -1962,10 +2029,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_heavy_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	advanced_heavy_art = {
@@ -1991,10 +2060,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_heavy_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	advanced_heavy_spaa = {
@@ -2020,13 +2091,35 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_heavy_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	super_heavy_tank = { #Maus
+
+		path = {
+			leads_to_tech = sp_armored_lc_high_impact_obliterator_cannon_tech
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = sp_armored_lc_naval_engine_conversion_tech
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = sp_armored_lc_transmission_improvements_tech
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = sp_armored_lc_specialized_field_manuals_tech
+			research_cost_coeff = 1
+		}
 
 		enable_equipments = {
 			super_heavy_tank_equipment_1
@@ -2035,12 +2128,24 @@ technologies = {
 		enable_subunits = {
 			super_heavy_armor
 		}
+
+		on_research_complete = {
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_land_land_cruiser	
+				}
+			}
+		}
 	
-		research_cost = 2.5
-		start_year = 1943
+		research_cost = 3
+		start_year = 1941
 		folder = {
 			name = armour_folder
-			position = { x = 8 y = 10 }
+			position = { x = 9 y = 8 }
 		}
 		
 		sub_technologies = {
@@ -2054,11 +2159,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			cat_heavy_armor
 			mio_cat_tech_heavy_armor_and_modules
 		}
+		special_project_specialization = { specialization_land }
 	}
 	
 	super_heavy_td = {
@@ -2079,10 +2185,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_heavy_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	super_heavy_art = {
@@ -2103,10 +2211,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_heavy_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 	super_heavy_spaa = {
@@ -2126,10 +2236,12 @@ technologies = {
 		}
 		
 		categories = {
-			mio_cat_tech_all_armor_and_modules
 			armor
+			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_heavy_armor_and_modules
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 	
 }

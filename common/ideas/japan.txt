@@ -1,8 +1,110 @@
 ideas = {
 
 	country = {
-	
-	
+		torpedo_cruisers_ns = {
+			name = JAP_torpedo_cruisers
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				sp_naval_torpedo_cruiser_speed_factor = 1
+			}
+			equipment_bonus = {
+				torpedo_cruiser = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
+
+		torpedo_cruisers_ns_mtg = {
+			name = JAP_torpedo_cruisers
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				sp_naval_torpedo_cruiser_speed_factor = 1
+			}
+			equipment_bonus = {
+				ship_hull_torpedo_cruiser = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
+		JAP_supremacy_of_the_battlefleet = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_navy_bonus
+
+			modifier = {
+				navy_capital_ship_defence_factor = 0.10
+				sp_naval_super_heavy_battleship_speed_factor = 1
+			}
+		}	
+		JAP_public_awareness_of_war_ns = {
+			allowed = {
+				always = no
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.05
+				political_power_factor = -0.05
+			}
+		}
+
+		JAP_public_awareness_of_war_worse_ns = {
+			name = JAP_public_awareness_of_war_ns
+			allowed = {
+				always = no
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.1
+				political_power_factor = -0.05
+			}
+		}
+
+		JAP_public_awareness_of_war_worst_ns = {
+			name = JAP_public_awareness_of_war_ns
+			allowed = {
+				always = no
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.1
+				political_power_factor = -0.1
+			}
+		}	
 		state_shintoism = {
 			allowed = {
 				always = no
@@ -19,7 +121,7 @@ ideas = {
 			modifier = {
 				industry_air_damage_factor = -0.1
 				army_morale_factor = 0.1
-				operative_slot = 1
+				#operative_slot = 1
 			}
 		}
 	
@@ -56,7 +158,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				naval_torpedo_screen_penetration_factor = 0.1
+				naval_torpedo_screen_penetration_factor = 0.2
 			}
 		}
 
@@ -80,6 +182,7 @@ ideas = {
 			equipment_bonus = {
 				ship_hull_carrier = {
 					carrier_size = 2
+                    instant = yes
 				}
 			}
 		}
@@ -105,7 +208,7 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.05
 				production_speed_arms_factory_factor = 0.05
 				production_speed_dockyard_factor = 0.05
-				consumer_goods_factor = 0.1ß
+				consumer_goods_factor = 0.10
 			}
 		}
 
@@ -131,7 +234,7 @@ ideas = {
 				production_speed_arms_factory_factor = 0.10
 				production_speed_dockyard_factor = 0.05
 				industrial_capacity_factory = 0.05
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.10
 			}
 		}
 
@@ -186,10 +289,6 @@ ideas = {
 			removal_cost = -1
 
 			picture = jap_interservice_rivalry_army_dominant
-			
-			research_bonus = {
-				naval_equipment = -0.1
-			}
 			
 			modifier = {
 				production_speed_arms_factory_factor = 0.1
@@ -391,8 +490,8 @@ ideas = {
 			
 			targeted_modifier = {
 				tag = CHI
-				attack_bonus_against = -0.35
-				defense_bonus_against = -0.2
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.15
 			}
 		}
 
@@ -458,8 +557,8 @@ ideas = {
 			
 			targeted_modifier = {
 				tag = CHI
-				attack_bonus_against = 0.6
-				defense_bonus_against = 0.4
+				attack_bonus_against = 0.4
+				defense_bonus_against = 0.2
 			}
 		}
 
@@ -479,11 +578,15 @@ ideas = {
 			
 			modifier = {
 				port_strike = 1
-				carrier_capacity_penalty_reduction = -0.4
-				sortie_efficiency = 0.4
+				carrier_capacity_penalty_reduction = -0.5
+				sortie_efficiency = 0.5
 				naval_strike_attack_factor = 0.2
 				naval_strike_targetting_factor = 0.2
 				naval_strike_agility_factor = 0.2
+				naval_defense_factor = 0.1
+                naval_damage_factor = 0.1
+                naval_detection = 0.15
+                naval_speed_factor = 0.1
 				army_attack_factor = 0.10
 				breakthrough_factor = 0.20
 				amphibious_invasion_defence = 0.50

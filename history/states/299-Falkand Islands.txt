@@ -1,25 +1,29 @@
-state= {
-	id=299
-	name="STATE_299"
-	manpower=2463
+state = {
+	id = 299
+	name = "STATE_299"
+	manpower = 2463
 	
 	state_category = enclave
 	
-	history= 	{
+	history = {
+
 		owner = ENG
+		add_core_of = SWE
+
 		buildings = {
 			infrastructure = 1
 			12960 = {
 				naval_base = 1
 			}
 		}
-		add_claim_by = SWE
 
 		victory_points = {
 			12960 1
 		}
+		
 	}
-	provinces= { 12960 13292 }
 
-	local_supplies=0.0 
+	provinces = { 12960 13292 }
+
+	local_supplies = 0.0 
 }

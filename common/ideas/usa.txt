@@ -1,6 +1,41 @@
 ideas = {
 
 	country = {
+		fleet_submarine_specialization_mtg = {
+			name = USA_fleet_submarines
+			picture = generic_naval_manufacturer_2
+			removal_cost = -1
+
+			allowed = { always = no }
+
+			modifier = {
+				sp_naval_fleet_submarine_speed_factor = 1
+			}
+			equipment_bonus = {
+				ship_hull_fleet_submarine = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
+
+		fleet_submarine_specialization = {
+			name = USA_fleet_submarines
+			picture = generic_naval_manufacturer_2
+			removal_cost = -1
+			
+			allowed = { always = no }
+
+			modifier = {
+				sp_naval_fleet_submarine_speed_factor = 1
+			}
+			equipment_bonus = {
+				fleet_submarine = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
 		great_depression = {
 			picture = usa_great_depression_3
 			
@@ -37,7 +72,7 @@ ideas = {
 			
 			modifier = {
 				political_power_cost = 0.65
-				consumer_goods_factor = 0.35
+				consumer_goods_factor = 0.50
 				conscription_factor = -0.4
 				join_faction_tension = 0.20
 				local_resources_factor = -0.15
@@ -58,7 +93,7 @@ ideas = {
 			
 			modifier = {
 				political_power_cost = 0.25
-				consumer_goods_factor = 0.10
+				consumer_goods_factor = 0.35
 				conscription_factor = -0.2
 				join_faction_tension = 0.20
 				local_resources_factor = -0.1
@@ -656,9 +691,23 @@ ideas = {
 			picture = generic_production_bonus
 
 			modifier = {
+				production_factory_start_efficiency_factor = 0.1
 				conversion_cost_civ_to_mil_factor= -0.5
 			}
 		}
+
+		USA_pre_war_production = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}	
+
+			removal_cost = -1	
+
+			modifier = {
+				conversion_cost_civ_to_mil_factor= -0.2
+			}			
+		}	
 	
 		bureau_of_ships_focus = {
 			
@@ -674,10 +723,6 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_navy_bonus
-
-			modifier = {
-				naval_equipment_upgrade_xp_cost = -0.1
-			}
 			
 			equipment_bonus = {
 
@@ -693,10 +738,6 @@ ideas = {
 					build_cost_ic = -0.05 instant = yes
 				}
 				ship_hull_light = {
-					build_cost_ic = -0.05 instant = yes
-				}
-				
-				ship_hull_submarine = {
 					build_cost_ic = -0.05 instant = yes
 				}
 			}
@@ -996,14 +1037,8 @@ ideas = {
 
 			picture = generic_pp_unity_bonus
 			
-			rule = {
-				can_join_opposite_factions = no
-				can_create_factions = yes
-			}
 			modifier = {
 				drift_defence_factor = 0.2
-				ai_badass_factor = 0.03 # cares for 3% of normal threat
-				ai_desired_divisions_factor = 0.5 
 			}
 		}
 
@@ -1197,7 +1232,24 @@ ideas = {
 				conscription_factor = 0.25
 			}			
 		}
-	
+		USA_manhattan_project_ns = {
+			name = USA_manhattan_project
+
+			picture = generic_research_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1			
+
+			modifier = {
+				specialization_nuclear_speed_factor = 0.05
+			}
+		}	
 	}
 
 
@@ -1664,7 +1716,7 @@ ideas = {
 				original_tag = USA
 			}
 			available = {
-				has_completed_focus = USA_wartime_industry
+				has_completed_focus = USA_pre_war_build_up
 			}
 			
 

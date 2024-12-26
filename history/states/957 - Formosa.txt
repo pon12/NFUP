@@ -4,6 +4,8 @@ state = {
 	manpower = 1
 	
 	state_category = pastoral
+	
+
 
 	history = {
 
@@ -14,6 +16,7 @@ state = {
 		buildings = {
 			infrastructure = 0
 		}
+
 		
 	}
 

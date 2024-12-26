@@ -3,15 +3,12 @@ state={
 	id=32
 	name="STATE_32" 
 	manpower = 1007500
-	resources={
-		steel=30 # was: 56
-		aluminium=30 # was: 58
-	}	
+	
 	state_category = town
 	
 	resources={
-		steel=16 #was:30 was: 56
-		aluminium=30 # was: 58
+		steel=50 #was:30 was: 56
+		aluminium=60 # was: 58
 	}
 
 	history={
@@ -22,6 +19,7 @@ state={
 		victory_points = {
 			3768 1 
 		}
+
 		add_core_of = FRA
 	}
 

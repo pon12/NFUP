@@ -6,7 +6,6 @@ state = {
 	state_category = pastoral
 
 	history = {
-
 		
 		buildings = {
 			# infrastructure = 1

@@ -155,65 +155,20 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SPR_equipment_shipments
-
-		prerequisite = { focus = SPR_the_corpo_truppe_volontarie }
-		prerequisite = { focus = SPR_the_condor_legion }
-		
-		icon = GFX_goal_generic_build_tank
-		x = 1
-		y = 1
-		relative_position_id = SPR_the_corpo_truppe_volontarie
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			GER = {
-				add_timed_idea = { idea = SPR_equipment_shipments days = 730 }
-				add_ai_strategy = { type = send_lend_lease_desire id = SPA value = 200 }
-			}
-			ITA = {
-				add_timed_idea = { idea = SPR_equipment_shipments days = 730 }
-				add_ai_strategy = { type = send_lend_lease_desire id = SPA value = 200 }
-			}
-			add_timed_idea = { idea = SPR_equipment_shipments_spain days = 730 }
-		}
-	}
-
-	focus = {
-		id = SPR_obtain_training_staff
-
-		prerequisite = { focus = SPR_equipment_shipments }
-		
-		icon = GFX_focus_generic_military_academy
-		x = -1
-		y = 1
-		relative_position_id = SPR_equipment_shipments
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			army_experience = 50
-			add_timed_idea = { idea = SPA_foreign_training_staff days = 730 }
-		}
-	}
-
-	focus = {
 		id = SPR_doctrinal_advancements
 
-		prerequisite = { focus = SPR_equipment_shipments }
+		prerequisite = { focus = SPR_the_condor_legion focus = SPR_the_corpo_truppe_volontarie }
 		
 		icon = GFX_goal_generic_army_doctrines
-		x = 1
+		x = -1
 		y = 1
-		relative_position_id = SPR_equipment_shipments
+		relative_position_id = SPR_the_condor_legion
 		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+			army_experience = 50
 			add_doctrine_cost_reduction = {
 				name = SPA_doctrinal_advancements
 				cost_reduction = 0.5
@@ -436,29 +391,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SPR_a_methodical_approach
-		available = {
-		}
-		bypass = {
-			has_global_flag = scw_over
-		}
-		prerequisite = { focus = SPR_unify_the_nationalist_front }
-		
-		icon = GFX_goal_generic_more_territorial_claims
-		x = 4
-		y = 1
-		relative_position_id = SPR_unify_the_nationalist_front
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = SPA_a_methodical_approach
-			custom_effect_tooltip = SPR_seize_public_transport_tt
-		}
-	}
-
-	focus = {
 		id = SPR_integrate_the_requetes
 		available = {
 		}
@@ -524,7 +456,7 @@ focus_tree = {
 		prerequisite = { focus = SPR_integrate_the_requetes  }
 		
 		icon = GFX_focus_research
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = SPR_integrate_the_requetes
 		cost = 5
@@ -683,26 +615,24 @@ focus_tree = {
 			    ideology = fascism
 			    popularity = 0.1
 			}
+			#if = {
+			#	limit = {
+			#		NOT = {
+			#			has_idea = war_economy
+			#			has_idea = tot_economic_mobilisation
+			#		}
+			#	}
+			#	add_ideas = war_economy
+			#}
 			if = {
 				limit = {
-					NOT = {
-						has_idea = war_economy
-						has_idea = tot_economic_mobilisation
+					OR = {
+						has_idea = volunteer_only
+						has_idea = limited_conscription
 					}
-				}
-				add_ideas = war_economy
-			}
-			if = {
-				limit = {
-					has_idea = limited_conscription
+					
 				}
 				add_ideas = extensive_conscription
-			}
-			if = {
-				limit = {
-					has_idea = volunteer_only
-				}
-				add_ideas = limited_conscription
 			}
 			every_owned_state = {
 				limit = {
@@ -730,7 +660,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SPR_adopt_the_26_points
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -800,7 +730,6 @@ focus_tree = {
 				has_global_flag = scw_over
 				NOT = {
 					country_exists = SPA
-					country_exists = SPD
 				}
 			}
 		}
@@ -817,28 +746,27 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			add_timed_idea = { idea = SPA_national_recovery_1 days = 1460 }
-			add_ideas = SPR_no_airfields
-			remove_ideas = {scw_pre_grinded_nerf2}
+			custom_effect_tooltip = SPR_economy_nr_tt
 			hidden_effect = {
-				169 = { 
-					remove_building = { type = air_base  level = 10 }  
+				add_to_variable = { var = SPReco_cgf value = -0.10 }
+				add_to_variable = { var = SPReco_stabwg value = 0.001 }
+				add_ideas = SPR_no_airfields
+				remove_ideas = scw_pre_grinded_nerf2
+				169 = {   
 					set_building_level = {
 						type = anti_air_building
 						level = 10
 						instant_build = yes
 					}		
 				}
-				173 = { 
-					remove_building = { type = air_base  level = 10 }  
+				173 = {  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
 						instant_build = yes
 					}		
 				}
-				168 = { 
-					remove_building = { type = air_base  level = 10 }  
+				168 = {  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
@@ -846,23 +774,20 @@ focus_tree = {
 					}		
 				}
 				789 = { 
-					remove_building = { type = air_base  level = 10 }  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
 						instant_build = yes
 					}		
 				}
-				170 = { 
-					remove_building = { type = air_base  level = 10 }  
+				170 = {  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
 						instant_build = yes
 					}		
 				}
-				175 = { 
-					remove_building = { type = air_base  level = 10 }  
+				175 = {  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
@@ -870,7 +795,6 @@ focus_tree = {
 					}		
 				}
 				167 = { 
-					remove_building = { type = air_base  level = 10 }  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
@@ -878,23 +802,20 @@ focus_tree = {
 					}		
 				}
 				793 = { 
-					remove_building = { type = air_base  level = 10 }  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
 						instant_build = yes
 					}		
 				}
-				41 = { 
-					remove_building = { type = air_base  level = 10 }  
+				41 = {  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
 						instant_build = yes
 					}		
 				}
-				788 = { 
-					remove_building = { type = air_base  level = 10 }  
+				788 = {  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
@@ -902,15 +823,13 @@ focus_tree = {
 					}		
 				}
 				791 = { 
-					remove_building = { type = air_base  level = 10 }  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
 						instant_build = yes
 					}		
 				}
-				794 = { 
-					remove_building = { type = air_base  level = 10 }  
+				794 = {  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
@@ -918,7 +837,6 @@ focus_tree = {
 					}		
 				}
 				166 = { 
-					remove_building = { type = air_base  level = 10 }  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
@@ -926,15 +844,13 @@ focus_tree = {
 					}		
 				}
 				165 = { 
-					remove_building = { type = air_base  level = 10 }  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
 						instant_build = yes
 					}		
 				}
-				176 = { 
-					remove_building = { type = air_base  level = 10 }  
+				176 = {  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
@@ -942,7 +858,6 @@ focus_tree = {
 					}		
 				}
 				172 = { 
-					remove_building = { type = air_base  level = 10 }  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
@@ -950,15 +865,13 @@ focus_tree = {
 					}		
 				}
 				792 = { 
-					remove_building = { type = air_base  level = 10 }  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
 						instant_build = yes
 					}		
 				}
-				790 = { 
-					remove_building = { type = air_base  level = 10 }  
+				790 = {  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
@@ -966,27 +879,20 @@ focus_tree = {
 					}		
 				}
 				171 = { 
-					remove_building = { type = air_base  level = 10 }  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
 						instant_build = yes
 					}		
 				}
-				174 = { 
-					remove_building = { type = air_base  level = 10 }  
+				174 = {  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
 						instant_build = yes
 					}		
 				}
-				290 = { 
-					remove_building = { type = air_base  level = 10 }		 
-				}
-
 				177 = { 
-					remove_building = { type = air_base  level = 10 }
 					set_building_level = {
 						type = anti_air_building
 						level = 10
@@ -1013,11 +919,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_ideas = SPA_fascist_economic_aid
-			swap_ideas = {
-				remove_idea = SPA_recovering_from_civil_war
-				add_idea = SPA_recovering_from_civil_war_2
-			}
+			
+			custom_effect_tooltip = SPR_modify_eco_modifier_tt
+			add_to_variable = { SPReco_cgf = -0.05 tooltip = consumer_goods_factor_tt }
+			add_to_variable = { SPReco_cs = 0.06 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { SPReco_FO = 0.12 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { SPReco_DO = 0.12 tooltip = industrial_capacity_dockyard_tt }
+			add_to_variable = { SPReco_DO = 0.1 tooltip = production_speed_arms_factory_factor_tt }				
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = SPA_fascist_economic_aid
 				bonus = 1.0
@@ -1032,19 +941,13 @@ focus_tree = {
 				technology = dispersed_industry3 
 				technology = dispersed_industry4 
 				technology = dispersed_industry5 
-			}
+			}		
 		}
 	}
 
 	focus = {
 		id = SPR_facilitate_pyrenees_freight_transports
 		available = {
-			has_full_control_of_state = 793
-			has_full_control_of_state = 794
-			has_full_control_of_state = 165
-			has_full_control_of_state = 176
-			has_full_control_of_state = 792
-			has_full_control_of_state = 41
 		}
 		bypass = {
 		}
@@ -1124,11 +1027,7 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = SPA_recovering_from_civil_war_2
-				add_idea = SPA_recovering_from_civil_war_3
-			}
-			random_owned_controlled_state = {
+			41 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -1136,6 +1035,11 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = SPR_modify_eco_modifier_tt
+			add_to_variable = { SPReco_cgf = -0.05 tooltip = consumer_goods_factor_tt }
+			add_to_variable = { SPReco_cs = 0.06 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { SPReco_FO = 0.14 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { SPReco_DO = 0.14 tooltip = industrial_capacity_dockyard_tt }		
 		}
 	}
 
@@ -1154,8 +1058,11 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-            remove_ideas = SPA_recovering_from_civil_war_3
-			add_ideas = SPA_the_duty_to_work
+			custom_effect_tooltip = SPR_modify_eco_modifier_tt
+			add_to_variable = { SPReco_cgf = -0.10 tooltip = consumer_goods_factor_tt }
+			add_to_variable = { SPReco_cs = 0.08 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { SPReco_FO = 0.24 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { SPReco_DO = 0.14 tooltip = industrial_capacity_dockyard_tt }
 		}
 	}
 
@@ -1176,11 +1083,11 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 4
+			169 = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1203,22 +1110,15 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-
-			swap_ideas = {
-				remove_idea = SPA_national_recovery_1
-				add_idea = SPA_national_recovery_2
+			hidden_effect = {
+				set_variable = { var = SPR_eco_ics value = 0.1 }
 			}
+			custom_effect_tooltip = SPR_economy_a_tt
 			add_tech_bonus = {
 				name = HOL_make_use_of_our_riches
 				bonus = 1.0
 				uses = 1
 				category = excavation_tech
-			}
-			add_tech_bonus = {
-				name = HOL_expand_curacao_oil_refineries
-				bonus = 1.0
-				uses = 1
-				category = synth_resources
 			}
 		}
 	}
@@ -1241,41 +1141,13 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = SPA_national_recovery_2
-				add_idea = SPA_national_recovery_3
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_idea = SPA_recovering_from_civil_war
-						has_idea = SPA_recovering_from_civil_war_2
-					}
-				}
-				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = SPA_recovering_from_civil_war
-						add_idea = SPA_recovering_from_civil_war_2
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_idea = SPA_recovering_from_civil_war
-				}
-				swap_ideas = {
-					remove_idea = SPA_recovering_from_civil_war
-					add_idea = SPA_recovering_from_civil_war_2
-				}
-			}
-			if = {
-				limit = {
-					has_idea = SPA_recovering_from_civil_war_2
-				}
-				swap_ideas = {
-					remove_idea = SPA_recovering_from_civil_war_2
-					add_idea = SPA_recovering_from_civil_war_3
-				}
+			custom_effect_tooltip = SPR_economy_sa_tt
+			hidden_effect = {
+				add_to_variable = { var = SPReco_cgf value = -0.15 }
+				add_to_variable = { var = SPReco_cs value = 0.06 }
+				add_to_variable = { var = SPReco_FO value = 0.12 }
+				add_to_variable = { var = SPReco_DO value = 0.12 }
+				add_to_variable = { var = SPReco_stabwg value = -0.001 }
 			}
 		}
 	}
@@ -1289,7 +1161,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SPR_spanish_austerity
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -1318,7 +1190,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = SPA_expand_the_axis_gold_trade
+			custom_effect_tooltip = SPR_modify_eco_modifier_tt
+			add_to_variable = { SPReco_cs = 0.15 tooltip = production_speed_buildings_factor_tt }
 		}
 	}
 
@@ -1340,16 +1213,19 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			remove_ideas = SPA_recovering_from_civil_war_3
-			random_owned_controlled_state = {
-				set_state_flag = SPA_ensure_agricultural_self_sufficiency_2civ
-				add_extra_state_shared_building_slots = 4
+			167 = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 4
+					level = 2
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = SPR_modify_eco_modifier_tt
+			add_to_variable = { SPReco_cgf = -0.15 tooltip = consumer_goods_factor_tt }
+			add_to_variable = { SPReco_cs = 0.14 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { SPReco_FO = 0.28 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { SPReco_DO = 0.28 tooltip = industrial_capacity_dockyard_tt }
 		}
 	}
 
@@ -1367,7 +1243,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			army_experience = 50
-			random_owned_controlled_state = {
+			170 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory

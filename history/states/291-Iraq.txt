@@ -26,16 +26,18 @@ state={
 		}
 		buildings = {
 			infrastructure = 3 #was: 5
+			arms_factory = 1
+			industrial_complex = 2 
 			air_base = 4
 			2089 = {
 				naval_base = 1
 			}
 		}
-		add_core_of = SWE
+		add_core_of = ENG
 	}
 
 	provinces={
-		78 2004 2089 2097 3795 7977 7994 8001 10876 12046 12726 12839 12855 
+		12788 12314 12769 10896 78 2004 2089 2097 3795 7977 7994 8001 10876 12046 12726  12855 
 	}
 
 	local_supplies=6.0 

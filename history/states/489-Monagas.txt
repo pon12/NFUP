@@ -5,7 +5,7 @@ state={
 	manpower = 1
 	
 	state_category = town
-	
+
 
 	history={
 		owner = SWE
@@ -14,11 +14,12 @@ state={
 		}
 		add_core_of = SWE
 
+
 	}
 
 	provinces={
 		1944 1997 2052 4526 5088 10855 12772 
 	}
 
-	local_supplies=0.0 
+	local_supplies=6.0 
 }

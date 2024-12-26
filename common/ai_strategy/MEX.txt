@@ -8,9 +8,6 @@ stay_in_mexicos_faction = {
 		OR = {
 			is_subject = yes
 			has_war_with = "MEX"
-			MEX = {
-				is_enemy_ideology = yes
-			}
 		}
 	}
 	
@@ -36,9 +33,6 @@ mexico_stay_in_americas_faction = {
 		OR = {
 			is_subject = yes
 			has_war_with = "USA"
-			USA = {
-				is_enemy_ideology = yes
-			}
 		}
 	}
 	

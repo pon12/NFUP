@@ -42,34 +42,7 @@ ITA_and_GER_help_SPA_win_civil_war = {
 	}
 }
 
-# make ussr want to send stuff to the communist side of SCW
-SOV_help_SPD_win_civil_war = {
-	allowed = {
-		NOT = { has_dlc = "La Resistance" }
-		original_tag = SOV
-	}
-	enable = {
-		date < 1939.1.1
-		SPR = { has_civil_war = yes }
-		country_exists = SPD
-		has_government = communism
-		NOT = { has_global_flag = scw_over }
-	}
-	abort = {
-		OR = {
-			date > 1939.1.1
-			NOT = { has_government = communism }
-			SPR = { has_civil_war = no }
-			has_global_flag = scw_over
-		}
-	}
 
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = SPD
-		value = 50
-	}
-}
 
 SPR_dont_attack_at_startup_of_civil_war = {
 	allowed = {

@@ -28,7 +28,9 @@ state = {
 			}
 			9784 = { #Bari
 				naval_base = 3
+				naval_facility = 1
 			}
+
 		}
 		add_core_of = ITA
 	}

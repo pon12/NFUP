@@ -11,14 +11,14 @@ state={
 			8066 1
 		}
 		owner = RAJ
+		add_core_of = RAJ
 		buildings = {
 			infrastructure = 1
 		}
-		add_core_of = RAJ
 	}
 
 	provinces={
-		1179 5043 5075 7917 8013 8066 12761 12774 
+		1179 5043 5075 7917 8013 8066 12761 12774 8068
 	}
 
 	local_supplies=0.0 

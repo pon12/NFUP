@@ -7,7 +7,6 @@ state={
 	state_category = town
 
 	history={
-		
 		owner = ENG
 		victory_points = {
 			200 5 #Aberdeen

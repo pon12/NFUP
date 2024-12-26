@@ -1,7 +1,347 @@
 ideas = {
 
+	hidden_ideas = {
+		GER_Barb_supply = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_acquire_tanks
+
+			modifier = { 
+				supply_node_range = 0.1 
+			}			
+		}
+
+		DOUBLE_SF_CAP = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			modifier = {
+				special_forces_min = 200
+			}
+		}
+		QUADRUPLE_SF_CAP = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			modifier = {
+				special_forces_min = 600
+			}
+		}
+		NO_SF_CAP = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			modifier = {
+				special_forces_min = 8000
+			}
+		}
+		lower_surrender_cap_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_acquire_tanks
+
+			modifier = { 
+				surrender_limit = -0.3
+			}				
+		}
+	}
+
+
+
+
+
 	country = {
-		
+		GER_choco = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = pervitin
+
+			modifier = { 
+				planning_speed = 0.15
+				army_defence_factor = -0.025
+			}
+			
+			equipment_bonus = {
+				armor = {
+					maximum_speed = 0.05 instant = yes
+				}
+				motorized_equipment = { 
+					maximum_speed = 0.05 instant = yes		
+				}				
+			}
+		}
+
+		GER_pillen = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GER_drug_fueled_rage
+
+			modifier = {
+				army_morale_factor = 0.1
+				army_defence_factor = -0.025
+			}
+		}	
+
+		"Fall Gelb" = {
+			picture = generic_acquire_tanks
+			allowed = {
+				always = no 
+			}
+			cancel = {
+				GER = {
+					controls_state = 16
+				}
+			}
+			modifier = {
+				army_speed_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = FRA 
+				breakthrough_bonus_against = 0.05
+			}
+		}
+
+		GER_stuka = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = pervitin
+
+			equipment_bonus = {
+				small_plane_cas_airframe = {
+					air_ground_attack = 0.1 maximum_speed = -0.25  air_agility = -0.25    instant = yes
+				}		
+				medium_plane_airframe = {
+					air_ground_attack = 0.1 maximum_speed = -0.25  air_agility = -0.25    instant = yes
+				}	
+			}
+		}	
+
+		GER_apointalbertspeer_idea= {
+
+			name = GER_apointalbertspeer
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_factory_start_efficiency_factor = 0.10
+			}
+
+			picture = generic_production_bonus
+			
+			removal_cost = -1			
+			
+		}
+
+		GER_emergency_fighter = {
+			allowed = {
+				always = no
+			}
+
+
+			removal_cost = -1
+
+			picture = generic_air_payment
+
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.10 instant = yes
+				}
+				light_tank_chassis = {
+					instant = yes
+					build_cost_ic = 0.15
+				}
+				medium_tank_chassis = {
+					instant = yes
+					build_cost_ic = 0.15
+				}
+				heavy_tank_chassis = {
+					instant = yes
+					build_cost_ic = 0.15
+				}
+				light_tank_artillery_chassis = {
+					instant = yes
+					build_cost_ic = 0.15
+				}
+				medium_tank_artillery_chassis = {
+					instant = yes
+					build_cost_ic = 0.15
+				}
+				heavy_tank_artillery_chassis = {
+					instant = yes
+					build_cost_ic = 0.15
+				}
+				light_tank_destroyer_chassis = {
+					instant = yes
+					build_cost_ic = 0.15
+				}
+				medium_tank_destroyer_chassis = {
+					instant = yes
+					build_cost_ic = 0.15
+				}
+				heavy_tank_destroyer_chassis = {
+					instant = yes
+					build_cost_ic = 0.15
+				}
+				amphibious_tank_chassis = {
+					instant = yes
+					build_cost_ic = 0.15
+				}
+			}
+		}
+
+		GER_emergency_tanks = {
+			allowed = {
+				always = no
+			}
+
+
+			removal_cost = -1
+
+			picture = generic_air_payment
+
+			equipment_bonus = {
+				light_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				medium_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				heavy_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				light_tank_artillery_chassis = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				medium_tank_artillery_chassis = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				heavy_tank_artillery_chassis = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				light_tank_destroyer_chassis = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				medium_tank_destroyer_chassis = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				heavy_tank_destroyer_chassis = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				amphibious_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				small_plane_airframe = {
+					build_cost_ic = 0.15 instant = yes
+				}
+			}
+		}
+
+		GER_plan_z_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_navy_bonus
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				ship_hull_heavy = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				ship_hull_carrier = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				ship_hull_submarine = {
+					build_cost_ic = 1 instant = yes
+				}				
+			}
+		}
+				
 		volunteers_3 = {
 			allowed = {
 				always = no
@@ -119,23 +459,6 @@ ideas = {
 				no_supply_grace = 72
 			}
 
-		}
-		GER_Barb_supply = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = fascism
-			}
-
-			removal_cost = -1
-
-			picture = generic_acquire_tanks
-
-			modifier = { 
-				supply_node_range = 0.1 
-			}			
 		}
 		axis_fall_blau = {
 			allowed = {
@@ -366,75 +689,6 @@ ideas = {
 				army_attack_factor = -0.3
 			}
 		}
-
-		DOUBLE_SF_CAP = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = generic_production_bonus
-
-			modifier = {
-				special_forces_min = 200
-			}
-		}
-		QUADRUPLE_SF_CAP = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = generic_production_bonus
-
-			modifier = {
-				special_forces_min = 600
-			}
-		}
-		NO_SF_CAP = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = generic_production_bonus
-
-			modifier = {
-				special_forces_min = 8000
-			}
-		}
-		GER_rubber_balance = { 
-		
-				allowed = {
-					always = no
-				}
-
-				allowed_civil_war = {
-					always = yes
-				}
-
-				removal_cost = -1
-				picture = generic_manpower_bonus
-				
-				modifier = { min_export = -0.3 }
-		
-		
-		}
 		peace_training = {
 			allowed = {
 				always = no
@@ -509,8 +763,8 @@ ideas = {
 			}
 			targeted_modifier = {
 				tag = SOV
-				attack_bonus_against = -0.15
-				defense_bonus_against = -0.1
+				attack_bonus_against = -0.20
+				defense_bonus_against = -0.15
 			}			
 		}
 		Steiners_counter = {
@@ -521,53 +775,53 @@ ideas = {
 			picture = generic_acquire_tanks
 			targeted_modifier = {
 				tag = ENG
-				attack_bonus_against = -0.15
-				defense_bonus_against = -0.1
+				attack_bonus_against = -0.20
+				defense_bonus_against = -0.15
 			}
 			targeted_modifier = {
 				tag = USA
-				attack_bonus_against = -0.15
-				defense_bonus_against = -0.1
+				attack_bonus_against = -0.20
+				defense_bonus_against = -0.15
 			}
 			targeted_modifier = {
 				tag = CAN
-				attack_bonus_against = -0.15
-				defense_bonus_against = -0.1
+				attack_bonus_against = -0.20
+				defense_bonus_against = -0.15
 			}
 			targeted_modifier = {
 				tag = SAF
-				attack_bonus_against = -0.15
-				defense_bonus_against = -0.1
+				attack_bonus_against = -0.20
+				defense_bonus_against = -0.15
 			}
 			targeted_modifier = {
 				tag = FRA
-				attack_bonus_against = -0.15
-				defense_bonus_against = -0.1
+				attack_bonus_against = -0.20
+				defense_bonus_against = -0.15
 			}
 			targeted_modifier = {
 				tag = AST
-				attack_bonus_against = -0.15
-				defense_bonus_against = -0.1
+				attack_bonus_against = -0.20
+				defense_bonus_against = -0.15
 			}
 			targeted_modifier = {
 				tag = RAJ
-				attack_bonus_against = -0.15
-				defense_bonus_against = -0.1
+				attack_bonus_against = -0.20
+				defense_bonus_against = -0.15
 			}
 			targeted_modifier = {
 				tag = NZL
-				attack_bonus_against = -0.15
-				defense_bonus_against = -0.1
+				attack_bonus_against = -0.20
+				defense_bonus_against = -0.15
 			}
 			targeted_modifier = {
 				tag = BRA
-				attack_bonus_against = -0.15
-				defense_bonus_against = -0.1
+				attack_bonus_against = -0.20
+				defense_bonus_against = -0.15
 			}
 			targeted_modifier = {
 				tag = MEX
-				attack_bonus_against = -0.15
-				defense_bonus_against = -0.1
+				attack_bonus_against = -0.20
+				defense_bonus_against = -0.15
 			}
 			targeted_modifier = {
 				tag = SOV
@@ -687,22 +941,6 @@ ideas = {
 				political_power_factor = -2.3
             }
 		}
-		SAF_annex_eco = {
-            allowed = { always = yes }
-
-            removal_cost = -1
-            picture = great_depression	
-
-			cancel={
-				CAN = { has_war = yes }
-			}
-
-			modifier = {
-				consumer_goods_factor = -0.15
-				industrial_capacity_factory = 0.10
-				industrial_capacity_dockyard = 0.10				
-			}		
-		}
 		GER_prepare_barb_idea = {
 			allowed = {
 				always = yes
@@ -747,7 +985,7 @@ ideas = {
 				custom_modifier_tooltip = hp_spirit	
 			}
 			equipment_bonus = {
-				small_plane_airframe = {  air_defence = 0.2 instant = yes }
+				small_plane_airframe = {  air_defence = 0.1 instant = yes }
 			}
 		}
 		ENG_operation_compass = {
@@ -759,7 +997,7 @@ ideas = {
 			}
 			modifier = {
 				heat_attrition_factor = -0.5  
-#				army_strength_factor = 0.3 
+				#army_strength_factor = 0.3 
 				custom_modifier_tooltip = hp_spirit_allies
 			}			
 		}
@@ -1027,7 +1265,7 @@ ideas = {
 		VIC_produce_aircraft_parts = {
 			picture = generic_bomber_production_diverted
 			allowed = {
-				original_tag = EFR #should probably be VIC
+				original_tag = EFR #should probably be 
 				always = no
 			}
 
@@ -1105,7 +1343,141 @@ ideas = {
 				attack_bonus_against = -0.3
 				defense_bonus_against = -0.1
 			}			
-		}		 		
+		}	
+		MEFO_bills_axis_minor = {
+			allowed = {
+				always = no
+			}
+			cancel = {
+				GER = { has_war = yes }
+			}	
+
+			removal_cost = -1
+
+			picture = ger_mefo_bills
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.20
+				political_power_gain = -0.25
+			}			
+		}
+		victory_programs = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				war_support_factor = 0.10
+				stability_factor = 0.10
+				civilian_factory_use = 5
+				production_cost_arms_factory_factor = -0.2
+			}
+		}
+		emergency_dday_idea = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_acquire_tanks
+
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.20
+			}
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.20
+			}
+			targeted_modifier = {
+				tag = SPR
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.20
+			}
+			targeted_modifier = {
+				tag = ERF
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.20
+			}
+			targeted_modifier = {
+				tag = HUN
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.20
+			}
+			targeted_modifier = {
+				tag = ROM
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.20
+			}
+			targeted_modifier = {
+				tag = BUL
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.20
+			}
+			targeted_modifier = {
+				tag = FIN
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.20
+			}
+
+		}
+		ITA_surrender_limit_idea = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = SPR_death_before_surrender
+
+			modifier = {
+				surrender_limit = 0.1
+			}						
+		}
+		NOR_crofter = {
+			picture = generic_victors_of_ww1 
+			modifier = {
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.1
+				amphibious_invasion = 0.2
+				winter_attrition_factor = -0.25
+				out_of_supply_factor = -0.25
+			}
+		}	
+		GER_endsieg_idea = {
+			picture = generic_fascism_drift_2
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				dig_in_speed_factor = 1
+				max_dig_in_factor = 0.1
+			}
+		}	
 	}
 	hidden_ideas = {
 		idea_JUNO_truck_production_cost = {
@@ -1253,60 +1625,6 @@ ideas = {
 				license_purchase_cost = -0.3
 			}
 		}
-		
-MAN_amptanks_focus = {
 
-			picture = generic_industrial_concern_2
-
-            allowed = {
-                tag = MAN
-                always = yes
-            }
-
-            allowed_civil_war =  {always = yes }
-
-            removal_cost = -1
-
-            equipment_bonus = {
-                amphibious_tank_equipment = {
-                    build_cost_ic = -0.03 instant = yes
-            }
-  }
-	}
-			AST_man = {					
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = generic_manpower_bonus
-			
-			modifier = {
-				conscription = 0.1
-			}
-		}
-		ITA_battleships = {
-
-			picture = generic_industrial_concern_2
-
-            allowed = {
-                tag = MAN
-                always = yes
-            }
-
-            allowed_civil_war =  {always = yes }
-
-            removal_cost = -1
-
-            equipment_bonus = {
-                ship_hull_heavy = {
-                    build_cost_ic = -0.03 instant = yes
-            }
-  }
 	}
 }

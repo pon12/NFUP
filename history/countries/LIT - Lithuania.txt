@@ -1,6 +1,5 @@
 ﻿capital = 11
 
-oob = "LIT_1936"
 
 set_research_slots = 0
 
@@ -14,8 +13,6 @@ set_technology = {
 	gw_artillery = 1
 	tech_support = 1
 }
-
-set_convoys = 10
 
 
 set_politics = {

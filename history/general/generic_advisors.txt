@@ -39,7 +39,7 @@ every_possible_country = {
 
 every_possible_country = {
 	limit = {
-		NOT = { OR = { allies = yes ai_country = yes tag = GER tag = SPR } }
+		NOT = { OR = { allies = yes ai_country = yes tag = GER tag = SPR tag = FIN tag = HUN } }
 		is_dynamic_country = no
 		NOT = {
 			has_allowed_idea_with_traits = { idea = fascist_demagogue characters = yes }
@@ -66,19 +66,7 @@ every_possible_country = {
 	limit = {
 		has_dlc = "La Resistance"
 		# china gets a special one via focus
-		NOT = { original_tag = CHI }
-		if = {
-			limit = {
-				has_dlc = "Battle for the Bosporus"
-			}
-			NOT = {
-				tag = GRE
-			}
-		}
-		if = {
-			limit = { has_dlc = "By Blood Alone" }
-			NOT = { OR = { tag = ETH } }
-		}
+		NOT = { OR = {  ai_country = yes tag = CHI tag = HUN } }
 		NOT = {
 			has_allowed_idea_with_traits = { idea = head_of_intelligence characters = yes }
 		}

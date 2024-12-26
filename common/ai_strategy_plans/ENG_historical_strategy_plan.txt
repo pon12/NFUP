@@ -31,28 +31,16 @@ ENG_historical_plan = {
 		ENG_prepare_for_the_inevitable #February 10 1939
 		ENG_home_defence #April 20 1939
 		ENG_issue_gasmasks#June 30 1939
-		ENG_military_training_act#September 10 1939
-		fighter_command_focus #November 20 1939
-		bomber_command_focus #January 30 1940
-		coastal_command_focus #April 10 1940
 		aircraft_production_focus #June 20 1940	
-		naval_rearmament_focus #August 30 1940
 		ENG_motorized_focus #November 10 1940
 		crypto_bomb_focus #January 20 1941	
 		tizard_mission_focus#March 30 1941	
 		ENG_special_air_service#June 10 1941
-		uk_destroyer_focus#August 20 1941
-		uk_waves_focus#October 30 1941	
-		uk_convoy_focus#January 10
 		ENG_chiefs_of_staff_committee	#March 20 1942
 		maud_focus#May 30 1942	
 		uk_mediterranean_focus#August 10 1942
-		uk_carrier_focus#October 20 1942	
  		uk_rock_focus#May 20 1943
  		singapore_focus#July 30 1943
- 		uk_amphibious_focus
- 		uk_protect_suez
-		uk_malta_focus
 		uk_commonwealth_focus
 		UK_secret_focus
 		ENG_tank_focus

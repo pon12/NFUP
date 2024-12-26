@@ -25,7 +25,7 @@ FIN_motti_tactics_category = {
 	priority = 89
 	
 	visible = {
-#		has_completed_focus = FIN_motti_tactics
+		has_completed_focus = FIN_motti_tactics
 	}
 
 	on_map_area = {

@@ -1038,6 +1038,7 @@ operation_coup_government = { ### 7 1/70
 	}
 
 	available = {
+		always = no
 	}
 
 	on_start = { #SCOPE_OPERATION
@@ -1211,6 +1212,15 @@ operation_boost_resistance = { ### 8 2/40
 	operatives = 2
 
 	visible = {
+		network_national_coverage = {
+			target = FROM
+			value > 0
+		}
+
+		has_operation_token = {
+			tag = FROM
+			token = token_resistance_contacts
+		}
 		always = no
 	}
 
@@ -1350,8 +1360,8 @@ operation_make_resistance_contacts = { ### 9 2/40
 			any_controlled_state = {
 				has_resistance = yes
 			}
-		}
-		always = no		
+		}	
+		always = no	
 	}
 
 	equipment = {

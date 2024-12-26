@@ -5,6 +5,7 @@ state={
 	manpower = 1
 	
 	state_category = town
+	
 	history={
 		owner = SWE
 		buildings = {
@@ -14,8 +15,8 @@ state={
 	}
 
 	provinces={
-		5082 7448 7519 7584 7916 7984 10476 10737 10781 10826 10852 10896 12248 12314 12653 12769 12831 12877 
+		13122 961    
 	}
-
+	buildings_max_level_factor=1.000
 	local_supplies=0.0 
 }

@@ -1668,18 +1668,6 @@ defined_text = {
 	}
 }
 
-defined_text = {
-	name = GetVictoryOrDefeatRepublicans
-	text = {
-		trigger = {
-			country_exists = SPD
-		}
-		localization_key = bftb_bulgaria_scw_volunteers.1.desc_republicans_victorious
-	}
-	text = {
-		localization_key = bftb_bulgaria_scw_volunteers.1.desc_republicans_defeated
-	}
-}
 
 defined_text = {
 	name = GetVictoryOrDefeatNationalists

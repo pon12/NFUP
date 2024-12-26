@@ -19,7 +19,6 @@ state={
 			6313 1 #Limerick
 		}
 		add_core_of = IRE
-		add_core_of = ENG
 	}
 
 	provinces={

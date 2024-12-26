@@ -261,11 +261,11 @@ country_event = {
 				    target = SPA
 				    type = annex_everything
 				}
+				country_event = { id = super.3 hours = 0 }	
 			}
 			SPA = {
 				load_focus_tree = {
 					tree = JFU_RSPAIN_focus
-					keep_completed = no
 				}
 				inherit_technology = SPR
 				country_lock_all_division_template = no

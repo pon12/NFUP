@@ -10,6 +10,7 @@ state = {
 		}
 		owner = ITA
 		add_core_of = ITA
+
 		buildings = {
 			infrastructure = 1
 			dockyard = 1

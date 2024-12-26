@@ -7,7 +7,7 @@ state = {
 	state_category = rural
 	
 	resources={
-		steel=15 # was: 4
+		steel=10 # was: 4
 	}
 	history={
 		owner = FIN
@@ -30,7 +30,7 @@ state = {
 		}
 
 		buildings = {
-			infrastructure = 1 #TODO_Manu: Was 2
+			infrastructure = 1 #MM: Was 2
 			industrial_complex = 1
 		}
 		

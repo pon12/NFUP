@@ -5539,7 +5539,7 @@ focus = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
 			date > 1939.6.1
 			date < 1940.6.1
-			GER = { has_completed_focus = GER_mol_rib_pact } 	
+			GER = { has_completed_focus = GER_molotov_ribbentrop_pact } 	
 		}
 
 		bypass = {
@@ -5596,7 +5596,7 @@ focus = {
 		icon = GFX_focus_generic_attack_romania
 		prerequisite = { focus = SOV_claims_in_baltic }
 		available = { 
-			GER = { has_completed_focus = GER_mol_rib_pact } 	
+			GER = { has_completed_focus = GER_molotov_ribbentrop_pact } 	
 			date < 1941.1.1
 		}
 		x = 0

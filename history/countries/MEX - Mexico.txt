@@ -9,14 +9,12 @@ if = {
 }
 if = {
 	limit = { has_dlc = "By Blood Alone" }
-	set_air_oob = "MEX_1936_air_bba"
 	set_technology = {
 		aa_lmg = 1
 		early_bombs = 1
 		iw_small_airframe = 1
 	}
 	else = {
-		set_air_oob = "MEX_1936_air_legacy"
 		set_technology = {
 			early_fighter = 1
 			early_bomber = 1
@@ -106,7 +104,6 @@ recruit_character = MEX_jose_gonzalo_escobar
 recruit_character = MEX_agustin_olachea
 recruit_character = MEX_leon_trotsky
 recruit_character = MEX_saturnino_cedillo
-recruit_character = MEX_hector_meixueiro
 recruit_character = MEX_matias_santos_ramos
 recruit_character = MEX_enrique_estrada
 recruit_character = MEX_pablo_gonzalez

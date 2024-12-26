@@ -18,9 +18,24 @@ ideas = {
 				max_surrender_limit_offset = 1
 			}
 		}
-	}
 
-	country = {
+		SPR_political_violence = {
+
+			picture = SPR_political_violence
+
+			allowed = {
+				original_tag = SPR
+				NOT = { has_global_flag = spanish_civil_war }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				disabled_ideas = 1
+			}
+		}
 		SPR_no_airfields = {
 			
 			name = Isolationism
@@ -32,7 +47,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				production_speed_air_base_factor = -10
-				#production_speed_synthetic_refinery_factor = -10
+				production_speed_synthetic_refinery_factor = -10
 				production_speed_radar_station_factor = -10
 				production_speed_naval_base_factor = -10
 			}
@@ -69,8 +84,21 @@ ideas = {
 				}
 			}
 		}
+		SPR_eco_placeholder_idea = {
 
+			name = SPR_eco_placeholder
+			allowed = {
+				original_tag = SPR
+			}	
+			removal_cost = -1
 
+			modifier = {
+				stability_weekly = 0.002
+			}		
+		}
+	}
+
+	country = {
 		SPR_carlists_uprising = {
 
 			name = carlist_uprising
@@ -105,25 +133,6 @@ ideas = {
 			modifier = {
 				surrender_limit = 1
 				max_surrender_limit_offset = 0.25
-			}
-		}
-
-		SPA_anti_republican_offensive = {
-
-			picture = SPR_nationalist_remnants
-
-			allowed = {
-				original_tag = SPR
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			targeted_modifier = {
-				tag = SPD
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.05
 			}
 		}
 

@@ -6,7 +6,6 @@ state = {
 	state_category = pastoral
 
 	history = {
-
 		
 		buildings = {
 			# infrastructure = 1
@@ -21,6 +20,7 @@ state = {
 		
 		owner = ETH
 		add_core_of = ETH
+
 	}
 
 	provinces = {

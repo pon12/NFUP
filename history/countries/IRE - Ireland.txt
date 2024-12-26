@@ -48,6 +48,7 @@ recruit_character = IRE_sean_lemass
 recruit_character = IRE_douglas_hyde
 recruit_character = IRE_sean_ceallaigh
 
+recruit_character = IRE_ernest_walton
 
 set_politics = {
 	ruling_party = democratic

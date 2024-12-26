@@ -10,7 +10,6 @@ state = {
 	}
 
 	history= {
-		
 		owner = ENG
 		victory_points = {
 			6062 1 #Skye/Stornoway

@@ -7,11 +7,8 @@
 		modifier = {
 			add = 10
 			tag = CZE
-			has_dlc = "Death or Dishonor"
 		}
 	}
 	
 	default = no
-
-	continuous_focus_position = { x = 50 y = 1100 }
 }

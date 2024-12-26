@@ -95,24 +95,6 @@ ideas = {
 			}
 		}
 
-		SPR_political_violence = {
-
-			picture = SPR_political_violence
-
-			allowed = {
-				original_tag = SPR
-				NOT = { has_global_flag = spanish_civil_war }
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			modifier = {
-				stability_factor = -0.15
-				disabled_ideas = 1
-			}
-		}
 
 		SPR_national_strikes_1 = { # Two times suppressed as Nationalists
 
@@ -927,26 +909,6 @@ ideas = {
 			}
 		}
 
-		SPR_masters_of_our_own_fate = {
-
-			picture = SPR_masters_of_our_own_fate
-
-			allowed = {
-				original_tag = SPR
-				NOT = { has_government = fascism }
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			targeted_modifier = {
-				tag = SPD
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.05
-			}
-		}
-
 		SPR_masters_of_our_own_fate_tooltip = { # Only present for the Focus Tree tooltip! Never actually assigned.
 
 			name = SPR_masters_of_our_own_fate
@@ -964,26 +926,6 @@ ideas = {
 
 			targeted_modifier = {
 				tag = SPR
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.05
-			}
-		}
-
-		SPR_crush_the_revolution = {
-
-			picture = SPR_crush_the_revolution
-
-			allowed = {
-				original_tag = SPR
-				NOT = { has_government = fascism }
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			targeted_modifier = {
-				tag = SPD
 				attack_bonus_against = 0.15
 				defense_bonus_against = 0.05
 			}

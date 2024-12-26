@@ -5,7 +5,6 @@ state={
 	manpower = 2212021
 	
 	state_category = city
-	
 
 	history={
 		owner = ENG

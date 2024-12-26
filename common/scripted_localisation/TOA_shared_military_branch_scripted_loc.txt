@@ -20,30 +20,12 @@ defined_text = {
 		localization_key = SMB_army_BRA
 	}
 	text = {
-		trigger = {
-			tag = ARG
-		}
-		localization_key = SMB_army_ARG
-	}
-	text = {
-		trigger = {
-			tag = CHL
-		}
-		localization_key = SMB_army_CHL
-	}
-	text = {
 		localization_key = SMB_army_default
 	}
 }
 # The Army desc
 defined_text = {
 	name = SMB_army_desc_key
-	#text = {
-	#	trigger = {
-	#		tag = CHL
-	#	}
-	#	localization_key = SMB_army_CHL_desc 
-	#}
 	text = {
 		localization_key = SMB_army_default_desc
 	}
@@ -152,12 +134,6 @@ defined_text = {
 defined_text = { 
 	name = SMB_tank_warfare_key
 	text = {
-		trigger = {
-			tag = CHL
-		}
-		localization_key = SMB_tank_warfare_default_CHL
-	}
-	text = {
 		localization_key = SMB_tank_warfare_default
 	}
 }
@@ -240,12 +216,6 @@ defined_text = {
 defined_text = { 
 	name = SMB_artillery_key
 	text = {
-		trigger = {
-			tag = CHL
-		}
-		localization_key = SMB_artillery_CHL
-	}
-	text = {
 		localization_key = SMB_artillery_default
 	}
 }
@@ -288,12 +258,6 @@ defined_text = {
 defined_text = { 
 	name = SMB_army_professionalism_key
 	text = {
-		trigger = {
-			tag = CHL
-		}
-		localization_key = SMB_army_professionalism_CHL
-	}
-	text = {
 		localization_key = SMB_army_professionalism_default
 	}
 }
@@ -307,12 +271,6 @@ defined_text = {
 # Conscription
 defined_text = { 
 	name = SMB_conscription_key
-	text = {
-		trigger = {
-			tag = CHL
-		}
-		localization_key = SMB_conscription_CHL
-	}
 	text = {
 		localization_key = SMB_conscription_default
 	}
@@ -402,24 +360,12 @@ defined_text = {
 		localization_key = SMB_special_forces_option_2_BRA
 	}
 	text = {
-		trigger = {
-			original_tag = CHL
-		}
-		localization_key = SMB_special_forces_option_2_CHL
-	}
-	text = {
 		localization_key = SMB_special_forces_option_2_default
 	}
 }
 # Marines desc
 defined_text = { 
 	name = SMB_special_forces_option_2_desc_key
-	text = {
-		trigger = {
-			original_tag = CHL
-		}
-		localization_key = SMB_special_forces_option_2_CHL_desc
-	}
 	text = {
 		localization_key = SMB_special_forces_option_2_default_desc
 	}
@@ -508,18 +454,6 @@ defined_text = {
 			tag = BRA
 		}
 		localization_key = SMB_air_force_BRA
-	}
-	text = {
-		trigger = {
-			tag = ARG
-		}
-		localization_key = SMB_air_force_ARG
-	}
-	text = {
-		trigger = {
-			tag = CHL
-		}
-		localization_key = SMB_air_force_CHL
 	}
 	text = {
 		localization_key = SMB_air_force_default
@@ -825,18 +759,6 @@ defined_text = {
 		localization_key = SMB_navy_BRA
 	}
 	text = {
-		trigger = {
-			tag = ARG
-		}
-		localization_key = SMB_navy_ARG
-	}
-	text = {
-		trigger = {
-			tag = CHL
-		}
-		localization_key = SMB_navy_CHL
-	}
-	text = {
 		localization_key = SMB_navy_default
 	}
 }
@@ -844,12 +766,6 @@ defined_text = {
 # The Army desc
 defined_text = {
 	name = SMB_navy_desc_key
-	text = {
-		trigger = {
-			tag = CHL
-		}
-		localization_key = SMB_CHL_navy_desc
-	}
 	text = {
 		localization_key = SMB_navy_desc_default
 	}
@@ -876,22 +792,12 @@ defined_text = {
 		localization_key = SMB_naval_academy_BRA
 	}
 	text = {
-		trigger = { original_tag = CHL }
-		localization_key = SMB_naval_academy_CHL
-	}
-	text = {
 		localization_key = SMB_naval_academy_default
 	}
 }
 # Naval Academy desc
 defined_text = {
 	name = SMB_naval_academy_desc_key
-	text = {
-		trigger = {
-			tag = CHL
-		}
-		localization_key = SMB_naval_academy_CHL_desc
-	}
 	text = {
 		localization_key = SMB_naval_academy_default_desc
 	}

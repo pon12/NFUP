@@ -25,12 +25,7 @@ news_event = {
 
 	immediate = {
 		hidden_effect = {
-			if = {
-				limit = {
-					has_completed_focus = SPR_unify_the_nationalist_front
-				}
-				set_global_flag = SPR_franco_won
-			}
+			set_global_flag = SPR_franco_won
 			if = {
 				limit = {
 					OR = {
@@ -58,23 +53,14 @@ news_event = {
 							is_core_of = SPR
 						}
 						remove_core_of = SPA
-						remove_core_of = SPD
 					}
 				}
 				remove_ideas = SPA_death_before_surrender
-				add_timed_idea = { idea = SPA_recovering_from_civil_war days = 2190 }
-				if = {
-					limit = {
-						has_idea = SPA_foreign_training_staff
-					}
-					remove_ideas = SPA_foreign_training_staff
-				}
-				if = {
-					limit = {
-						has_idea = SPA_a_methodical_approach
-					}
-					remove_ideas = SPA_a_methodical_approach
-				}
+				add_to_variable = { var = SPReco_cgf value = 0.2 }
+				add_to_variable = { var = SPReco_stab value = 0.25 }
+				add_to_variable = { var = SPReco_cs value = -0.1 }
+				add_to_variable = { var = SPReco_FO value = -0.3 }
+				add_to_variable = { var = SPReco_DO value = -0.3 }
 			}
 		}
 	}
@@ -141,19 +127,7 @@ news_event = {
 					disband = yes
 			}
 			remove_ideas = SPA_death_before_surrender
-			if = {
-				limit = {
-					has_idea = SPA_a_methodical_approach
-				}
-				remove_ideas = SPA_a_methodical_approach
-			}
 			add_timed_idea = { idea = SPA_recovering_from_civil_war days = 2190 }
-			if = {
-				limit = {
-					has_idea = SPA_foreign_training_staff
-				}
-				remove_ideas = SPA_foreign_training_staff
-			}
 		}
 	}
 }
@@ -197,14 +171,7 @@ news_event = {
 		name = lar_news.10.c # Republicans/Anarchists/anyone helping them
 		trigger = {
 			OR = {
-				tag = SPD
 				tag = SPA
-				SPD = {
-					has_volunteers_amount_from = {
-					    tag = ROOT
-					    count > 0
-					}
-				}
 				SPA = {
 					has_volunteers_amount_from = {
 					    tag = ROOT
@@ -226,14 +193,7 @@ news_event = {
 			NOT = {
 				tag = SPA
 				tag = SPR
-				tag = SPD
 				SPA = {
-					has_volunteers_amount_from = {
-					    tag = ROOT
-					    count > 0
-					}
-				}
-				SPD = {
 					has_volunteers_amount_from = {
 					    tag = ROOT
 					    count > 0
@@ -281,39 +241,12 @@ news_event = {
 		}
 	}
 	option = {
-		name = lar_news.11.b # Republicans/anyone helping them
-		trigger = {
-			OR = {
-				tag = SPD
-				SPD = {
-					has_volunteers_amount_from = {
-					    tag = ROOT
-					    count > 0
-					}
-				}
-			}
-		}
-	}
-	option = {
-		name = lar_news.11.c # Anarchists
-		trigger = {
-			tag = SPD
-		}
-	}
-	option = {
 		name = lar_news.11.d # Everyone else
 		trigger = {
 			NOT = {
 				tag = SPA
 				tag = SPR
-				tag = SPD
 				SPA = {
-					has_volunteers_amount_from = {
-					    tag = ROOT
-					    count > 0
-					}
-				}
-				SPD = {
 					has_volunteers_amount_from = {
 					    tag = ROOT
 					    count > 0

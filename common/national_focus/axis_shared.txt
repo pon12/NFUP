@@ -4,14 +4,9 @@
 	x = 0
 	y = 0
 	offset = {
-		x = 20  
+		x = 13  
 		y = 7  
 		trigger = {	tag = HUN}
-	}
-	offset = {
-		x = 11
-		y = 7
-		trigger = {	tag = YUG}
 	}
 	offset = {
 		x = 25  
@@ -19,8 +14,8 @@
 		trigger = {	tag = FIN}
 	}
 	offset = {
-		x = 15
-		y = 6
+		x = 23 
+		y = 1
 		trigger = {	tag = ROM}
 	}
 	offset = {
@@ -29,7 +24,7 @@
 		trigger = {	tag = EFR}
 	}
 	offset = {
-		x = 13  
+		x = 10  
 		y = 6
 		trigger = {	tag = BUL}
 	}

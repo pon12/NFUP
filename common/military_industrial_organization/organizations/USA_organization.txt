@@ -18,92 +18,6 @@ USA_marmon_herrington_organization = {
 	}
 }
 
-USA_chrysler_organization = {
-	include = generic_medium_tank_organization
-	icon = GFX_idea_chrysler
-	
-	allowed = {	
-		OR = {
-			tag = USA 
-			AND = {
-				tag = MEX 
-				has_dlc = "Man the Guns"
-			}
-		}
-	}
-
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = USA } }
-			}
-			FROM = { NOT = { has_war_with = USA } }
-		}
-
-		if = {
-			limit = {
-				FROM = { tag = MEX }
-			}
-			FROM = { is_in_faction_with = USA }
-		} 
-#		else_if = {
-#			limit = {
-#				FROM = { tag = NOR }
-#			}
-#			FROM = { 
-#				has_completed_focus = NOR_invite_transnational_manufacturers
-#			}
-#		}
-	}
-
-	initial_trait = {
-		name = USA_mio_trait_medium_tank_organization
-
-		limit_to_equipment_type = { mio_cat_eq_all_medium_tank }
-
-		equipment_bonus = {
-			reliability = 0.1
-			soft_attack = 0.05
-			hard_attack = 0.05
-			defense = -0.15
-		}
-	}
-
-	add_trait = { 
-		token = USA_mio_trait_strict_design_specifications
-		name = USA_mio_trait_strict_design_specifications
-		icon = GFX_generic_mio_trait_icon_reliability
-		special_trait_background = yes
-
-		position = { x=2 y=1 }
-		relative_position_id = generic_mio_trait_simplified_turret_design
-
-		all_parents = { generic_mio_trait_simplified_turret_design generic_mio_trait_armor_steel_working }
-		limit_to_equipment_type = { mio_cat_eq_all_medium_tank }
-
-		equipment_bonus = {
-			reliability = 0.1
-		}
-	}
-
-	add_trait = { 
-		token = USA_mio_trait_expanded_production_facilities
-		name = USA_mio_trait_expanded_production_facilities
-		icon = GFX_generic_mio_trait_icon_build_cost_ic
-		special_trait_background = yes
-
-		position = { x=0 y=1 }
-		relative_position_id = USA_mio_trait_strict_design_specifications
-
-		all_parents = { USA_mio_trait_strict_design_specifications }
-		production_bonus = {
-			production_cost_factor = -0.05
-			production_capacity_factor = 0.05
-		}
-	}
-}
-
 USA_army_ordnance_department_organization = {
 	include = generic_medium_tank_organization
 	icon = GFX_idea_army_ordnance_department
@@ -120,7 +34,7 @@ USA_army_ordnance_department_organization = {
 
 		position = { x=1 y=1 }
 		relative_position_id = generic_mio_trait_all_round_cupola
-
+		mutually_exclusive = { USA_mio_trait_mass_production_of_armor }
 		all_parents = { generic_mio_trait_all_round_cupola }
 		equipment_bonus = {
 			breakthrough = 0.1
@@ -134,10 +48,10 @@ USA_army_ordnance_department_organization = {
 		icon = GFX_generic_mio_department_icon_tank_medium_tank_line_efficiency
 		special_trait_background = yes
 
-		position = { x=2 y=1 }
+		position = { x=2 y=0 }
 		relative_position_id = generic_mio_trait_simplified_turret_design
-
-		all_parents = { generic_mio_trait_simplified_turret_design generic_mio_trait_armor_steel_working }
+		mutually_exclusive = { USA_mio_trait_periscope_sights }
+		all_parents = { generic_mio_trait_all_round_cupola generic_mio_trait_armor_steel_working }
 		production_bonus = {
 			production_efficiency_cap_factor = 0.05
 			production_efficiency_gain_factor = 0.05
@@ -153,22 +67,19 @@ USA_detroit_arsenal_organization = {
 		tag = USA
 	}
 	available = {
-		FROM = { has_completed_focus = USA_main_battle_tanks }
 	}
 }
 
 USA_tank_destroyer_board_organization = {
-	name = tank_destroyer_board
-	include = generic_mobile_tank_organization
+	include = generic_medium_tank_organization
 	icon = GFX_idea_usa_tank_destroyer_board
 	allowed = {	
 		tag = USA 
 	}
 	available = {
-		FROM = { has_completed_focus = USA_tank_destroyer_doctrine }
 	}
 	initial_trait = {
-		name = ROM_mio_trait_mobile_tank_destroyers
+		name = USA_mio_trait_mobile_tank_destroyers
 		
 		limit_to_equipment_type = { 
 			mio_cat_eq_all_tank_destroyers
@@ -182,16 +93,105 @@ USA_tank_destroyer_board_organization = {
 	}
 
 	override_trait = {
-		token = generic_mio_enlarged_breech
+		token = generic_mio_trait_power_traverse
 		limit_to_equipment_type = { 
 			mio_cat_eq_all_tank_destroyers
 		}
 		equipment_bonus = {
 			hard_attack = 0.05
+		}
+	}
+	override_trait = {
+		token = generic_mio_trait_all_round_cupola
+		limit_to_equipment_type = { 
+			mio_cat_eq_all_tank_destroyers
+		}
+		equipment_bonus = {
+			soft_attack = 0.05
+		}
+	}
+	override_trait = {
+		token = generic_mio_trait_simplified_turret_design
+		limit_to_equipment_type = { 
+			mio_cat_eq_all_tank_destroyers
+		}
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+	}
+	override_trait = {
+		token = generic_mio_trait_specialist_shells
+		limit_to_equipment_type = { 
+			mio_cat_eq_all_tank_destroyers
+		}
+
+		mutually_exclusive = { generic_mio_trait_improved_gun_metallurgy }
+
+		equipment_bonus = {
+			soft_attack = 0.1
+			reliability = 0.1
+		}
+	}
+	override_trait = {
+		token = generic_mio_trait_improved_gun_metallurgy
+		limit_to_equipment_type = { 
+			mio_cat_eq_all_tank_destroyers
+		}
+		mutually_exclusive = { generic_mio_trait_specialist_shells }
+
+		equipment_bonus = {
+			hard_attack = 0.1
+			armor_value = 0.1
+		}
+	}
+	override_trait = {
+		token = generic_mio_trait_advanced_shells
+		limit_to_equipment_type = { 
+			mio_cat_eq_all_tank_destroyers
+		}
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.05
 			ap_attack = 0.1
 		}
-		special_trait_background = yes
 	}
+	override_trait = {
+		token = generic_mio_trait_armor_steel_working
+		limit_to_equipment_type = { 
+			mio_cat_eq_all_tank_destroyers
+		}
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+	}
+	override_trait = {
+		token = generic_mio_trait_spaced_armor
+		limit_to_equipment_type = { 
+			mio_cat_eq_all_tank_destroyers
+		}
+		equipment_bonus = {
+			armor_value = 0.1
+		}
+	}
+	override_trait = {
+		token = generic_mio_trait_crew_survival_layout
+		limit_to_equipment_type = { 
+			mio_cat_eq_all_tank_destroyers
+		}
+		equipment_bonus = {
+			defense = 0.1
+		}
+	}
+	override_trait = {
+		token = generic_mio_trait_sloped_side_armor
+		limit_to_equipment_type = { 
+			mio_cat_eq_all_tank_destroyers
+		}
+		equipment_bonus = {
+			ap_attack = 0.1
+		}
+	}
+
 }
 
 
@@ -364,6 +364,7 @@ USA_lockheed_organization = {
 		equipment_bonus = {
 			air_range = 0.1
 			air_attack = 0.05
+			air_defence = 0.05
 		}
 	}
 }

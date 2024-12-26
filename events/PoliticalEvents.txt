@@ -1,0 +1,106 @@
+﻿###########################
+# Political Events
+###########################
+
+add_namespace = political
+
+
+
+
+### > 50% support
+# political.18 Fascist
+
+country_event = {
+	id = political.18
+	title = political.18.t
+	desc = political.18.d
+	picture = GFX_report_event_fascist_gathering
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = political.18.c
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		add_stability = -0.05
+	}
+}
+
+# political.19 Communist
+
+country_event = {
+	id = political.19
+	title = political.19.t
+	desc = political.19.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = political.19.c
+		trigger = {
+			#Special case CHI PRC
+			OR = {
+				NOT = { tag = CHI }
+				AND = {
+					NOT = { country_exists = PRC }
+					tag = CHI
+				}			
+			}
+		}
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+		add_stability = -0.05
+	}
+}
+
+# political.20 Democratic
+
+country_event = {
+	id = political.20
+	title = political.20.t
+	desc = political.20.d
+	picture = GFX_report_event_journalists_speech
+
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = political.20.c
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		add_stability = -0.05
+	}
+}
+	
+country_event = {
+	id = political.33
+	title = political.33.t
+	desc = political.33.desc
+
+	picture = GFX_report_event_journalists_speech
+
+	trigger = {
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = {
+		name = political.33.a
+		add_war_support = 0.1
+	}
+}
+	

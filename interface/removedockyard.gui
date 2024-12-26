@@ -9,7 +9,7 @@ guiTypes = {
         buttonType = {
             name = "remove_dockyard"
             spriteType = "GFX_cancel_conversion_button"
-            position = { x = 7 y = 9 }
+            position = { x = -40 y = -5 }
             scale = 1.0
 			pdx_tooltip = "DELETE_DOCK"
         }

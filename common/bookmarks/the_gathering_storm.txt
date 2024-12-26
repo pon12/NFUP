@@ -10,14 +10,9 @@ bookmarks = {
 			history = "GER_GATHERING_STORM_DESC"
 			ideology = fascism
 			ideas = {
-				sour_loser
-				general_staff
-				GER_mefo_bills_1
 			}
 			focuses = {
-				GER_anschluss
-				GER_danzig_or_war
-				GER_ussr_war_goal
+
 			}
 		}
 		"SOV"={
@@ -45,7 +40,7 @@ bookmarks = {
 			focuses = {
 				general_rearmament_focus
 				tizard_mission_focus
-				uk_develope_focus
+				#uk_develope_focus
 			}
 		}
 		"USA"={
@@ -100,7 +95,6 @@ bookmarks = {
 			}	
 			focuses = {
 				ITA_comandante_diavolo
-#				ITA_a_colonial_empire
 				ITA_pact_of_steel
 			}		
 		}
@@ -116,7 +110,6 @@ bookmarks = {
 			history = "RAJ_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
-				RAJ_agrarian_society
 				RAJ_princely_states
 			}
 			focuses = {
@@ -130,7 +123,6 @@ bookmarks = {
 			history = "CAN_GATHERING_STORM_DESC"
 			ideology = democratic
 			ideas = {
-				CAN_great_depression_1
 				CAN_conscription_crisis
 			}
 			focuses = {
@@ -158,7 +150,6 @@ bookmarks = {
 			history = "AST_GATHERING_STORM_DESC"
 			ideology = democratic
 			ideas = {
-				AST_great_depression_1
 			}
 			focuses = {
 				AST_support_the_policy_of_appeasement
@@ -174,9 +165,6 @@ bookmarks = {
 				
 			}
 			focuses = {
-				NZL_bob_semple_tank
-				NZL_maori_volunteers
-				AST_hmas_assault
 			}
 		}
 		"BRA"={
@@ -232,12 +220,8 @@ bookmarks = {
 			history = "HUN_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
-				HUN_treaty_of_triannon
 			}
 			focuses = {
-				HUN_secret_rearmament
-				HUN_renounce_the_treaty_of_trianon
-				HUN_announce_the_gyor_program
 			}
 		}
 
@@ -260,14 +244,14 @@ bookmarks = {
 			history = "SPAIN_GATHERING_STORM_DESC"
 			ideology = democratic
 			ideas = {
-				SPR_military_disloyalty
-				SPA_carlism_1
-				SPR_political_violence
+				#SPR_military_disloyalty
+				#SPA_carlism_1
+				#SPR_political_violence
 			}
 			focuses = {
-				SPR_caudillo_of_spain
-				SPR_fuse_the_parties
-				SPR_adopt_the_26_points
+				#SPR_caudillo_of_spain
+				#SPR_fuse_the_parties
+				#SPR_adopt_the_26_points
 			}
 		}
 
@@ -293,7 +277,6 @@ bookmarks = {
 			ideas = {
 				MAN_banditry
 				MAN_kwantung_veto
-				MAN_low_legitimacy_5
 			}
 			focuses = {
 				MAN_obediencex
@@ -306,14 +289,8 @@ bookmarks = {
 			history = ""
 			ideology = fascism
 			ideas = {
-				MAN_banditry
-				MAN_kwantung_veto
-				MAN_low_legitimacy_5
 			}
 			focuses = {
-				FIN_winter_war
-				FIN_marshal_of_finland
-				FIN_mining
 			}			
 		}
 		"EFR"={
@@ -326,18 +303,6 @@ bookmarks = {
 				VIC_emergency_powers_to_petain
 				VIC_anti_bolshevist_volunteers
 				VIC_a_nation_reborn
-			}						
-		}
-		"YUG"={
-			minor = yes
-			history = ""
-			ideology = fascism
-			ideas = {
-			}
-			focuses = {
-				YUG_united_yugoslavia
-				YUG_evolution
-				YUG_artillery_regiments2
 			}						
 		}
 		effect = {

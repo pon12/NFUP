@@ -56,11 +56,17 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		
-		category_all_infantry = {
+		motorized = {
+			max_organisation = 15
+			
+		}
+		mechanized = {
+			max_organisation = 5
+		}
+		amphibious_mechanized = {
 			max_organisation = 15
 		}
-		
-		
+
 		enable_tactic = tactic_delay
 		
 		path = {
@@ -104,8 +110,8 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 
-		category_tanks = {
-			max_organisation = 1
+		category_all_armor = {
+			max_organisation = 5
 		}
 		armored_car = {
 			max_organisation = 2
@@ -247,10 +253,18 @@ technologies = {
 	mass_motorization = {
 		xp_research_type = army
 		xp_unlock_cost = 100
-		category_all_infantry = {
-			max_organisation = 10
-		}	
-		
+		motorized = {
+			max_organisation = 5
+		}
+		armored_car = {
+			max_organisation = 5
+		}
+		mechanized = {
+			max_organisation = 5
+		}
+		amphibious_mechanized = {
+			max_organisation = 5
+		}		
 		path = {
 			leads_to_tech = mechanised_offensive 
 			research_cost_coeff = 1
@@ -299,14 +313,14 @@ technologies = {
 		xp_unlock_cost = 100
 
 		motorized = {
-			max_organisation = 15
+			max_organisation = 5
 			
 		}
 		mechanized = {
-			max_organisation = 15
+			max_organisation = 5
 		}
 		amphibious_mechanized = {
-			max_organisation = 15
+			max_organisation = 5
 		}
 		
 		armored_car = {
@@ -375,8 +389,11 @@ technologies = {
 	armored_spearhead = { #Branch focused on Tanks 
 		xp_research_type = army
 		xp_unlock_cost = 100
+		category_all_armor = {
+			max_organisation = 5
+
+		}
 		category_tanks = {
-			max_organisation = 3
 			breakthrough = 0.20
 		}
 		
@@ -492,8 +509,8 @@ technologies = {
 	blitzkrieg = {
 		xp_research_type = army
 		xp_unlock_cost = 100
-		category_tanks = {
-			max_organisation = 1
+		category_all_armor = {
+			max_organisation = 5
 		}
 
 		category_all_armor = {
@@ -566,7 +583,7 @@ technologies = {
 		xp_unlock_cost = 100
 		category_all_infantry = {
 			default_morale = 0.2
-			max_organisation = 10
+			max_organisation = 5
 		}
 		# faster planning
 		planning_speed = 0.2
@@ -628,7 +645,7 @@ technologies = {
 		}
 		
 		category_all_infantry = {
-			max_organisation = 10
+			max_organisation = 5
 		}
 		category_tanks = {
 			max_organisation = 2
@@ -784,9 +801,6 @@ technologies = {
 		xor={
 			firebrigades
 		}
-
-		
-		conscription = 0.02
 		
 		path = {
 			leads_to_tech = nd_conscription 
@@ -838,7 +852,7 @@ technologies = {
 	nd_conscription = {
 		xp_research_type = army
 		xp_unlock_cost = 100
-		conscription = 0.03
+		conscription = 0.01
 
 		path = {
 			leads_to_tech = werwolf_guerillas 
@@ -883,8 +897,6 @@ technologies = {
 		xp_unlock_cost = 100
 		#Increased Partisan effect on your land occupied by others
 		resistance_damage_to_garrison_on_our_occupied_states = 0.1 
-
-		enable_tactic = tactic_guerrilla_tactics
 		
 		doctrine = yes	
 		research_cost = 4.5
@@ -1739,12 +1751,12 @@ technologies = {
 		}
 		
 		category_all_infantry = { 
-			soft_attack = 0.05 
-			hard_attack = 0.05
+			soft_attack = 0.1
+			hard_attack = 0.1
 		}
 		category_artillery = { 
-			soft_attack = 0.05
-			hard_attack = 0.05
+			soft_attack = 0.1
+			hard_attack = 0.1
 		}
 		enable_tactic = tactic_breakthrough
 				
@@ -2736,9 +2748,6 @@ technologies = {
 		xp_unlock_cost = 100
 		max_dig_in = 3
 
-		category_light_infantry = {
-			max_organisation = 6
-		}
 		category_all_infantry = {
 			max_organisation = 10
 		}		
@@ -2857,7 +2866,7 @@ technologies = {
 			max_organisation = 3
 		}
 		category_all_infantry = {
-			max_organisation = 10
+			max_organisation = 5
 		}	
 
 		xp_research_type = army
@@ -2964,6 +2973,11 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		max_planning = 0.1
+
+		category_all_armor = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
 		
 		enable_tactic = tactic_overwhelming_fire
 		
@@ -3013,7 +3027,7 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		category_all_infantry = {
-			max_organisation = 10
+			max_organisation = 5
 		}
 		
 		enable_tactic = tactic_breakthrough
@@ -3180,7 +3194,7 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 	
-		conscription = 0.02
+		conscription = 0.01
 
 		enable_tactic = tactic_human_wave_tactics
 		
@@ -3338,13 +3352,13 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		anti_tank = {
-			hard_attack = 0.1
+			hard_attack = 0.15
 		}
 		anti_tank_brigade = {
-			hard_attack = 0.1
+			hard_attack = 0.15
 		}
 		mot_anti_tank_brigade = {
-			hard_attack = 0.1
+			hard_attack = 0.15
 		}
 		land_night_attack = 0.15
 		path = {

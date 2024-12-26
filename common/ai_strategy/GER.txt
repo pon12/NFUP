@@ -38,11 +38,6 @@ GER_unit_production = {
 	# 	value = 6
 	# }
 
-	ai_strategy = {
-		type = role_ratio
-		id = paratroopers
-		value = 0
-	}
 
 	ai_strategy = {
 		type = role_ratio
@@ -467,31 +462,6 @@ GER_template_design = {
 		id = heavy_armor
 		value = -50
 	}
-
-	ai_strategy = {
-		type = template_prio
-		id = paratroopers
-		value = -50
-	}
-}
-
-war_with_poland = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		has_completed_focus = GER_demand_memel
-		country_exists = POL
-	}
-	abort = {
-		NOT = { country_exists = POL }
-	}
-
-	ai_strategy = {
-		type = antagonize
-		id = "POL"
-		value = 200
-	}
 }
 
 danzig_of_war_preparation = {
@@ -825,30 +795,6 @@ axis_stay_away_from_the_royal_navy = {
 	}
 }
 
-dont_take_claims_on_POL_we_got_focus = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		country_exists = POL
-		has_war = no
-		has_completed_focus = GER_demand_memel
-	}
-
-	abort = {
-		OR = {
-			NOT = { country_exists = POL }
-			date > 1940.1.1
-			has_war = yes
-		}
-	}
-
-	ai_strategy = {
-		type = ignore_claim
-		id = "POL"
-		value = 1
-	}
-}
 
 axis_dont_mess_with_volunteers = {
 	allowed = {

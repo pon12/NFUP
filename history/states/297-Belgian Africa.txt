@@ -10,16 +10,13 @@ state=
 	{
 		owner = SWE
 		add_core_of = SWE
-		victory_points = {
-			1903 1 
-		}
 		buildings = {
 			infrastructure = 0
 		}
 	}
-	provinces=
-	{
-1903 8244 	}
+	provinces= {
+		1903 8244 
+	}
 
 	local_supplies=0.0 
 }

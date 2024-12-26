@@ -27,16 +27,6 @@ ETH_escalate_the_war_effect = {
 	#	}
 	#}
 }
-
-ETH_set_up_lon_arms_resolution_effect = {
-	add_relation_rule_override = {
-		can_access_market = no
-		trigger = has_lon_arms_embargo
-		usage_desc = lon_arms_resolution_tt
-	}
-	
-}
-
 ETH_deescalate_the_war_effect = {
 	custom_effect_tooltip = ITA_war_deescalation_inc_tt #Change or use scripted loc if ETH ever has effects to de-escalate
 	subtract_from_variable = { ETH.ETH_war_escalation_level = 1 }

@@ -128,3 +128,71 @@ ITA_africa_states = {
 		state = 911 
 	}
 }
+ALLIED_asia_states = {
+	OR = {
+		state = 623
+		state = 336
+		state = 672
+		state = 335
+		state = 667
+		state = 333
+		state = 334
+		state = 673
+		state = 626
+		state = 523
+		state = 327
+		state = 624
+		state = 628
+		state = 625
+		state = 627
+		state = 668
+		state = 669
+		state = 523
+		state = 738
+		state = 737
+		state = 634
+		state = 638
+	}
+}
+
+#victory System
+is_axis_country = {
+	OR = {
+		original_tag = GER
+		original_tag = ITA
+		original_tag = HUN
+		original_tag = ROM
+		original_tag = BUL
+		original_tag = JAP
+		original_tag = MAN
+		original_tag = SIA
+		original_tag = SPR
+		original_tag = FIN
+		original_tag = EFR
+	}
+}
+
+is_allied_country = {
+	OR = {
+		original_tag = ENG
+		original_tag = SOV
+		original_tag = FRA
+		original_tag = CAN
+		original_tag = AST
+		original_tag = USA
+		original_tag = SAF
+		original_tag = BRA
+		original_tag = NZL
+		original_tag = RAJ
+		original_tag = IRE
+		original_tag = NOR
+		original_tag = MEX
+
+
+		#just to be safe
+		original_tag = BEL
+		original_tag = HOL
+		original_tag = POL
+		original_tag = DEN
+	}
+}

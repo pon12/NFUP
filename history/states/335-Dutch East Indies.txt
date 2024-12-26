@@ -13,7 +13,7 @@ state={
 
 	history={
 		owner = HOL
-		add_core_of = SWE
+		add_core_of = HOL
 		victory_points = {
 			7381 5
 		}
@@ -23,6 +23,8 @@ state={
 
 		buildings = {
 			infrastructure = 3 #was: 5
+			industrial_complex = 1
+			dockyard = 1
 			air_base = 3
 			7381 = {
 				naval_base = 6

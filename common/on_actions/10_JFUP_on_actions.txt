@@ -8,6 +8,7 @@ YUG = {add_timed_idea = {idea = peace_training  days = 1277}}
 YUG = {add_ideas = NO_SF_CAP}
 YUG = {add_ideas = NO_GRINDING}
 YUG = {add_ideas = Yugoslavian_Army }
+
 }
 }
 

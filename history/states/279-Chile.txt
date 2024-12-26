@@ -1,22 +1,25 @@
-
-state={
-	id=279
-	name="STATE_279" # Santiago
-	manpower = 1
+state = {
+	id = 279
+	name = "STATE_279" # Santiago
+	manpower = 1 
 	
 	state_category = large_city
 
-	history={
+
+	history = {
+
 		owner = SWE
+		add_core_of = SWE
+
 		buildings = {
 			infrastructure = 0
 		}
-		add_core_of = SWE
+
 	}
 
-	provinces={
+	provinces = {
 		650 5191 8194 8222 8229 8251 12984 
 	}
 
-	local_supplies=0.0 
+	local_supplies = 0.0 
 }

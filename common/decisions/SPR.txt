@@ -190,11 +190,7 @@ SPR_civil_war_offensives = {
 				factor = 0
 				has_full_control_of_state = 790
 			}
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-				tag = SPD
-			}
+
 			modifier = {
 				factor = 10
 				OR = {
@@ -628,11 +624,7 @@ SPR_civil_war_offensives = {
 					tag = SPR
 				}
 			}
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-				tag = SPD
-			}
+
 			modifier = {
 				factor = 10
 				divisions_in_state = {
@@ -974,11 +966,7 @@ SPR_civil_war_offensives = {
 				factor = 0
 				has_full_control_of_state = 794
 			}
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-				tag = SPD
-			}
+
 			modifier = {
 				factor = 10
 				OR = {
@@ -1080,11 +1068,7 @@ SPR_civil_war_offensives = {
 				factor = 0
 				has_full_control_of_state = 165
 			}
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-				tag = SPD
-			}
+
 			modifier = {
 				factor = 10
 				OR = {
@@ -1287,11 +1271,7 @@ SPR_civil_war_offensives = {
 				factor = 0
 				has_full_control_of_state = 41
 			}
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-				tag = SPD
-			}
+
 			modifier = {
 				factor = 10
 				OR = {
@@ -1393,11 +1373,7 @@ SPR_civil_war_offensives = {
 				factor = 0
 				has_full_control_of_state = 793
 			}
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-				tag = SPD
-			}
+
 			modifier = {
 				factor = 10
 				OR = {
@@ -1499,11 +1475,7 @@ SPR_civil_war_offensives = {
 				factor = 0
 				has_full_control_of_state = 167
 			}
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-				tag = SPD
-			}
+
 			modifier = {
 				factor = 10
 				OR = {
@@ -1706,11 +1678,7 @@ SPR_civil_war_offensives = {
 				factor = 0
 				has_full_control_of_state = 175
 			}
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-				tag = SPD
-			}
+
 			modifier = {
 				factor = 10
 				OR = {
@@ -1812,11 +1780,7 @@ SPR_civil_war_offensives = {
 				factor = 0
 				has_full_control_of_state = 168
 			}
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-				tag = SPD
-			}
+
 			modifier = {
 				factor = 10
 				OR = {
@@ -2120,11 +2084,7 @@ SPR_civil_war_offensives = {
 				factor = 0
 				has_full_control_of_state = 173
 			}
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-				tag = SPD
-			}
+
 			modifier = {
 				factor = 10
 				OR = {
@@ -3319,53 +3279,6 @@ political_actions = {
 
 		timeout_effect = {
 				add_timed_idea = { idea = SPR_carlists_uprising days = 365 }
-		}
-	}
-
-	SPR_government_crackdown_mission = {
-
-		icon = generic_ignite_civil_war
-
-		allowed = {
-			tag = SPR
-		}
-
-		available = {
-			hidden_trigger = { always = no }
-		}
-
-		priority = 10
-
-		fire_only_once = yes
-
-		days_mission_timeout = SPR_communists_uprising_mission_var?246
-
-		is_good = no
-
-		cancel_if_not_visible = yes
-
-		activation = {
-			always = no
-		}
-
-		visible = {
-			tag = SPD
-		}
-
-		timeout_effect = {
-			if = {
-				limit = {
-					num_of_controlled_states > 1
-				}
-				country_event = lar_spain.10
-			}
-			else = {
-				activate_mission = SPR_government_crackdown_mission
-				add_days_mission_timeout = {
-					mission = SPR_government_crackdown_mission
-					days = -211
-				}
-			}
 		}
 	}
 

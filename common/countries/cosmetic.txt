@@ -805,11 +805,6 @@ FIN_greater_kingdom_of_finland = { #Dark Purple
 	color_ui = rgb { 90 38 106 }
 }
 
-FIN_confederated_finno_russian_republics = {
-	color = rgb { 255 231 71 } #Yellow
-	color_ui = rgb { 255 231 71 }
-}
-
 FIN_finnish_democratic_republic = {
 	color = rgb { 200 122 125 } #Reddish
 	color_ui = rgb { 200 122 125 }
@@ -866,4 +861,8 @@ NSE_UNIFIED = {
 DEN_imperial = {
 	color = rgb { 200 210 220 }
 	color_ui = rgb { 230 255 255 }
+}
+RSI = {
+	color = rgb { 10 80 20 }
+	color_ui = rgb { 10 80 20 }
 }

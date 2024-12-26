@@ -375,43 +375,6 @@ characters={
 				small="GFX_idea_SOV_lev_trotsky"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = NOR_lev_trotsky
-			allowed  = {
-				NOR_AAT = yes
-			}	
-			ai_will_do = {
-				factor = 1
-			}
-			available = {
-				has_country_flag = NOR_trotsky_embraced
-#				NOT = { has_completed_focus = NOR_compromise_with_the_nkp } 
-				NOT = { has_government = fascism } 
-				NOT = { has_government = neutrality }
-				NOR_trotsky_not_in_sov = yes 
-				NOR_trotsky_not_in_mex = yes #Yes, I know this is bullshit but it's all for the tooltip
-			}
-			traits  = {
-				NOR_permanent_revolutionary
-			}
-		}
-		corps_commander={
-			visible = {
-#				has_completed_focus = NOR_a_resurgent_labor_movement
-				has_country_flag = NOR_trotsky_embraced
-#				NOT = {	
-#					has_completed_focus = NOR_compromise_with_the_nkp 
-#				}
-			}
-			traits={  }
-			skill=3
-			attack_skill=4
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=1
-			legacy_id=-1
-		}
 	}
 	
 	NOR_sverre_riisnaes={
@@ -1107,7 +1070,6 @@ characters={
 				ai_will_do = {
 					factor = 1.000
 				}
-				can_be_fired = no
 			}
 			name=NOR_kristian_laake
 			portraits={

@@ -150,10 +150,6 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 60
-		
-		category_mountaineers = {
-			initiative = 0.01
-		}
 
 		mountaineers = {
 			Mountain = {
@@ -428,6 +424,7 @@ technologies = {
 		
 		force_use_small_tech_layout = yes
 		naval_invasion_capacity = 10
+		naval_invasion_planning_bonus_speed = 2	
 		enable_subunits = {
 			marine
 		}
@@ -628,9 +625,41 @@ technologies = {
 		
 		xor = { marines_expeditionary }
 		
-		acclimatization_cold_climate_gain_factor = 0.25
-		acclimatization_hot_climate_gain_factor = 0.25
-			
+		artillery_brigade = {
+			amphibious = {
+				attack = 0.10
+			}
+		}			
+		mot_artillery_brigade = {
+			amphibious = {
+				attack = 0.10
+			}
+		}	
+		rocket_artillery_brigade = {
+			amphibious = {
+				attack = 0.10
+			}
+		}	
+		mot_rocket_artillery_brigade = {
+			amphibious = {
+				attack = 0.10
+			}
+		}	
+		motorized_rocket_brigade = {
+			amphibious = {
+				attack = 0.10
+			}
+		}	
+		anti_tank_brigade = {
+			amphibious = {
+				attack = 0.10
+			}
+		}
+		mot_anti_tank_brigade = {
+			amphibious = {
+				attack = 0.10
+			}
+		}
 		doctrine = yes	
 		research_cost = 2.25
 		
@@ -776,8 +805,7 @@ technologies = {
 			amphibious = {
 				attack = 0.10
 			}
-		}
-		naval_invasion_planning_bonus_speed = 1			
+		}		
 		doctrine = yes	
 		research_cost = 2.25
 		
@@ -885,8 +913,40 @@ xor = { marines_expeditionary_support }
 		xp_research_type = army
 		xp_unlock_cost = 60
 
-		category_marines = {
-			defense = 0.10
+		artillery_brigade = {
+			amphibious = {
+				attack = 0.10
+			}
+		}			
+		mot_artillery_brigade = {
+			amphibious = {
+				attack = 0.10
+			}
+		}	
+		rocket_artillery_brigade = {
+			amphibious = {
+				attack = 0.10
+			}
+		}	
+		mot_rocket_artillery_brigade = {
+			amphibious = {
+				attack = 0.10
+			}
+		}	
+		motorized_rocket_brigade = {
+			amphibious = {
+				attack = 0.10
+			}
+		}	
+		anti_tank_brigade = {
+			amphibious = {
+				attack = 0.10
+			}
+		}
+		mot_anti_tank_brigade = {
+			amphibious = {
+				attack = 0.10
+			}
 		}
 
 
@@ -1352,7 +1412,7 @@ xor = { marines_expeditionary_support }
 		xp_research_type = army
 		xp_unlock_cost = 60
 
-		category_rangers = {
+		rangers = {
 			defense = 0.10
 		}	
 

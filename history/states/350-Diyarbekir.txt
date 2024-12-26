@@ -5,13 +5,12 @@ state={
 
 	history={
 		owner = SWE
+
 		buildings = {
 			infrastructure = 0
 
 		}
-
 		add_core_of = SWE
-
 	}
 
 	provinces={

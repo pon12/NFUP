@@ -226,10 +226,10 @@ characters={
 		corps_commander={
 			traits={ politically_connected }
 			skill=3
-			attack_skill=3
-			defense_skill=2
+			attack_skill=2
+			defense_skill=1
 			planning_skill=3
-			logistics_skill=2
+			logistics_skill=1
 			legacy_id=704
 		}
 	}
@@ -337,7 +337,6 @@ characters={
 			legacy_id=707
 		}
 	}
-
 	### THEORISTS ###
 
 	# Treviño up there
@@ -529,28 +528,14 @@ characters={
 				large="GFX_portrait_MEX_luis_farell"
 			}
 		}
-		advisor={
-			slot = air_chief
-			idea_token = MEX_luis_farell
-			allowed = {
-				original_tag = MEX
-			}
-			traits = {
-				air_chief_ground_support_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 		
 		corps_commander={
 			traits={ war_hero }
-			skill=3
+			skill=4
 			attack_skill=4
-			defense_skill=1
-			planning_skill=2
-			logistics_skill=3
+			defense_skill=2
+			planning_skill=5
+			logistics_skill=2
 			legacy_id=701
 		}
 	}

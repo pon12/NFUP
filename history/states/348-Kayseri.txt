@@ -8,6 +8,7 @@ state={
 
 	history={
 		owner = SWE
+
 		buildings = {
 			infrastructure = 0
 
@@ -17,7 +18,7 @@ state={
 	}
 
 	provinces={
-		886 921 961 3870 3921 6888 6956 6977 9830 
+		886 921 3870 3921 6888 6956 6977 9830 
 	}
 
 	local_supplies=6.0 

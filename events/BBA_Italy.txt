@@ -25,318 +25,6 @@ add_namespace = BBA_italy_council_deposes_duce
 add_namespace = BBA_italy_human_torpedo_raid
 
 
-# Italy offer for peace - Event for ETH
-country_event = {
-	id = BBA_italy_second_italo_ethiopian_war.1
-	title = BBA_italy_second_italo_ethiopian_war.1.t
-	desc = BBA_italy_second_italo_ethiopian_war.1.desc
-	picture = GFX_report_event_african_soldiers
-	
-	is_triggered_only = yes
-	
-	#ACCEPT
-	option = {
-		name = BBA_italy_second_italo_ethiopian_war.1.a
-		ai_chance = {
-			base = 10
-			modifier = { #If they're stronger than ITA then never accept
-				factor = 0
-				strength_ratio = {
-					tag = FROM
-					ratio > 1
-				}
-			}
-		}
-		effect_tooltip = {
-			if = { #ERITREA
-				limit = {
-					has_full_control_of_state = 550
-				}
-				transfer_state = 550
-				550 = { add_compliance = 50 }
-			}
-			if = { #SOMALILAND
-				limit = {
-					has_full_control_of_state = 559
-				}
-				transfer_state = 559
-				559 = { add_compliance = 50 }
-			}
-			if = { #JUBALAND
-				limit = {
-					has_full_control_of_state = 844
-				}
-				transfer_state = 844
-				844 = { add_compliance = 50 }
-			}
-			if = {
-				limit = {
-					908 = {
-						is_owned_by = FROM
-					}
-				}
-				#AFAR always goes to ETH if owned by ITA
-				transfer_state = 908 
-				908 = { add_compliance = 50 }
-			}
-			white_peace = FROM
-		}
-
-		hidden_effect = {
-			FROM = {
-				country_event = { id = BBA_italy_second_italo_ethiopian_war.2 days = 1 }
-			}
-			if = {
-				limit = {
-					is_in_faction = no
-				}
-				set_country_flag = ETH_forced_ITA_peace_achievement
-			}
-		}
-	}
-	
-	option = {
-		name = BBA_italy_second_italo_ethiopian_war.1.b
-		ai_chance = {
-			base = 1
-			modifier = { #Usually they should accept
-				factor = 0
-				strength_ratio = {
-					tag = FROM
-					ratio < 1
-				}
-			}
-		}
-		FROM = {
-			country_event = { id = BBA_italy_second_italo_ethiopian_war.3 days = 1 }
-		}
-	}
-}
-
-# ETH accepts ITA peace offer - Event for ITA
-country_event = {
-	id = BBA_italy_second_italo_ethiopian_war.2
-	title = BBA_italy_second_italo_ethiopian_war.2.t
-	desc = BBA_italy_second_italo_ethiopian_war.2.desc
-	picture = GFX_report_event_african_soldiers
-	
-	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			ITA_end_the_italo_ethiopian_war = yes
-		}
-	}
-	
-	#Ok - Already completed initial missiolini focus
-	option = {
-		name = BBA_italy_second_italo_ethiopian_war.2.a
-
-		trigger = {
-			OR = {
-				has_completed_focus = ITA_solid_progress
-				has_completed_focus = ITA_the_abyssinian_fiasco
-				has_completed_focus = ITA_struggle_in_ethiopia
-			}
-		}
-
-		if = { #ERITREA
-			limit = {
-				FROM = { has_full_control_of_state = 550 }
-			}
-			FROM = {
-				transfer_state = 550
-				550 = { add_compliance = 50 }
-			}
-		}
-		if = { #SOMALILAND
-			limit = {
-				FROM = { has_full_control_of_state = 559 }
-			}
-			FROM = {
-				transfer_state = 559
-				559 = { add_compliance = 50 }
-			}
-		}
-		if = { #JUBALAND
-			limit = {
-				FROM = { has_full_control_of_state = 844 }
-			}
-			FROM = {
-				transfer_state = 844
-				844 = { add_compliance = 50 }
-			}
-		}
-		if = { #AFAR always goes to ETH if owned by ITA
-			limit = {
-				owns_state = 908
-			}
-			FROM = {
-				transfer_state = 908 
-				908 = { add_compliance = 50 }
-			}
-		}
-		white_peace = FROM
-		hidden_effect = {
-			if = {
-				limit = {
-					any_country = {
-						is_in_faction_with = ROOT
-						has_war_with = FROM
-					}
-				}
-				every_other_country = {
-					limit = {
-						is_in_faction_with = ROOT
-						has_war_with = FROM
-					}
-					white_peace = FROM
-				}
-			}
-		}
-
-		ITA_manage_italian_defeat_in_ethiopia_effect = yes
-
-		hidden_effect = {
-			news_event = {
-				id = news.337
-				days = 1
-			}
-		}
-	}
-
-	# Ok - Abyssinian Fiasco
-	option = { 
-		name = BBA_italy_missiolinis.02_north.b
-
-		trigger = {
-			has_dlc = "By Blood Alone" #Abyssinian Fiasco focus not available without BBA
-			NOT = {
-				has_completed_focus = ITA_solid_progress
-				has_completed_focus = ITA_the_abyssinian_fiasco
-				has_completed_focus = ITA_struggle_in_ethiopia
-			}
-		}
-
-
-
-		if = { #ERITREA
-			limit = {
-				FROM = { has_full_control_of_state = 550 }
-			}
-			FROM = {
-				transfer_state = 550
-				550 = { add_compliance = 50 }
-			}
-		}
-		if = { #SOMALILAND
-			limit = {
-				FROM = { has_full_control_of_state = 559 }
-			}
-			FROM = {
-				transfer_state = 559
-				559 = { add_compliance = 50 }
-			}
-		}
-		if = { #JUBALAND
-			limit = {
-				FROM = { has_full_control_of_state = 844 }
-			}
-			FROM = {
-				transfer_state = 844
-				844 = { add_compliance = 50 }
-			}
-		}
-		white_peace = FROM
-
-		complete_national_focus = ITA_the_abyssinian_fiasco
-
-		ITA_manage_italian_defeat_in_ethiopia_effect = yes
-
-		hidden_effect = {
-			news_event = {
-				id = news.337
-				days = 1
-			}
-		}
-	}
-
-	# Ok - Struggle in Ethiopia
-	option = { 
-		name = BBA_italy_missiolinis.02_north.c
-
-		trigger = {
-			NOT = {
-				has_completed_focus = ITA_solid_progress
-				has_completed_focus = ITA_the_abyssinian_fiasco
-				has_completed_focus = ITA_struggle_in_ethiopia
-			}
-		}
-
-		ai_chance = {
-			base = 10
-		}
-
-		if = { #ERITREA
-			limit = {
-				FROM = { has_full_control_of_state = 550 }
-			}
-			FROM = {
-				transfer_state = 550
-				550 = { add_compliance = 50 }
-			}
-		}
-		if = { #SOMALILAND
-			limit = {
-				FROM = { has_full_control_of_state = 559 }
-			}
-			FROM = {
-				transfer_state = 559
-				559 = { add_compliance = 50 }
-			}
-		}
-		if = { #JUBALAND
-			limit = {
-				FROM = { has_full_control_of_state = 844 }
-			}
-			FROM = {
-				transfer_state = 844
-				844 = { add_compliance = 50 }
-			}
-		}
-		white_peace = FROM
-
-		complete_national_focus = ITA_struggle_in_ethiopia
-
-		ITA_manage_italian_defeat_in_ethiopia_effect = yes
-
-		hidden_effect = {
-			news_event = {
-				id = news.337
-				days = 1
-			}
-		}
-
-	}
-}
-
-# ETH refects ITA peace offer - Event for ITA
-country_event = {
-	id = BBA_italy_second_italo_ethiopian_war.3
-	title = BBA_italy_second_italo_ethiopian_war.3.t
-	desc = BBA_italy_second_italo_ethiopian_war.3.desc
-	picture = GFX_report_event_african_soldiers
-	
-	is_triggered_only = yes
-	
-	#Ok
-	option = {
-		name = BBA_italy_second_italo_ethiopian_war.3.a
-
-	}
-}
-
-
 
 
 #########################
@@ -846,8 +534,6 @@ country_event = {
 		
 		trigger = {
 			OR = {
-				has_completed_focus = ITA_the_abyssinian_fiasco
-				has_completed_focus = ITA_struggle_in_ethiopia
 				NOT = { has_country_flag = ITA_missiolini_conquer_the_north_failed_flag }
 			}
 		}
@@ -857,43 +543,6 @@ country_event = {
 		}
 
 		ITA_missiolini_progress_in_ethiopia_failure_effect = yes
-	}
-
-	# Oops (Complete The Abyssinian Fiasco)
-	option = { 
-		name = BBA_italy_missiolinis.02_north.b
-
-		trigger = {
-			has_dlc = "By Blood Alone" #Abyssinian Fiasco focus not available without BBA
-			NOT = {
-				has_completed_focus = ITA_the_abyssinian_fiasco
-				has_completed_focus = ITA_struggle_in_ethiopia
-				has_country_flag = ITA_missiolini_conquer_the_south_failed_flag
-			}
-		}
-
-
-		ITA_missiolini_progress_in_ethiopia_failure_effect = yes
-		
-		complete_national_focus = ITA_the_abyssinian_fiasco
-	}
-
-	# Oops (Complete Struggle in Ethiopia)
-	option = { 
-		name = BBA_italy_missiolinis.02_north.c
-
-		trigger = {
-			NOT = {
-				has_completed_focus = ITA_the_abyssinian_fiasco
-				has_completed_focus = ITA_struggle_in_ethiopia
-				has_country_flag = ITA_missiolini_conquer_the_south_failed_flag
-			}
-		}
-
-
-		ITA_missiolini_progress_in_ethiopia_failure_effect = yes
-		
-		complete_national_focus = ITA_struggle_in_ethiopia
 	}
 }
 
@@ -925,8 +574,6 @@ country_event = {
 		
 		trigger = {
 			OR = {
-				has_completed_focus = ITA_the_abyssinian_fiasco
-				has_completed_focus = ITA_struggle_in_ethiopia
 				NOT = { has_country_flag = ITA_missiolini_conquer_the_south_failed_flag }
 			}
 		}
@@ -936,42 +583,6 @@ country_event = {
 		}
 
 		ITA_missiolini_progress_in_ethiopia_failure_effect = yes
-	}
-
-	# Oops (Complete The Abyssinian Fiasco)
-	option = { 
-		name = BBA_italy_missiolinis.04_south.b
-
-		trigger = {
-			NOT = {
-				has_completed_focus = ITA_the_abyssinian_fiasco
-				has_completed_focus = ITA_struggle_in_ethiopia
-				has_country_flag = ITA_missiolini_conquer_the_north_failed_flag
-			}
-		}
-
-
-		ITA_missiolini_progress_in_ethiopia_failure_effect = yes
-		
-		complete_national_focus = ITA_the_abyssinian_fiasco
-	}
-
-	# Oops (Complete Struggle in Ethiopia)
-	option = { 
-		name = BBA_italy_missiolinis.04_south.c
-
-		trigger = {
-			NOT = {
-				has_completed_focus = ITA_the_abyssinian_fiasco
-				has_completed_focus = ITA_struggle_in_ethiopia
-				has_country_flag = ITA_missiolini_conquer_the_north_failed_flag
-			}
-		}
-
-
-		ITA_missiolini_progress_in_ethiopia_failure_effect = yes
-		
-		complete_national_focus = ITA_struggle_in_ethiopia
 	}
 }
 
@@ -1511,36 +1122,6 @@ unit_leader_event = {
 
 		ITA_mussolinis_reroll_cleanup_if_necessary = yes #To clear stuff if coming from a reroll
 	}
-
-
-	# Re-roll
-	option = { 
-		name = BBA_italy_missiolinis.council
-
-		ai_chance = {
-			base = 0
-		}
-
-		trigger = {
-			has_completed_focus = ITA_boost_the_grand_council_of_fascism
-			NOT = { has_country_flag = ITA_missiolinis_rerolling_flag }
-		}
-
-		ITA_missiolinis_reroll_cost = yes
-
-		hidden_effect = {
-			#Revert mission initialization from immediate effect
-			ITA_missiolinis_revert_new_mission_initialization_effect = yes
-
-			#Revert other stuff in the immediate effect
-			clr_country_flag = ITA_missiolini_stockpile_trucks_triggered_flag
-			set_variable = { ITA_missiolinis_stockpile_trucks_goal = 0 }
-
-			#Re-roll
-			set_variable = { ITA_missiolini_reroll_from = 1 } #STOCKPILE TRUCKS
-			country_event = { id = BBA_italy_missiolinis.00 hours = 20 }
-		}
-	}
 }
 
 # Stockpile Trucks - FAILURE 
@@ -1632,34 +1213,6 @@ unit_leader_event = {
 		activate_mission = ITA_missiolini_stockpile_fuel
 
 		ITA_mussolinis_reroll_cleanup_if_necessary = yes #To clear stuff if coming from a reroll
-	}
-
-	# Re-roll
-	option = { 
-		name = BBA_italy_missiolinis.council
-
-		ai_chance = {
-			base = 0
-		}
-
-		trigger = {
-			has_completed_focus = ITA_boost_the_grand_council_of_fascism
-			NOT = { has_country_flag = ITA_missiolinis_rerolling_flag }
-		}
-
-		ITA_missiolinis_reroll_cost = yes
-
-		hidden_effect = {
-			#Revert mission initialization from immediate effect
-			ITA_missiolinis_revert_new_mission_initialization_effect = yes
-
-			#Revert other stuff in the immediate effect
-			clr_country_flag = ITA_missiolini_stockpile_fuel_triggered_flag
-
-			#Re-roll
-			set_variable = { ITA_missiolini_reroll_from = 2 } #STOCKPILE FUEL
-			country_event = { id = BBA_italy_missiolinis.00 hours = 20 }
-		}
 	}
 }
 
@@ -1806,39 +1359,6 @@ unit_leader_event = {
 		activate_mission = ITA_missiolini_strengthen_the_airforce
 
 		ITA_mussolinis_reroll_cleanup_if_necessary = yes #To clear stuff if coming from a reroll
-	}
-
-	# Re-roll
-	option = { 
-		name = BBA_italy_missiolinis.council
-
-		ai_chance = {
-			base = 0
-		}
-
-		trigger = {
-			has_completed_focus = ITA_boost_the_grand_council_of_fascism
-			NOT = { has_country_flag = ITA_missiolinis_rerolling_flag }
-		}
-
-		ITA_missiolinis_reroll_cost = yes
-
-		hidden_effect = {
-			#Revert mission initialization from immediate effect
-			ITA_missiolinis_revert_new_mission_initialization_effect = yes
-
-			#Revert other stuff in the immediate effect
-			clr_country_flag = ITA_missiolini_strengthen_the_airforce_triggered_flag
-			set_variable = { ITA_missiolinis_fighters_goal = 0 }
-			set_variable = { ITA_missiolinis_cas_goal = 0 }
-			set_variable = { ITA_missiolinis_naval_bombers_goal = 0 }
-			set_variable = { ITA_missiolinis_tactical_bombers_goal = 0 }
-
-
-			#Re-roll
-			set_variable = { ITA_missiolini_reroll_from = 3 } #STRENGTHEN THE AIRFORCE
-			country_event = { id = BBA_italy_missiolinis.00 hours = 20 }
-		}
 	}
 }
 
@@ -2097,51 +1617,6 @@ unit_leader_event = {
 
 		ITA_mussolinis_reroll_cleanup_if_necessary = yes #To clear stuff if coming from a reroll
 	}
-
-	# Re-roll
-	option = { 
-		name = BBA_italy_missiolinis.council
-
-		ai_chance = {
-			base = 0
-		}
-
-		trigger = {
-			has_completed_focus = ITA_boost_the_grand_council_of_fascism
-			NOT = { has_country_flag = ITA_missiolinis_rerolling_flag }
-		}
-
-		ITA_missiolinis_reroll_cost = yes
-
-		hidden_effect = {
-			#Revert mission initialization from immediate effect
-			ITA_missiolinis_revert_new_mission_initialization_effect = yes
-
-			#Revert other stuff in the immediate effect
-			if = {
-				limit = {
-					has_country_flag = ITA_missiolini_research_production_flag
-				}
-				clr_country_flag = ITA_missiolini_research_production_flag
-			}
-			if = {
-				limit = {
-					has_country_flag = ITA_missiolini_research_industry_flag
-				}
-				clr_country_flag = ITA_missiolini_research_industry_flag
-			}
-			if = {
-				limit = {
-					has_country_flag = ITA_missiolini_research_construction_flag
-				}
-				clr_country_flag = ITA_missiolini_research_construction_flag
-			}
-
-			#Re-roll
-			set_variable = { ITA_missiolini_reroll_from = 4 } #INDUSTRIAL RESEARCH
-			country_event = { id = BBA_italy_missiolinis.00 hours = 20 }
-		}
-	}
 }
 
 # Industrial Research - FAILURE 
@@ -2303,35 +1778,6 @@ unit_leader_event = {
 		activate_mission = ITA_missiolini_expand_intelligence_agency
 
 		ITA_mussolinis_reroll_cleanup_if_necessary = yes #To clear stuff if coming from a reroll
-	}
-
-	# Re-roll
-	option = { 
-		name = BBA_italy_missiolinis.council
-
-		ai_chance = {
-			base = 0
-		}
-
-		trigger = {
-			has_completed_focus = ITA_boost_the_grand_council_of_fascism
-			NOT = { has_country_flag = ITA_missiolinis_rerolling_flag }
-		}
-
-		ITA_missiolinis_reroll_cost = yes
-
-		hidden_effect = {
-			#Revert mission initialization from immediate effect
-			ITA_missiolinis_revert_new_mission_initialization_effect = yes
-
-			#Revert other stuff in the immediate effect
-			clr_country_flag = ITA_missiolini_expand_intelligence_service_triggered_flag
-			clr_country_flag = ITA_missiolini_upgrade_agency_goal_flag
-
-			#Re-roll
-			set_variable = { ITA_missiolini_reroll_from = 5 } #EXPAND INTELLIGENCE SERVICE
-			country_event = { id = BBA_italy_missiolinis.00 hours = 20 }
-		}
 	}
 }
 
@@ -2701,34 +2147,6 @@ unit_leader_event = {
 
 		ITA_mussolinis_reroll_cleanup_if_necessary = yes #To clear stuff if coming from a reroll
 	}
-
-	# Re-roll
-	option = { 
-		name = BBA_italy_missiolinis.council
-
-		ai_chance = {
-			base = 0
-		}
-
-		trigger = {
-			has_completed_focus = ITA_boost_the_grand_council_of_fascism
-			NOT = { has_country_flag = ITA_missiolinis_rerolling_flag }
-		}
-
-		ITA_missiolinis_reroll_cost = yes
-
-		hidden_effect = {
-			#Revert mission initialization from immediate effect
-			ITA_missiolinis_revert_new_mission_initialization_effect = yes
-
-			#Revert other stuff in the immediate effect
-			clr_country_flag = ITA_missiolini_bolster_political_cabinet_triggered_flag
-
-			#Re-roll
-			set_variable = { ITA_missiolini_reroll_from = 6 } #BOLSTER POLITICAL CABINET
-			country_event = { id = BBA_italy_missiolinis.00 hours = 20 }
-		}
-	}
 }
 
 # Bolster Political Cabinet - FAILURE 
@@ -2820,34 +2238,6 @@ unit_leader_event = {
 		activate_mission = ITA_missiolini_bolster_military_high_command
 
 		ITA_mussolinis_reroll_cleanup_if_necessary = yes #To clear stuff if coming from a reroll
-	}
-
-	# Re-roll
-	option = { 
-		name = BBA_italy_missiolinis.council
-
-		ai_chance = {
-			base = 0
-		}
-
-		trigger = {
-			has_completed_focus = ITA_boost_the_grand_council_of_fascism
-			NOT = { has_country_flag = ITA_missiolinis_rerolling_flag }
-		}
-
-		ITA_missiolinis_reroll_cost = yes
-
-		hidden_effect = {
-		#Revert mission initialization from immediate effect
-			ITA_missiolinis_revert_new_mission_initialization_effect = yes
-
-			#Revert other stuff in the immediate effect
-			clr_country_flag = ITA_missiolini_bolster_military_high_command_triggered_flag
-
-			#Re-roll
-			set_variable = { ITA_missiolini_reroll_from = 7 } #BOLSTER MILITARY CABINET
-			country_event = { id = BBA_italy_missiolinis.00 hours = 20 }
-		}
 	}
 }
 

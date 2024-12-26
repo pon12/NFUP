@@ -2027,8 +2027,6 @@ country_event = {
 				start_resistance = BUL
 			}
 		}
-		unlock_decision_tooltip = BUL_repress_imro_foreign
-		unlock_decision_tooltip = BUL_destroy_imro_foreign
 	}
 }
 
@@ -3196,27 +3194,6 @@ country_event = {
 	option = { #Ok
 		name = bftb_bulgaria_rearmament.9.a
 
-		ai_chance = {
-			base = 5
-			modifier = {
-				factor = 5
-				is_historical_focus_on = yes
-			}
-			modifier = {
-				factor = 100
-				BUL = {
-					OR = {
-						has_war_with = GER
-						is_in_faction_with = ROOT	
-					}
-				}
-			}
-			modifier = { #You think like us, we like that
-				factor = 1.5
-				BUL = {	has_government = ROOT }
-			}
-		}
-
 		effect_tooltip = { 
 			BUL = { remove_ideas = BUL_army_restrictions }
 		}
@@ -3245,10 +3222,6 @@ country_event = {
 			BUL = { remove_ideas = BUL_army_restrictions }
 		}
 		add_political_power = -75
-		create_wargoal = {
-			type = topple_government
-			target = BUL
-		}
 	}
 }
 
@@ -4555,63 +4528,6 @@ country_event = {
  ######   ######   ###  ###  
 
 
-#SCW is over - Bulgarian volunteers aiding the Spanish Republic are back - Event for BUL
-country_event = {
-	id = bftb_bulgaria_scw_volunteers.1
-	title = bftb_bulgaria_scw_volunteers.1.t
-	desc = bftb_bulgaria_scw_volunteers.1.desc
-	picture = GFX_report_event_spr_no_pasaran 
-
-	is_triggered_only = yes
-
-	fire_only_once = yes
-
-	option = {
-		name = bftb_bulgaria_scw_volunteers.1.a
-
-		trigger = {
-			country_exists = SPD
-		}
-
-		custom_effect_tooltip = available_chief_of_airforce
-		show_ideas_tooltip = BUL_zachari_zachariev
-
-		if = {
-			limit = {
-				check_variable = { BUL_spanish_tag_aided = FROM }
-			}
-			army_experience = 50
-			air_experience = 25
-		}
-		else = {
-			army_experience = 25
-			air_experience = 15
-		}
-	}
-
-	option = {
-		name = bftb_bulgaria_scw_volunteers.1.b
-
-		trigger = {
-			NOT = { country_exists = SPD }
-		}
-
-		custom_effect_tooltip = available_chief_of_airforce
-		show_ideas_tooltip = BUL_zachari_zachariev
-
-		if = {
-			limit = {
-				check_variable = { BUL_spanish_tag_aided = FROM }
-			}
-			army_experience = 50
-			air_experience = 25
-		}
-		else = {
-			army_experience = 25
-			air_experience = 15
-		}
-	}
-}
 
 #SCW is over - Bulgarian volunteers aiding the Spanish Nationalists are back - Event for BUL
 country_event = {

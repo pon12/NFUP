@@ -8,18 +8,6 @@ if = {
 		set_naval_oob = "NOR_1936_naval_legacy"
 	}
 }
-if = {
-	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "NOR_1936_air_bba"
-	else = {
-		set_air_oob = "NOR_1936_air_legacy"
-		set_technology = {
-			early_fighter = 1
-			early_bomber = 1
-
-		}
-	}
-}
 #Country Leaders 
 recruit_character = NOR_johan_nygaardsvold
 #recruit_character = NOR_vidkun_quisling
@@ -186,21 +174,6 @@ set_popularities = {
 	communism = 2
 }
 
-1939.1.1 = {
-	set_politics = {
-		ruling_party = democratic
-		last_election = "1936.10.19"
-		election_frequency = 36
-		elections_allowed = yes
-	}
-	set_popularities = {
-		democratic = 84
-		fascism = 2
-		communism = 2
-		neutrality = 12
-	}
-}
-
 ### VARIANTS ###
 # 1936 Start #
 if = {
@@ -287,31 +260,4 @@ if = {
 			rear_1_custom_slot = empty
 		}
 	}
-}
-
-# 1939 Start #
-1939.1.1 = {
-	if = {
-		limit = { not = { has_dlc = "Man the Guns" } }
-		# Ship variants #
-	}
-	if = {
-		limit = { has_dlc = "Man the Guns" }
-		# Destroyers #
-		create_equipment_variant = {
-			name = "Sleipner & Odin Class"							
-			type = ship_hull_light_1
-			name_group = NOR_DD_HISTORICAL
-			parent_version = 0
-			modules = {
-				fixed_ship_battery_slot = ship_light_battery_1
-				fixed_ship_anti_air_slot = ship_anti_air_1
-				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-				fixed_ship_radar_slot = empty
-				fixed_ship_engine_slot = light_ship_engine_1
-				fixed_ship_torpedo_slot = ship_torpedo_1
-				mid_1_custom_slot = ship_mine_layer_1
-				rear_1_custom_slot = ship_depth_charge_1
-			}
-		}
 }

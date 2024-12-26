@@ -28,24 +28,6 @@ characters={
 				small=GFX_portrait_BRA_eurico_dutra_civilian_small
 			}
 		}
-		advisor={
-			cost = 150
-			slot = political_advisor 
-			idea_token = BRA_eurico_gaspar_dutra
-			allowed = {
-				original_tag = BRA
-				has_dlc = "Trial of Allegiance"
-			}
-			available = {
-				OR = { 
-					has_completed_focus = BRA_posts_for_generals 
-				}
-				is_country_leader = NO
-			}
-			traits = {
-				BRA_minister_of_defense
-			}
-		}	
 		corps_commander={
 			traits={ jungle_rat }
 			skill=4
@@ -580,21 +562,7 @@ characters={
 		#	traits = {
 		#		BRA_anti_authoritarian
 		#	}
-		#}
-		advisor={
-			slot = political_advisor
-			idea_token = BRA_lindolfo_collor
-			allowed = {
-				original_tag = BRA
-			}
-			available  = {
-				has_government = democratic
-				has_completed_focus = BRA_free_speech
-			}
-			traits  = {
-				BRA_anti_authoritarian
-			}
-		}		
+		#}		
 	}
 
 	BRA_jose_americo_de_almeida = {
@@ -602,20 +570,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_portrait_BRA_jose_de_almeida_small"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = BRA_jose_americo_de_almeida
-			allowed = {
-				original_tag = BRA
-			}
-			available  = {
-				has_government = democratic
-				has_completed_focus = BRA_free_speech
-			}
-			traits  = {
-				BRA_academic_writer
 			}
 		}		
 	}
@@ -635,22 +589,7 @@ characters={
 		#	traits = {
 		#		BRA_education_pioneer
 		#	}
-		#}
-		advisor={
-			slot = political_advisor
-			idea_token = BRA_anisio_teixeira
-			allowed = {
-				original_tag = BRA
-			}
-			available  = {
-				has_government = democratic
-				has_completed_focus = BRA_free_speech
-				is_country_leader = no
-			}
-			traits  = {
-				BRA_education_pioneer
-			}
-		}		
+		#}		
 	}
 
 	BRA_armando_de_sales_oliveira = {
@@ -665,21 +604,6 @@ characters={
 			ideology = liberalism
 			expire = "1965.1.1.1"
 			traits = { democratic_reformer }
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = BRA_armando_de_sales_oliveira
-			allowed = {
-				original_tag = BRA
-			}
-			available  = {
-				has_government = democratic
-				has_completed_focus = BRA_free_speech
-				is_country_leader = no
-			}
-			traits  = {
-				BRA_democratic_engineer
-			}
 		}		
 	}
 
@@ -704,7 +628,6 @@ characters={
 			idea_token = BRA_minervino_de_oliveira
 			allowed = {
 				original_tag = BRA
-				has_dlc = "Trial of Allegiance"
 			}
 			available  = {
 				#has_government = communism
@@ -762,7 +685,6 @@ characters={
 			idea_token = BRA_war_industrialist
 			allowed = {
 				original_tag = BRA
-				has_dlc = "Trial of Allegiance"
 			}
 			available  = {
 				#has_government = communism
@@ -786,7 +708,6 @@ characters={
 			idea_token = BRA_captain_of_industry
 			allowed = {
 				original_tag = BRA
-				has_dlc = "Trial of Allegiance"
 			}
 			available  = {
 				#has_government = communism
@@ -848,7 +769,6 @@ characters={
 			idea_token = BRA_gustavo_barroso
 			allowed = {
 				original_tag = BRA
-				has_dlc = "Trial of Allegiance"
 			}
 			available  = {
 				NOT = { has_government = communism }
@@ -888,7 +808,6 @@ characters={
 			idea_token = BRA_oliveria_viana
 			allowed = {
 				original_tag = BRA
-				has_dlc = "Trial of Allegiance"
 			}
 			available  = {
 				NOT = { has_government = communism }
@@ -912,7 +831,6 @@ characters={
 	#		idea_token = BRA_geremia_lunarelli
 	#		allowed  = {
 	#			original_tag  = BRA
-	#			has_dlc = "Trial of Allegiance"
 	#		}
 	#		available  = {
 	#			always = no

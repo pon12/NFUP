@@ -28,8 +28,8 @@ sub_units = {
 			artillery_equipment = 36
 		}
 		
-		max_strength = 0.6
-		max_organisation = 0
+		max_strength = 10
+		max_organisation = 10
 		default_morale = 0.1
 		training_time = 120
 		weight = 0.5
@@ -71,7 +71,7 @@ sub_units = {
 		}
 
 		amphibious = {
-			attack = -0.4
+			attack = -0.2
 		}
 	}
 
@@ -88,7 +88,7 @@ sub_units = {
 			artillery
 		}
 
-		group = mobile_combat_support
+		group = mobile
 		
 		categories = {
 			category_army
@@ -109,8 +109,8 @@ sub_units = {
 			motorized_equipment = 36
 		}
 		
-		max_strength = 0.6
-		max_organisation = 0
+		max_strength = 10
+		max_organisation = 10
 		default_morale = 0.1
 		training_time = 120
 		weight = 0.5
@@ -149,7 +149,7 @@ sub_units = {
 		}
 
 		amphibious = {
-			attack = -0.4
+			attack = -0.2
 		}
 	}
 	
@@ -166,7 +166,7 @@ sub_units = {
 			artillery
 		}
 
-		group = combat_support
+		group = infantry
 		
 		categories = {
 			category_army
@@ -181,9 +181,9 @@ sub_units = {
 		}
 		
 		manpower = 500
-		max_organisation = 0
+		max_organisation = 10
 		default_morale = 0.1
-		max_strength = 0.6
+		max_strength = 10
 		training_time = 120
 		weight = 0.5
 
@@ -222,7 +222,7 @@ sub_units = {
 		}
 
 		amphibious = {
-			attack = -0.4
+			attack = -0.2
 		}
 	}
 
@@ -239,7 +239,7 @@ sub_units = {
 			artillery
 		}
 
-		group = mobile_combat_support
+		group = mobile
 		
 		categories = {
 			category_army
@@ -255,9 +255,9 @@ sub_units = {
 		}
 		
 		manpower = 500
-		max_organisation = 0
+		max_organisation = 10
 		default_morale = 0.1
-		max_strength = 0.6
+		max_strength = 10
 		training_time = 120
 		weight = 0.5
 
@@ -296,7 +296,7 @@ sub_units = {
 		}
 
 		amphibious = {
-			attack = -0.4
+			attack = -0.2
 		}
 	}
 	
@@ -314,7 +314,7 @@ sub_units = {
 			rocket
 		}
 
-		group = mobile_combat_support
+		group = mobile
 		
 		categories = {
 			category_army
@@ -330,9 +330,9 @@ sub_units = {
 		}
 		
 		manpower = 500
-		max_organisation = 0
+		max_organisation = 10
 		default_morale = 0.1
-		max_strength = 0.6
+		max_strength = 10
 		training_time = 120
 		weight = 0.5
 
@@ -372,7 +372,7 @@ sub_units = {
 		}
 
 		amphibious = {
-			attack = -0.4
+			attack = -0.2
 		}
 	}
 }

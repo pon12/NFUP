@@ -78,53 +78,10 @@ SOV_morozov_design_bureau_organization = {
 	icon = GFX_idea_morozov_design_bureau
 	
 	allowed = {	
-		OR = {
-			tag = SOV
-			AND = {
-				tag = MEX 
-				has_dlc = "Man the Guns"
-			}
-			AND = {
-				OR = {
-					tag = MAN
-				} 
-				has_dlc = "Waking the Tiger"
-			}
-		}
+		tag = SOV
 	}
 
 	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = SOV } }
-			}
-			FROM = { NOT = { has_war_with = SOV } }
-		}
-
-		IF = {
-			limit = {
-				FROM = { tag = MEX }
-			}
-			FROM = { is_in_faction_with = SOV }
-		}
-#		ELSE_IF = {
-#			limit = {
-#				FROM = {
-#					OR = {
-#						is_literally_china = yes
-#						tag = MAN
-#					}
-#				} 
-#			}
-#			FROM = { has_completed_focus = CHI_hire_soviet_designer }
-#		}
-#		ELSE_IF = {
-#			limit = {
-#				FROM = { original_tag = NOR }
-#			}
-#			FROM = { has_completed_focus = NOR_invite_soviet_designers }
-#		}
 	}
 
 	add_trait = { 
@@ -720,6 +677,13 @@ SOV_CAS_organization = {
 	allowed = {	 
 		tag = SOV
 	}
+	initial_trait = {
+		name = generic_mio_initial_trait_sov_cas_designer
+
+		equipment_bonus = {
+			air_defence = 0.2
+		}
+	}
 }
 
 SOV_mig_design_bureau_organization = {
@@ -743,8 +707,7 @@ SOV_mig_design_bureau_organization = {
 		equipment_bonus = {
 			air_agility = 0.05
 			maximum_speed = 0.05
-			air_attack = 0.05
-			air_defence = 0.15
+			air_defence = 0.2
 		}
 	}
 

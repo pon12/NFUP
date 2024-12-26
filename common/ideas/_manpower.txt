@@ -1,5 +1,5 @@
 ideas = {
-
+	
 	mobilization_laws = {
 		law = yes
 		use_list_view = yes
@@ -126,13 +126,6 @@ ideas = {
 				}
 				has_war_support > 0.2
 				#Special rules AST in TFV
-				if = {
-					limit = {
-						original_tag = CAN
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = CAN_commit_to_the_war
-				}
 
 				if = {
 					limit = {
@@ -184,17 +177,6 @@ ideas = {
 					
 					has_completed_focus = AST_fight_work_or_perish
 				}
-
-				if = {
-					limit = {
-						original_tag = CAN
-						has_dlc = "Together for Victory"
-					}
-					OR = {
-						has_completed_focus = CAN_compromise_with_quebec
-						has_completed_focus = CAN_forced_quebec_conscription
-					}
-				}
 				NOT = { original_tag = RAJ }
 				if = {
 					limit = {
@@ -218,6 +200,10 @@ ideas = {
 
 			modifier = {
 				conscription = 0.1
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				production_speed_buildings_factor = -0.1
+				#XP from reinforcement penalty (small)
 			}
 
 			cancel_if_invalid = no
@@ -242,17 +228,6 @@ ideas = {
 					
 					has_completed_focus = AST_fight_work_or_perish
 				}
-
-				if = {
-					limit = {
-						original_tag = CAN
-						has_dlc = "Together for Victory"
-					}
-					OR = {
-						has_completed_focus = CAN_compromise_with_quebec
-						has_completed_focus = CAN_forced_quebec_conscription
-					}
-				}
 				NOT = { original_tag = RAJ }
 
 				if = {
@@ -276,12 +251,11 @@ ideas = {
 			level = 2
 
 			modifier = {
-				conscription = 0.2
+				conscription = 0.15
 				industrial_capacity_factory = -0.2
 				industrial_capacity_dockyard = -0.2
 				production_speed_buildings_factor = -0.2
 				#XP from reinforcement penalty (small)
-				training_time_factor = 0.3
 			}
 
 			cancel_if_invalid = no
@@ -303,17 +277,6 @@ ideas = {
 					}
 					
 					has_completed_focus = AST_fight_work_or_perish
-				}
-
-				if = {
-					limit = {
-						original_tag = CAN
-						has_dlc = "Together for Victory"
-					}
-					OR = {
-						has_completed_focus = CAN_compromise_with_quebec
-						has_completed_focus = CAN_forced_quebec_conscription
-					}
 				}
 				NOT = { original_tag = RAJ }
 
@@ -338,7 +301,7 @@ ideas = {
 			level = 1
 
 			modifier = {
-				conscription = 0.25
+				conscription = 0.20
 				industrial_capacity_factory = -0.3
 				industrial_capacity_dockyard = -0.3
 				production_speed_buildings_factor = -0.3
@@ -346,9 +309,5 @@ ideas = {
 
 			cancel_if_invalid = no
 		}
-
-		### Swiss Citizen Militia ### 
 	}
-
-
 }
