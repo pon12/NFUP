@@ -268,8 +268,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_empower_the_greenshirts
 
-		cost = 5
-
+		cost = 10
 		ai_will_do = {
 			factor = 15
 		}
@@ -310,7 +309,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_the_march_on_budapest
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 25

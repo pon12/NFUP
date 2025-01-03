@@ -246,3 +246,7 @@ SAF_tt_3_5_influence:0 "3Equality Movement!: \n G+5! YInfluence!\n\n" #add
 SAF_tt_3_10_influence:0 "3Equality Movement!: \n G+10! YInfluence!\n\n" #add_to_variable = { SAF_1_Influence = 10}
 SAF_tt_3_-5_influence:0 "3Equality Movement!: \n R-5! YInfluence!\n\n" #add_to_variable = { SAF_1_Influence = -5}
 SAF_tt_3_-10_influence:0 "3Equality Movement!: \n R-10! YInfluence!\n\n" #add_to_variable = { SAF_1_Influence = -10}
+
+#GER
+
+GER_kdf_wagen_factories2:0 "Nationalize Saxon Industry"
