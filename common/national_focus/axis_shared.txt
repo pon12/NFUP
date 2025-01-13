@@ -33,6 +33,11 @@
 		y = 0   
 		trigger = {	tag = SPR}
 	}
+	offset = {
+		x = 15
+		y = 6 
+		trigger = {	tag = YUG}
+	}
 	cost = 5
 	completion_reward = {
 		add_political_power = 50
