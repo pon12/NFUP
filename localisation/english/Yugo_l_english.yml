@@ -185,7 +185,7 @@ SAF_D_PM_backroom_deals_1:0 "Backroom deals with Ossewabrandwag"
 SAF_D_PM_backroom_deals_2:0 "Backroom deals with British Loyalists"
 SAF_D_PM_backroom_deals_3:0 "Backroom deals with Equality Movement"
 
-SAF_expand_the_mining_industry2:0 "Financial Subsidies"
+SAF_expand_the_mining_industry2:0 "Start the Rearmarment"
 SAF_expand_the_mining_industry3:0 "Nationalize the Industry"
 
 timeout_effect_tt:0 "g4Every 30 Days! for the YPoint differences! between YInfluence! and GSupport!\nY0.1 Stability! will be Gadded! if the GSupport! is Yhigher! than the YInflunece! and Rremoved! if YInfluence! is Yhigher! than GSupport! \nThe Min is -10 Stability and the Max ist +20 Stability!"
@@ -247,6 +247,13 @@ SAF_tt_3_10_influence:0 "3Equality Movement!: \n G+10! YInfluence!\n\n" #a
 SAF_tt_3_-5_influence:0 "3Equality Movement!: \n R-5! YInfluence!\n\n" #add_to_variable = { SAF_1_Influence = -5}
 SAF_tt_3_-10_influence:0 "3Equality Movement!: \n R-10! YInfluence!\n\n" #add_to_variable = { SAF_1_Influence = -10}
 
+
+
+SAF_modify_dynamicm_tt:0 "Modify YFast Rearmament! by:"
+SAF_Fast_Reamarment_i:0 "Fast Rearmament"
+SAF_mil_industry1:0 "Expand Military Industry"
+SAF_mil_industry2:0 "Military Resources"
+SAF_mil_industry3:0 "Maximize Production"
 #GER
 
 GER_kdf_wagen_factories2:0 "Nationalize Saxon Industry"

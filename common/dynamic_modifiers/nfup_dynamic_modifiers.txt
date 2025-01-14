@@ -42,4 +42,24 @@ SAF_Politcal_manuevering_i = {
 	custom_modifier_tooltip = SAF_modifier_tt_test1
 	#}
 }
-
+SAF_Fast_Reamarment_i = {
+	enable = { always = yes }
+	
+	icon = GFX_idea_ARG_rapid_militarization
+	
+	#modifier = {
+	
+	stability_factor = var_SAF_2_stab
+	war_support_factor = var_SAF_2_wars
+	consumer_goods_factor = var_SAF_2_consg
+	production_factory_max_efficiency_factor = var_SAF_2_maxeff
+	production_factory_efficiency_gain_factor = var_SAF_2_effgain
+	production_lack_of_resource_penalty_factor = var_SAF_2_ressourcepen
+	production_speed_arms_factory_factor = var_SAF_2_factoryspeed
+	production_speed_industrial_complex_factor = var_SAF_2_civspeed
+	economy_cost_factor = var_SAF_2_law1
+	trade_laws_cost_factor = var_SAF_2_law2
+	mobilization_laws_cost_factor = var_SAF_2_law3
+	local_resources_factor = var_SAF_2_resc
+	#}
+}

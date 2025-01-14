@@ -10,6 +10,36 @@ YUG = {add_ideas = NO_GRINDING}
 YUG = {add_ideas = Yugoslavian_Army }
 AST = {add_ideas = AST_great_depression_1}
 CAN = {add_ideas = CAN_great_depression_1}
+SAF = {
+    set_variable = { SAF_1_Support = 10}
+    set_variable = { SAF_1_Influence = 20}
+    
+    add_to_variable = {
+        var_SAF_stab = 0.05
+    }
+    
+    set_variable = { SAF_2_Support = 50}
+    set_variable = { SAF_2_Influence = 60}
+
+    set_variable = { SAF_3_Support = 5}
+    set_variable = { SAF_3_Influence = 10}
+
+add_to_variable = {
+    var = var_SAF_2_stab
+    value = -0.1
+}
+add_to_variable = {
+    var = var_SAF_2_wars
+    value = 0.05
+}
+add_to_variable = {
+    var = var_SAF_2_factoryspeed
+    value = 0.2
+}
+add_to_variable = {
+    var = var_SAF_2_civspeed
+    value = -0.05
+}}
 }
 }
 

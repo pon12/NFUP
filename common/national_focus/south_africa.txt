@@ -99,18 +99,7 @@
 			#}
 			
 			custom_effect_tooltip = SAF_tt_start_pm
-			set_variable = { SAF_1_Support = 10}
-			set_variable = { SAF_1_Influence = 20}
 			
-			add_to_variable = {
-				var_SAF_stab = 0.05
-			}
-			
-			set_variable = { SAF_2_Support = 50}
-			set_variable = { SAF_2_Influence = 60}
-
-			set_variable = { SAF_3_Support = 5}
-			set_variable = { SAF_3_Influence = 10}
 			add_dynamic_modifier = {
 				modifier = SAF_Politcal_manuevering_i
 			}
@@ -851,7 +840,7 @@
 	focus = {
 		id = SAF_south_african_railways
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 10
+		x = 12
 		y = 0
 
 		cost = 5
@@ -867,55 +856,47 @@
 		}	
 		completion_reward = {
 
-			681 = {
+			random_owned_controlled_state  = {
 				add_building_construction = {
 					type = infrastructure 
-					Level = 2
+					Level = 1
 					instant_build = yes
 				}
-			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = SAF_south_african_railways
-		}
-	}
-
-	focus = {
-		id = SAF_expand_the_mining_industry
-		icon = GFX_goal_generic_construction
-		prerequisite = { focus = SAF_south_african_railways }
-		x = -1
-		y = 1
-		relative_position_id = SAF_south_african_railways
-
-		cost = 5
-
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-        search_filters = { FOCUS_FILTER_INDUSTRY}
-
-		completion_reward = {
-			681 = {
 				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state  = {
 				add_building_construction = {
-					type = industrial_complex
-					level = 2
+					type = infrastructure 
+					Level = 1
 					instant_build = yes
 				}
-				set_state_flag = SAF_expand_the_mining_industry_IC
+				add_extra_state_shared_building_slots = 2
 			}
+			random_owned_controlled_state  = {
+				add_building_construction = {
+					type = infrastructure 
+					Level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		
+
+		
+			
 		}
 	}
-#
+
+	
+
 	focus = {
 		id = SAF_expand_the_mining_industry2
-		icon = GFX_focus_DEN_no_regulations
-		prerequisite = { focus = SAF_expand_the_mining_industry }
-		x = -1
+		icon = GFX_focus_generic_military_industry
+		prerequisite = { focus = SAF_south_african_railways }
+		x = -2
 		y = 1
-		relative_position_id = SAF_expand_the_mining_industry
-
+		relative_position_id = SAF_south_african_railways
+		mutually_exclusive = { focus = SAF_expand_the_mining_industry3 }
 		cost = 5
 
 
@@ -928,6 +909,230 @@
 			895 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				#set_state_flag = SAF_expand_the_mining_industry_IC
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_dynamic_modifier = {
+							modifier = SAF_Fast_Reamarment_i
+						}
+
+					
+		}
+	}
+	focus = {
+		id = SAF_mil_industry1
+		icon = GFX_focus_generic_reorient_production
+		prerequisite = { focus = SAF_expand_the_mining_industry2 }
+		x = 0
+		y = 1
+		relative_position_id = SAF_expand_the_mining_industry2
+		
+		cost = 5
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+        search_filters = { FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			895 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = SAF_modify_dynamicm_tt
+						add_to_variable = { 
+							var_SAF_2_consg = -0.10
+							tooltip = consumer_goods_factor_tt
+						}
+						add_to_variable = { 
+							var_SAF_2_factoryspeed  = 0.05
+							tooltip = production_speed_arms_factory_factor_tt
+						}
+						add_to_variable = {
+							var_SAF_2_civspeed = -0.05
+							tooltip = production_speed_industrial_complex_factor_tt
+						}
+						add_to_variable = { 
+							var_SAF_2_stab = -0.02
+							tooltip = stability_factor_tt
+						}
+						
+			
+		}
+	}
+	focus = {
+		id = SAF_mil_industry2
+		icon = GFX_focus_GER_factories_for_resources
+		prerequisite = { focus = SAF_expand_the_mining_industry2 }
+		x = -2
+		y = 1
+		relative_position_id = SAF_expand_the_mining_industry2
+		
+		cost = 5
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+        search_filters = { FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			random_owned_controlled_state =  {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				
+				add_resource = {
+					type = steel
+					amount = 20
+				}
+				add_resource = {
+					type = tungsten
+					amount = 10
+				}
+				add_resource = {
+					type = aluminium
+					amount = 5
+				}
+				add_resource = {
+					type = oil
+					amount = 2
+				}
+				
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = SAF_modify_dynamicm_tt
+						add_to_variable = { 
+							var_SAF_2_ressourcepen = -0.15
+							tooltip = production_lack_of_resource_penalty_factor_tt
+						}
+						add_to_variable = { 
+							var_SAF_2_resc = 0.10
+							tooltip = local_resources_factor_tt
+						}
+						#
+						add_to_variable = {
+							var_SAF_2_civspeed = -0.05
+							tooltip = production_speed_industrial_complex_factor_tt
+						}
+						add_to_variable = { 
+							var_SAF_2_stab = -0.02
+							tooltip = stability_factor_tt
+						}
+						add_to_variable = { 
+							var_SAF_2_law2 = 0.25
+							tooltip = trade_laws_cost_factor_tt
+						}
+						
+			
+		}
+	}
+
+	focus = {
+		id = SAF_mil_industry3
+		icon = GFX_focus_SOV_merge_plants
+		prerequisite = { focus = SAF_mil_industry1  }
+		prerequisite = {focus = SAF_mil_industry2}
+		x = -1
+		y = 1
+		relative_position_id = SAF_mil_industry1
+		
+		cost = 10
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+        search_filters = { FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			random_owned_controlled_state =  {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}	
+			}
+			random_owned_controlled_state =  {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}	
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = SAF_modify_dynamicm_tt
+						add_to_variable = { 
+							var_SAF_2_maxeff = 0.05
+							tooltip = production_factory_max_efficiency_factor_tt
+						}
+						add_to_variable = { 
+							var_SAF_2_effgain = 0.05
+							tooltip = production_factory_efficiency_gain_factor_tt
+						}
+						add_to_variable = { 
+							var_SAF_2_consg = -0.05
+							tooltip = consumer_goods_factor_tt
+						}
+						add_to_variable = { 
+							var_SAF_2_law1 = -0.10
+							tooltip = economy_cost_factor_tt
+						}
+						add_to_variable = { 
+							var_SAF_2_law3 = -0.10
+							tooltip = mobilization_laws_cost_factor_tt
+						}
+						add_to_variable = {
+							var_SAF_2_civspeed = -0.1
+							tooltip = production_speed_industrial_complex_factor_tt
+						}
+						add_to_variable = { 
+							var_SAF_2_stab = -0.06
+							tooltip = stability_factor_tt
+						}
+			
+		}
+	}
+	
+	focus = {
+		id = SAF_expand_the_mining_industry3
+		icon = GFX_focus_DEN_heavy_regulations
+		prerequisite = { focus = SAF_south_african_railways }
+		x = 2
+		y = 1
+		relative_position_id = SAF_south_african_railways
+		
+		cost = 5
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+        search_filters = { FOCUS_FILTER_INDUSTRY}
+		mutually_exclusive = { focus = SAF_expand_the_mining_industry2 }
+		completion_reward = {
+			541 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
@@ -936,15 +1141,13 @@
 			}
 		}
 	}
-	
-
 	focus = {
 		id = SAF_heavy_engineering
 		icon = GFX_goal_generic_production
-		prerequisite = { focus = SAF_south_african_railways }
-		x = 1
+		prerequisite = { focus = SAF_expand_the_mining_industry3 }
+		x = 0
 		y = 1
-		relative_position_id = SAF_south_african_railways
+		relative_position_id = SAF_expand_the_mining_industry3
 
 		cost = 5
 
@@ -953,7 +1156,14 @@
 		available_if_capitulated = no
         search_filters = {  FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
-		completion_reward = {			
+		completion_reward = {	
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+				add_extra_state_shared_building_slots = 5
+			}		
 			add_tech_bonus = {
 				name = SAF_heavy_engineering
 				bonus = 1.0
@@ -972,8 +1182,8 @@
 		}
 	}
 	focus = {
-		id = SAF_expand_the_mining_industry3
-		icon = GFX_focus_DEN_heavy_regulations
+		id = SAF_expand_the_mining_industry
+		icon = GFX_goal_generic_construction
 		prerequisite = { focus = SAF_heavy_engineering }
 		x = 1
 		y = 1
@@ -988,22 +1198,31 @@
         search_filters = { FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			541 = {
-				add_extra_state_shared_building_slots = 2
+			681 = {
+				
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
-				#set_state_flag = SAF_expand_the_mining_industry_IC
+
+				add_extra_state_shared_building_slots = 5
+				add_resource = {
+					type = steel
+					amount = 15
+				}
+				add_resource = {
+					type = tungsten
+					amount = 10
+				}
+				set_state_flag = SAF_expand_the_mining_industry_IC
 			}
 		}
 	}
-
 	focus = {
 		id = SAF_infrastructure_effort
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = SAF_heavy_engineering focus = SAF_expand_the_mining_industry }
+		prerequisite = { focus = SAF_expand_the_mining_industry2 focus = SAF_expand_the_mining_industry3 }
 		x = 0
 		y = 2
 		relative_position_id = SAF_south_african_railways
@@ -1016,13 +1235,31 @@
         search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {			
-			719 = {
+			random_owned_controlled_state  = {
 				add_building_construction = {
-					type = infrastructure
-					level = 2
+					type = infrastructure 
+					Level = 1
 					instant_build = yes
 				}
+				add_extra_state_shared_building_slots = 2
 			}
+			random_owned_controlled_state  = {
+				add_building_construction = {
+					type = infrastructure 
+					Level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state  = {
+				add_building_construction = {
+					type = infrastructure 
+					Level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			
 		}
 	}
 
@@ -1070,6 +1307,13 @@
         search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+				add_extra_state_shared_building_slots = 3
+			}
 			275 = {
 				add_resource = {
 					type = steel
@@ -1150,6 +1394,13 @@
         search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+				add_extra_state_shared_building_slots = 3
+			}
 			add_ideas = SAF_gold_exports
 		}
 	}
@@ -1262,7 +1513,7 @@
 	focus = {
 		id = SAF_special_service_battalion
 		icon = GFX_goal_generic_army_doctrines
-		x = 14
+		x = 19
 		y = 0
 
 		cost = 5
