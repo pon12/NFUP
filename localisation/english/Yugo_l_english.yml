@@ -249,11 +249,13 @@ SAF_tt_3_-10_influence:0 "3Equality Movement!: \n R-10! YInfluence!\n\n" #
 
 
 
-SAF_modify_dynamicm_tt:0 "Modify YFast Rearmament! by:"
+SAF_modify_dynamicm_tt:0 "Modify YFast Rearmament! by"
 SAF_Fast_Reamarment_i:0 "Fast Rearmament"
 SAF_mil_industry1:0 "Expand Military Industry"
 SAF_mil_industry2:0 "Military Resources"
 SAF_mil_industry3:0 "Maximize Production"
+SAF_heavy_engineering2:0 "Industrial Heart of Africa"
+SAF_Fast_Reamarment_i_desc:0 "The Effects will be lowered after completing YWar Measures Act!"
 #GER
 
 GER_kdf_wagen_factories2:0 "Nationalize Saxon Industry"

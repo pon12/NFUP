@@ -61,5 +61,7 @@ SAF_Fast_Reamarment_i = {
 	trade_laws_cost_factor = var_SAF_2_law2
 	mobilization_laws_cost_factor = var_SAF_2_law3
 	local_resources_factor = var_SAF_2_resc
+
+	
 	#}
 }
