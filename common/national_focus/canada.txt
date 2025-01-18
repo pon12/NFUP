@@ -51,7 +51,9 @@ focus = {
 		cost = 5
 
 
-		available = {OR = {ENG = {has_completed_focus = uk_develope_focus} GER = {has_completed_focus = GER_danzig_or_war}}}
+		available = {
+			
+		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -204,7 +206,9 @@ focus = {
 		cost = 10
 
 
-available = {OR = {ENG = {has_completed_focus = uk_develope_focus} GER = {has_completed_focus = GER_danzig_or_war}}}
+available = {
+	date > 1938.01.01
+}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -266,7 +270,7 @@ available = {OR = {ENG = {has_completed_focus = uk_develope_focus} GER = {has_co
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_timed_idea = { idea = CAN_Industrie_Idee  days = 70 }
+			add_timed_idea = { idea = CAN_Industrie_Idee  days = 140 }
 			862 = {
 			add_extra_state_shared_building_slots = 1
 					add_building_construction = {
@@ -321,7 +325,7 @@ available = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_timed_idea = { idea = CAN_Industrie2_Idee  days = 70 }
+			add_timed_idea = { idea = CAN_Industrie2_Idee  days = 140 }
 			862 = {
 			add_extra_state_shared_building_slots = 1
 					add_building_construction = {
@@ -368,7 +372,7 @@ available = {
 
 		cost = 5
 
-available = {OR = {ENG = {has_completed_focus = uk_develope_focus} GER = {has_completed_focus = GER_danzig_or_war}}}
+available = {}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1831,7 +1835,7 @@ available = {
 		}
 
 		available = {
-
+			has_war = yes
 		}
 		
 		bypass = {
@@ -1845,8 +1849,7 @@ available = {
 
 		completion_reward = {
 			remove_ideas = CAN_conscription_crisis
-			custom_effect_tooltip = "CAN_ANGERED_WORKERS"
-			
+			add_stability = -0.05
 			# Opens up the MTTH events tfv_canada.50 - tfv_canada.53
 		}
 	}
