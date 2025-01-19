@@ -2025,7 +2025,7 @@ focus_tree = {
 			
 			add_tech_bonus = {
 				name = GER_coal_liquefaction
-				bonus = 1
+				bonus = 3
 				uses = 1
 				category = synth_resources
 			}
@@ -2213,7 +2213,7 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = GER_establish_buna_werke
-				bonus = 1
+				bonus = 3
 				uses = 1
 				category = synth_resources
 			}
