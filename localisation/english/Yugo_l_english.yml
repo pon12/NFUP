@@ -96,6 +96,10 @@ ENG_No_Asia_Test:0 "No Asia"
  FRA_appeal_to_overseas_territories2:0 "Appeal to Overseas Territories"
  FRA_continue_the_fight2:0 "Continue the Fight"
  FRA_appeal_to_the_french_nation2:0 "Appeal to the French Nation"
+ FRA_intervention_in_central_africa2:0 "Intervention in Central Africa"
+ FRA_intervention_in_west_africa2:0 "Intervention in West Africa"
+ FRA_intervention_in_madagascar2:0 "Intervention in Madagascar"
+ FRA_intervention_in_syria2:0 "Intervention in Syria"
 
 #SOV FOCUS TREE
  SOV_Great_War:0 "The Great Patriotic War"

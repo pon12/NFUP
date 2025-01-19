@@ -218,7 +218,7 @@ focus = {
 	focus = {
 		id = FRA_begin_rearmament
 		icon = GFX_R56_GOAL_FRA_INCREASE_MILITARY_SPENDINGS
-		x = 4
+		x = 9
 		y = 0
 		available = { GER = { has_completed_focus = GER_rhineland} }
 		prerequisite = {}
@@ -342,6 +342,264 @@ focus = {
 			
 		}
 	}
+
+
+
+
+	
+	focus = {
+		id = FRA_infantry_tanks
+		icon = GFX_focus_generic_combined_arms
+		x = 2
+		y = 1
+		
+		prerequisite = {  focus = FRA_aggressive_focus }
+		mutually_exclusive = { }
+		relative_position_id = FRA_aggressive_focus
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			IF = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:FRA_renault_organization = {
+					add_mio_funds = 2000
+				}
+			}
+			ELSE = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = FRA_hotchkiss
+			}
+		}
+	}
+	focus = {
+		id = FRA_special_forces
+		icon = GFX_goal_generic_special_forces
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_infantry_tanks }
+		mutually_exclusive = { }
+		relative_position_id = FRA_infantry_tanks
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = { special_forces }
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				add_potential_special_forces_tree = yes
+			}
+		}
+	}
+	focus = {
+		id = FRA_methodical_battle
+		icon = GFX_goal_generic_cavalry
+		x = -3
+		y = 1
+		
+		prerequisite = { focus = FRA_defensive_focus }
+		
+		relative_position_id = FRA_defensive_focus
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = FRA_methodical_battle
+				category = land_doctrine
+				uses = 2
+				cost_reduction = 0.65
+			}
+		}
+	}
+	focus = {
+		id = FRA_fortification_focus
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = FRA_methodical_battle }
+		x = 0
+		y = 1
+		relative_position_id = FRA_methodical_battle
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = FRA_fortification_focus
+		}
+	}
+	focus = {
+		id = FRA_alpine_forts
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = FRA_fortification_focus }
+		x = -1
+		y = 1
+		relative_position_id = FRA_fortification_focus
+		cost = 5
+		mutually_exclusive = { focus = FRA_extend_the_maginot_line }
+		available = {
+			735 = { is_controlled_by = ROOT }
+		}
+
+		completion_reward = {
+			735 = {
+				add_building_construction = {
+					type = bunker
+					province = 764
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9909
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3959
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6975
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3764
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9745
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 778
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_extend_the_maginot_line
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = FRA_fortification_focus }
+		x = 1
+		y = 1
+		relative_position_id = FRA_fortification_focus
+		cost = 5
+		mutually_exclusive = { focus = FRA_alpine_forts }
+		available = {
+			18 = { is_controlled_by = ROOT }
+			29 = { is_controlled_by = ROOT }
+			785 = { is_controlled_by = ROOT }
+			has_idea = FRA_protected_by_the_maginot_line
+		}
+		completion_reward = {
+			18 = {
+				add_building_construction = {
+					type = bunker
+					province = 5291
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3560
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9472
+					level = 2
+					instant_build = yes
+				}
+			}
+			29 = {
+				add_building_construction = {
+					type = bunker
+					province = 11606
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11483
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 575
+					level = 2
+					instant_build = yes
+				}
+			}
+			785 = {
+				add_building_construction = {
+					type = bunker
+					province = 3447
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
 	focus = {
 		id = FRA_battle_of_maneuver
 		icon = GFX_FOCUS_FRA_DE_GAULLE
@@ -457,7 +715,7 @@ focus = {
 	focus = {
 		id = FRA_form_the_popular_front
 		icon = GFX_FRA_front_de_la_liberte
-		x = 9
+		x = 16
 		y = 0
 
 
@@ -521,6 +779,7 @@ focus = {
 				technology = dispersed_industry4 
 				technology = dispersed_industry5
 			}
+			
 			hidden_effect = { country_event = { id = lar_fra_inefficient_economy.1 days = 730 } }
 			custom_effect_tooltip = FRA_laissez_faire_tt
 		}
@@ -647,7 +906,7 @@ focus = {
 		}
 
 		available = {
-			NOT = { 16 = { is_controlled_by = FRA} }
+			
 		}
 		
 		bypass = {
@@ -917,7 +1176,7 @@ focus = {
 	focus = {
 		id = FRA_naval_rearmament
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 13
+		x = 20
 		y = 0
 		cost = 5
 		available_if_capitulated = yes
@@ -1028,10 +1287,11 @@ focus = {
 			}
 		}
 	}
+	
 	focus = {
 		id = FRA_appeal_to_the_french_nation2
 		icon = GFX_FOCUS_FRA_DE_GAULLE
-		x = 25
+		x = 33
 		y = 0
 
 		prerequisite = {}
@@ -1116,7 +1376,7 @@ focus = {
 		}
 	}
 	focus = {
-		id = FRA_intervention_in_west_africa
+		id = FRA_intervention_in_west_africa2
 		icon = GFX_goal_generic_position_armies
 		x = -1
 		y = 1
@@ -1172,7 +1432,7 @@ focus = {
 		}
 	}
 	focus = {
-		id = FRA_intervention_in_syria
+		id = FRA_intervention_in_syria2
 		icon = GFX_goal_generic_position_armies
 		x = 3
 		y = 1
@@ -1220,7 +1480,7 @@ focus = {
 	}
 
 	focus = {
-		id = FRA_intervention_in_central_africa
+		id = FRA_intervention_in_central_africa2
 		icon = GFX_goal_generic_position_armies
 		x = -3
 		y = 1
@@ -1269,7 +1529,7 @@ focus = {
 		}
 	}
 	focus = {
-		id = FRA_intervention_in_madagascar
+		id = FRA_intervention_in_madagascar2
 		icon = GFX_goal_generic_position_armies
 		x = 1
 		y = 1
@@ -1317,10 +1577,10 @@ focus = {
 		y = 2
 
 		prerequisite = { 
-			focus = FRA_intervention_in_madagascar
-			focus = FRA_intervention_in_syria
-			focus = FRA_intervention_in_west_africa
-			focus = FRA_intervention_in_central_africa
+			focus = FRA_intervention_in_madagascar2
+			focus = FRA_intervention_in_syria2
+			focus = FRA_intervention_in_west_africa2
+			focus = FRA_intervention_in_central_africa2
 		}
 		relative_position_id = FRA_appeal_to_overseas_territories2
 		
@@ -1549,7 +1809,7 @@ focus = {
 	focus = {
 		id = FRA_refus_absurde
 		icon = GFX_goal_generic_demand_territory
-		x = 17
+		x = 26
 		y = 0
 
 		prerequisite = { 
@@ -1562,7 +1822,7 @@ focus = {
 		}
 		available = {
 			check_variable = {  FRA_legitimacy > 60  }
-
+			NOT = { FRA = { controls_state = 16 } }
 			custom_trigger_tooltip = {
 				tooltip = "Has at least 60 legitimacy"
 				check_variable = { FRA_legitimacy > 60 }
@@ -1763,7 +2023,7 @@ focus = {
 		prerequisite = {
 			focus = FRA_form_the_national_committee
 		}
-		relative_position_id = FRA_the_civil_and_military_organization
+		relative_position_id = FRA_the_civil_and_military_organization2
 		
 		cost = 10
 		ai_will_do = {
