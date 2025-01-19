@@ -1800,10 +1800,10 @@ focus_tree = {
 					}
 				}
 				prioritize = { 59 }
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 				add_resource = {
@@ -2206,7 +2206,7 @@ focus_tree = {
 			modify_building_resources = {
         	   building = synthetic_refinery
         	   resource = rubber
-        	   amount = 3
+        	   amount = 4
         	}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -4002,9 +4002,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_adopt_new_panzer_doctrine
 		cost = 10
-		available = {
-			has_tech = radio
-		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 
