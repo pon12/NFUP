@@ -4150,6 +4150,7 @@ focus_tree = {
 		}
 
 	}
+	
 	focus = {
 		id = ITA_battleship
 		icon = GFX_goal_generic_occupy_states_coastal

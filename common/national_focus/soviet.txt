@@ -1523,7 +1523,7 @@ add_building_construction = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-	add_ideas = Sov_Fighter_Group
+			add_ideas = Sov_Fighter_Group
 
 			add_tech_bonus = {
 				name = SOV_increase_aircraft_production

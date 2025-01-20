@@ -118,7 +118,7 @@ SOV_development_of_tankograd_factories_tt2:0 "In Every State with atleast Y3! 
  SOV_Tank_IC_Reduction:0 "Tank Industry"
  SOV_Mec_IC_Reduction:0 "Mechanized Industry"
  SOV_Last_Stand:0 "Last Stand of Communism"
-
+ Sov_Fighter_Group:0 "Fighter Group"
 
 #HUN
 HUN_imp_guard:0 "Imperial Guard"
@@ -263,3 +263,15 @@ SAF_Fast_Reamarment_i_desc:0 "The Effects will be lowered after completing YWar
 #GER
 
 GER_kdf_wagen_factories2:0 "Nationalize Saxon Industry"
+
+#MAN
+MAN_armorfr:0 "Armor Focus"
+MAN_amptanks:0 "Amphibious Tanks"
+MAN_Tank_major:0 "Tank Major"
+MAN_Build_up:0 "Build up"
+MAN_Heavy_project:0 "Heavy Project"
+MAN_amptanks_focus3:0 "Amphibious Tanks"
+
+#ITA
+ITA_battleship:0 "Battleship Fleet"
+ITA_battleships:0 "Battleship Fleet"

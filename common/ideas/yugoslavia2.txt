@@ -1,6 +1,70 @@
 ideas = {
 
 	country = {
+
+		MAN_amptanks_focus3 = {
+
+			picture = generic_industrial_concern_2
+
+            allowed = {
+                tag = MAN
+                always = yes
+            }
+
+            allowed_civil_war =  {always = yes }
+
+            removal_cost = -1
+
+           equipment_bonus = {
+				amphibious_tank_equipment = {build_cost_ic = -0.03 instant = yes}
+		   }     
+  }
+
+  Sov_Fighter_Group = {
+			
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+	
+	picture = generic_air_bonus
+
+	removal_cost = -1
+	
+	equipment_bonus = {
+		small_plane_airframe = {
+			build_cost_ic = -0.1 instant = yes
+		}
+		cv_small_plane_airframe = {
+			build_cost_ic = -0.1 instant = yes
+		}
+	}
+}
+
+  ITA_battleships = {
+
+	picture = generic_industrial_concern_2
+
+	allowed = {
+		tag = MAN
+		always = yes
+	}
+
+	allowed_civil_war =  {always = yes }
+
+	removal_cost = -1
+
+	equipment_bonus = {
+		ship_hull_heavy = {
+			build_cost_ic = -0.03 instant = yes
+	}
+}
+}
+
+
 		FIN_contin_war = {
 
 			picture = FIN_opposition_to_winter_war

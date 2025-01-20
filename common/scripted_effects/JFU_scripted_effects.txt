@@ -4268,7 +4268,7 @@ JFU_vichy_france_2 = {
 			transfer_state = 888
 		}
 		FRA_africa_spawn_ins = yes 
-		add_equipment_to_stockpile = { type = medium_tank_chassis_2 amount = 500 producer = FRA variant_name = "AFRICA TANKs" }
+		add_equipment_to_stockpile = { type = medium_tank_chassis_2 amount = 1000 producer = FRA variant_name = "AFRICA TANKs" }
 		add_equipment_to_stockpile = { type = medium_tank_flame_chassis_1 amount = 200 producer = FRA variant_name = "AFRICA FLAME TANKs" }
 		add_equipment_to_stockpile = { type = light_tank_chassis_1 amount = 300 producer = FRA variant_name = "AFRICA LIGHT TANKs" }
 		set_country_flag = GER_has_capitulated_to_germany

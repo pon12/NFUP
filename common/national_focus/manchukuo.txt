@@ -1587,10 +1587,11 @@ focus_tree = {
 		cost = 5
 		
 				completion_reward = {
-			add_ideas = MAN_amptanks_focus
+			add_ideas = MAN_amptanks_focus3
 		       }
 
 			}
+			
 	focus = {
 		id = MAN_Tank_major 
 		icon = GFX_goal_generic_production2
@@ -1602,8 +1603,8 @@ focus_tree = {
 		cost = 5
 		
 				completion_reward = {
-			add_ideas  = MAN_Tank_major
-			set_cosmetic_tag = MAN88
+			#add_ideas  = MAN_Tank_major
+			
 		
 		      761 = {
  add_extra_state_shared_building_slots = 10
@@ -1616,7 +1617,7 @@ add_building_construction = {
 			   }
 			   }
 focus = {
-		id = Build_up
+		id = MAN_Build_up
 		icon = GFX_goal_generic_production2
 		prerequisite = { focus = MAN_Tank_major  }
 		x = 0
@@ -1626,8 +1627,8 @@ focus = {
 		cost = 5
 		
 				completion_reward = {
-			add_ideas  = MAN_Tank_major
-			set_cosmetic_tag = MAN88
+			
+			
 		
 		      716 = {
  add_extra_state_shared_building_slots = 5
@@ -1640,17 +1641,17 @@ add_building_construction = {
 			   }
 }
 focus = {
-		id = Heavy_project
+		id = MAN_Heavy_project
 		icon = GFX_goal_generic_production2
-		prerequisite = { focus = Build_up }
+		prerequisite = { focus = MAN_Build_up }
 		x = 2
 		y = 1
-	    relative_position_id = Build_up
+	    relative_position_id = MAN_Build_up
 		available = {NOT = {country_exists = CHI}}
 		cost = 5
 		
 				completion_reward = {
-			add_ideas  = MAN_Tank_major
+			
 			set_cosmetic_tag = MAN88
 		
 		      611 = {
