@@ -603,3 +603,34 @@ SOV_Winter_war_d = {
 			}
 		}
 	}
+
+JFU_decisions = {
+
+		#annex indonesien
+		ENG_annex_indenesien = { 
+			icon = eng_trade_unions_demand
+			fire_only_once = yes
+			allowed = { tag = ENG }	
+			visible = {
+				#has_game_rule = {
+				#	rule = No_Asia_game_rule
+				#	option = NO_ASIA_JA
+				#}
+				tag = ENG
+			}
+			available = { 
+				date > 1939.1.1
+				ENG = {has_war = yes}
+				NOT = {HOL = {controls_state = 7}}
+				#has_game_rule = {
+				#	rule = No_Asia_game_rule
+				#	option = NO_ASIA_JA
+				#}
+		}		
+			cost = 0
+			complete_effect = { 
+				ENG = {annex_country = { target = HOL transfer_troops = no }}
+				}
+			}
+
+}
