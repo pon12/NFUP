@@ -1210,7 +1210,7 @@
  EFR_defense_plan:0 "Bulwark of France"
 
  pacific_war_japan:0 "Pacific War" 
- pacific_war_japan_desc:0 "If we lose control of our Island our Homelands will be threatened \nPacific War Islands Japan: §YMarshall Islands, Caroline Islands, Palau, Kuril Islands, Hainan, Saipan, Marcus Islands, Iwo Jima, Formosa, Okinawa§!."
+ pacific_war_japan_desc:0 "If we lose control of our Island our Homelands will be threatened \nPacific War Islands Japan: \n §YMarshall Islands\n Caroline Islands\n Palau\n Kuril Islands\n Hainan\n Saipan\n Marcus Islands\n Iwo Jima\n Taiwan\n Okinawa§!."
  pacific_war_USA:0 "Pacific War" 
  pacific_war_USA_desc:0 "If we lose control of our Islands our Homelands will be threatened \nPacific War Islands USA: §YGuam, Wake, Midway Islands, Johnston Atoll, Hawaii§!.\nSouth east asian states: §YManila, Singapur, Kalimantan, Java, Papua§!."
  pacific_war_allies:0 "Pacific War" 

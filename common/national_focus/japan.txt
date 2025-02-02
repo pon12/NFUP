@@ -15,7 +15,7 @@
 	continuous_focus_position = { x = 20 y = 1200 }
 	focus = {
 		id = JAP_purge_the_kodoha_faction
-		icon = GFX_goal_generic_major_war
+		icon = GFX_PON_JAP_POL1 
 		x = 3
 		y = 0
 
@@ -45,7 +45,7 @@
 
 	focus = {
 		id = JAP_liaison_conference
-		icon = GFX_goal_generic_intelligence_exchange
+		icon = GFX_PON_JAP_POL2 
 		prerequisite = { focus = JAP_purge_the_kodoha_faction }
 		x = -2
 		y = 1
@@ -125,7 +125,7 @@
 
 	focus = {
 		id = JAP_intervene_in_china
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_PON_JAP_POL3 
 		prerequisite = { focus = JAP_greater_east_asian_co_prosperity_sphere }
 		will_lead_to_war_with = CHI
 		x = -1
@@ -201,7 +201,7 @@
 
 	focus = {
 		id = JAP_develop_chinese_resources
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_PON_JAP_POL6 
 		prerequisite = { focus = JAP_secure_china }
 		x = 0
 		y = 2
@@ -245,9 +245,9 @@
 
 	focus = {
 		id = JAP_strike_south_doctrine
-		icon = GFX_goal_generic_navy_doctrines_tactics
+		icon = GFX_PON_JAP_POL4
 		prerequisite = { focus = JAP_greater_east_asian_co_prosperity_sphere }
-		x = 1
+		x = 2
 		y = 2
 		relative_position_id = JAP_liaison_conference
 
@@ -260,6 +260,11 @@
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
+			transfer_state = 728
+			transfer_state = 671
+			transfer_state = 670
+			transfer_state = 286 
+			transfer_state = 741 
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.75
@@ -302,6 +307,52 @@
 				uses = 1
 				category = tp_tech
 			}
+
+		}
+	}
+	#
+	focus = {
+		id = JAP_develope_siam
+		icon = GFX_PON_JAP_POL5  
+		prerequisite = { focus = JAP_strike_south_doctrine }
+		x = -1
+		y = 1
+		relative_position_id = JAP_strike_south_doctrine
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+289 = {
+	add_extra_state_shared_building_slots = 6
+	add_building_construction = {
+		type = industrial_complex
+		level = 3
+	}
+}
+868 = {
+	add_extra_state_shared_building_slots = 6
+	add_building_construction = {
+		type = industrial_complex
+		level = 3
+	}
+}
 
 		}
 	}
@@ -434,7 +485,7 @@
 		id = JAP_guide_the_zaibatsus
 		icon = GFX_focus_jap_zaibatsu
 		prerequisite = { focus = JAP_purge_the_kodoha_faction }
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = JAP_purge_the_kodoha_faction
 
@@ -496,8 +547,70 @@
 	}
 
 	focus = {
+		id = JAP_develope_man
+		icon = GFX_GOAL_DEVELOP_PROVINCES
+		prerequisite = { focus = JAP_purge_the_kodoha_faction }
+		x = 1
+		y = 1
+		relative_position_id = JAP_purge_the_kodoha_faction
+
+		cost = 5
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			MAN = {
+			random_owned_controlled_state = {
+				limit = {
+					 
+					is_core_of = MAN
+				}
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					
+					is_core_of = MAN
+				}
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+		limit = { MAN = {exists = no} }
+			328 = {				add_extra_state_shared_building_slots = 6
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}}
+			761 = {				add_extra_state_shared_building_slots = 6
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}}
+		}
+	}
+	}
+
+	focus = {
 		id = JAP_nationalize_war_industry
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_PON_JAP_ECO1    
 		prerequisite = { focus = JAP_national_mobilization_law  }
 		x = 0
 		y = 2
