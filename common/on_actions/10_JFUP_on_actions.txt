@@ -2,6 +2,9 @@ on_actions = {
 on_startup = {
 effect = {
 #every_country = {army_experience = 10 navy_experience = 10 air_experience = 10}
+
+JAP = { set_power_balance = {id = JAP_power_balance}}
+JAP = { remove_ideas = JAP_interservice_rivalry_balanced}
 YUG = {remove_ideas = ai_limiter} 
 YUG = {add_timed_idea = {idea = JFU_no_tradeback  days = 1277}}
 YUG = {add_timed_idea = {idea = peace_training  days = 1277}}

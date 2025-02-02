@@ -282,3 +282,13 @@ ENG_annex_indenesien:0 "Annex Indonesia"
 #JAP
 JAP_develope_siam:0 "Develope Siam"
 JAP_develope_man:0 "Develope Manchuria"
+
+JAP_power_balance:0 "Army-Navy Rivalry"
+JAP_Navy_side:0 "Navy Side"
+JAP_Army_side:0 "Army Side" 
+JAP_low_trust_range:0 "Navy Strengthened"
+JAP_very_low_trust_range:0 "Navy Dominant"
+JAP_medium_trust_range:0 "Balanced"
+JAP_high_trust_range:0 "Army Strengthened"
+JAP_very_high_trust_range:0 "Army Dominant"
+NEUENG_British_Influnence:0 "British Influence"
