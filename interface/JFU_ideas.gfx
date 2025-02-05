@@ -10,6 +10,10 @@ spriteTypes = {
 	SpriteType = { 
 		name = "GFX_idea_pervitin"
 		texturefile = "gfx/interface/ideas/pervitin.dds"
-	}	
+	}
+	SpriteType = { 
+		name = "GFX_idea_JAP_closed_eco"
+		texturefile = "gfx/interface/ideas/idea_JAP_closed_economy.dds"
+	}		
 }
 

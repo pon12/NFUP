@@ -106,6 +106,20 @@ ideas = {
 				political_advisor_cost_factor = -0.10
 			}
 		}
+
+		ROM_Minestry_for_development = {
+
+			picture = generic_economic_increase
+
+			
+			modifier = {
+				economy_cost_factor = -0.10
+				trade_laws_cost_factor = -0.10
+				production_speed_buildings_factor = 0.1
+				
+			}
+		}
+
 		CHI_debuff_idea ={
 			
 			picture = man_five_year_plan_tank

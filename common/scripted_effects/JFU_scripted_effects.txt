@@ -811,16 +811,16 @@ SOV_closed_eco_effect = {
 		}
 	}	
 }
-JAP_closed_eco_effect = {
-	JAP = {
-		add_ideas = closed_economy 
-		add_ideas = export_focus_idea
-	}
+#JAP_closed_eco_effect = {
+#	JAP = {
+#		add_ideas = closed_economy 
+#		add_ideas = export_focus_idea
+#	}
 	#MAN = {
 	#	add_ideas = closed_economy 
 	#	add_ideas = export_focus_idea		
 	#}	
-}
+#}
 JFU_apply_intel = {
     every_country = {
         limit = {

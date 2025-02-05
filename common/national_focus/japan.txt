@@ -128,7 +128,7 @@
 		icon = GFX_PON_JAP_POL3 
 		prerequisite = { focus = JAP_greater_east_asian_co_prosperity_sphere }
 		will_lead_to_war_with = CHI
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = JAP_greater_east_asian_co_prosperity_sphere
 
@@ -158,7 +158,7 @@
 		id = JAP_secure_china
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = JAP_intervene_in_china }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = JAP_intervene_in_china
 
@@ -176,14 +176,12 @@
 			CHI = {
 				surrender_progress > 0.3
 			}
-			has_war_with = USA
 		}
 
 		bypass = {
 			OR = {
-				NOT = { JAP_has_idea_JAP_intervene_in_china = yes }
-				CHI = { has_capitulated = yes }
-			}
+			CHI = {exists = no}
+		}
 		}
 
 		cancel_if_invalid = yes
@@ -193,7 +191,7 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
 			JAP_intervene_in_china_remove = yes
-			add_named_threat = { threat = 15 name = JAP_secure_china }		
+			add_named_threat = { threat = 10 name = JAP_secure_china }		
 			USA = { add_war_support = 0.05 }	
 			unlock_decision_tooltip = JAP_ichi_go
 		}
@@ -202,9 +200,9 @@
 	focus = {
 		id = JAP_develop_chinese_resources
 		icon = GFX_PON_JAP_POL6 
-		prerequisite = { focus = JAP_secure_china }
-		x = 0
-		y = 2
+		prerequisite = { focus = JAP_intervene_in_china }
+		x = 1
+		y = 1
 		relative_position_id = JAP_intervene_in_china
 
 		cost = 10
@@ -243,11 +241,12 @@
 		}
 	}
 
+
 	focus = {
 		id = JAP_strike_south_doctrine
 		icon = GFX_PON_JAP_POL4
 		prerequisite = { focus = JAP_greater_east_asian_co_prosperity_sphere }
-		x = 2
+		x = 4
 		y = 2
 		relative_position_id = JAP_liaison_conference
 
@@ -263,8 +262,8 @@
 			transfer_state = 728
 			transfer_state = 671
 			transfer_state = 670
-			transfer_state = 286 
 			transfer_state = 741 
+			transfer_state = 286 
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.75
@@ -371,6 +370,10 @@
 		available = {
 			date > 1940.12.31
 			NOT = { has_war = yes }
+		}
+		bypass = {
+			date > 1940.12.31
+			has_war_with = ENG
 		}
 
 
@@ -485,7 +488,7 @@
 		id = JAP_guide_the_zaibatsus
 		icon = GFX_focus_jap_zaibatsu
 		prerequisite = { focus = JAP_purge_the_kodoha_faction }
-		x = 3
+		x = 5
 		y = 1
 		relative_position_id = JAP_purge_the_kodoha_faction
 
@@ -886,7 +889,7 @@
 	focus = {
 		id = JAP_army_expansion_law
 		icon = GFX_FOCUS_CHU_IMPERIAL_ARMY
-		x = 7
+		x = 9
 		y = 0
 		relative_position_id = JAP_purge_the_kodoha_faction 
 

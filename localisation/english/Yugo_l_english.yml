@@ -283,6 +283,8 @@ ENG_annex_indenesien:0 "Annex Indonesia"
 JAP_develope_siam:0 "Develope Siam"
 JAP_develope_man:0 "Develope Manchuria"
 
+FRA_no_manchu:0 "No Manchu Player Balance"
+JAP_eco_closed_fickdichgame:0 "Japanese Economy"
 JAP_power_balance:0 "Army-Navy Rivalry"
 JAP_Navy_side:0 "Navy Side"
 JAP_Army_side:0 "Army Side" 
@@ -292,3 +294,8 @@ JAP_medium_trust_range:0 "Balanced"
 JAP_high_trust_range:0 "Army Strengthened"
 JAP_very_high_trust_range:0 "Army Dominant"
 NEUENG_British_Influnence:0 "British Influence"
+
+#ROM
+ROM_Minestry_for_development:0 "Ministry for Development and Construction"
+ROM_malaxa2:0 "Establish the MDC"
+ROM_invest_in_the_iar2:0 "Invite Axis Investments"
