@@ -20,9 +20,9 @@ GER_seize_gold_reserves_cat = {
 	allowed = {
 		original_tag = GER
 	}
-	visible_when_empty = no
+	visible_when_empty = yes
 
-	priority = 12
+	priority = 13
 
 	visible = {
 		has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
