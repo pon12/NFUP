@@ -171,7 +171,7 @@ ROM_kings_guard:0 "Karol´s Guard"
 ROM_the_kings_government:0 "The Kings Government"
 
 #SAF
-JFU_SAF_desc:0 "To Pass our Bills we need Politcal Support of some Groups in our Country\nSupport and Influence of Politcal Movements:\n\ngOssewabrandwag!:\n GSupport!: [?SAF_1_Support]\n YInfluence!: [?SAF_1_Influence]\n\ntBritish Loyalists!:\n GSupport!: [?SAF_2_Support]\n YInfluence!: [?SAF_2_Influence]\n\n3Equality Movement!:\n GSupport!: [?SAF_3_Support]\n YInfluence!: [?SAF_3_Influence]\n\ng4Every 30 Days! for the YPoint differences! between YInfluence! and GSupport!\nY0.1 Stability! will be Gadded! if the GSupport! is Yhigher! than the YInflunece! and Rremoved! if YInfluence! is Yhigher! than GSupport! \nThe Min is -10 Stability and the Max ist +20 Stability!"
+JFU_SAF_desc:0 "To Pass our Bills we need Politcal Support of some Groups in our Country\nSupport and Influence of Politcal Movements:\n\ngOssewabrandwag!:\n GSupport!: [?SAF_1_Support]\n YInfluence!: [?SAF_1_Influence]\n\ntBritish Loyalists!:\n GSupport!: [?SAF_2_Support]\n YInfluence!: [?SAF_2_Influence]\n\n3Equality Movement!:\n GSupport!: [?SAF_3_Support]\n YInfluence!: [?SAF_3_Influence]\n\ng4Every 30 Days! for the YPoint differences! between YInfluence! and GSupport!\nY0.1 Stability! will be Gadded! if the GSupport! is Yhigher! than the YInflunece! and Rremoved! if YInfluence! is Yhigher! than GSupport! \nThe Min is -20 Stability and the Max ist +10 Stability!"
 
 SAF_modifier_tt_test1:0 "8Support and Influence of Politcal Movements:!\ngOssewabrandwag!:\n GSupport!: [?SAF_1_Support]\n YInfluence!: [?SAF_1_Influence]\n\ntBritish Loyalists!:\n GSupport!: [?SAF_2_Support]\n YInfluence!: [?SAF_2_Influence]\n\n3Equality Movement!:\n GSupport!: [?SAF_3_Support]\n YInfluence!: [?SAF_3_Influence]\n\nYEffects:!"
 SAF_Politcal_manuevering_i:0 "Politcal Maneuvering"
@@ -192,7 +192,7 @@ SAF_D_PM_backroom_deals_3:0 "Backroom deals with Equality Movement"
 SAF_expand_the_mining_industry2:0 "Start the Rearmarment"
 SAF_expand_the_mining_industry3:0 "Nationalize the Industry"
 
-timeout_effect_tt:0 "g4Every 30 Days! for the YPoint differences! between YInfluence! and GSupport!\nY0.1 Stability! will be Gadded! if the GSupport! is Yhigher! than the YInflunece! and Rremoved! if YInfluence! is Yhigher! than GSupport! \nThe Min is -10 Stability and the Max ist +20 Stability!"
+timeout_effect_tt:0 "g4Every 30 Days! for the YPoint differences! between YInfluence! and GSupport!\nY0.1 Stability! will be Gadded! if the GSupport! is Yhigher! than the YInflunece! and Rremoved! if YInfluence! is Yhigher! than GSupport! \nThe Min is -20 Stability and the Max is +10 Stability!"
 
 SAF_D_PM_fight_influence_of_1:0 "Fight Influence of Ossewabrandwag"
 SAF_D_PM_fight_influence_of_2:0 "Fight Influence of British Loyalists"

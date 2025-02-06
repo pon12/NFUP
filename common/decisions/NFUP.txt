@@ -277,7 +277,7 @@ JFU_SAF = {
 			if = {
 				limit = {check_variable = { SAF_1_Support < SAF_1_Influence} 
 						check_variable = {
-							var_SAF_stab > -0.10
+							var_SAF_stab > -0.20
 						}
 			}
 			add_to_variable = {
@@ -299,7 +299,7 @@ JFU_SAF = {
 		else_if = {
 			limit = {check_variable = { SAF_1_Support > SAF_1_Influence} 
 					check_variable = {
-						var_SAF_stab < 0.20
+						var_SAF_stab < 0.10
 					}
 		}
 
@@ -323,7 +323,7 @@ JFU_SAF = {
 	if = {
 		limit = {check_variable = { SAF_2_Support < SAF_2_Influence} 
 				check_variable = {
-					var_SAF_stab > -0.10
+					var_SAF_stab > -0.20
 				}
 	}
 	add_to_variable = {
@@ -345,7 +345,7 @@ JFU_SAF = {
 else_if = {
 	limit = {check_variable = { SAF_2_Support > SAF_2_Influence} 
 			check_variable = {
-				var_SAF_stab < 0.20
+				var_SAF_stab < 0.10
 			}
 }
 
@@ -369,7 +369,7 @@ else_if = {
 if = {
 	limit = {check_variable = { SAF_3_Support < SAF_3_Influence} 
 			check_variable = {
-				var_SAF_stab > -0.10
+				var_SAF_stab > -0.20
 			}
 }
 add_to_variable = {
@@ -391,7 +391,7 @@ clear_variable = SAF_3_Unterstuertzung_Unterschied
 else_if = {
 limit = {check_variable = { SAF_3_Support > SAF_3_Influence} 
 		check_variable = {
-			var_SAF_stab < 0.20
+			var_SAF_stab < 0.10
 		}
 }
 
