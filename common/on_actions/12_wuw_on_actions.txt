@@ -730,6 +730,9 @@ on_actions = {
 						tag = YUG
 						tag = SOV
 						tag = ENG
+						tag = GRE
+						tag = IRE
+						tag = LIT
 						
 					}
 					

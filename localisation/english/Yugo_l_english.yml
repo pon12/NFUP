@@ -52,12 +52,12 @@
  general_staff2:0 "General Staff"
  Yugoslavian_Army:0 "Yugoslavian Army"
 
-#HUN
-HUN_devleope_slovakia:0 "Expand Livingspace in Slovakia"
-HUN_mobelize_the_Nation:0 "Kickstart the War Economy"
-HUN_mobelize_the_Nation2:0 "Expand the Consription"
+ #HUN
+ HUN_devleope_slovakia:0 "Expand Livingspace in Slovakia"
+ HUN_mobelize_the_Nation:0 "Kickstart the War Economy"
+ HUN_mobelize_the_Nation2:0 "Expand the Consription"
 
-#Soviet
+ #Soviet
  Mongolia_labor:0 "Exploit Mongolian Labour"
  SOV_claims_in_balitc2.tt:0 "\nRAnnex! the YUnited Baltics! ! \n\n"
  SOV_Bessarabia2.tt:0 "\nRAnnex! YBessarabia! from LRomania! ! \n\n"
@@ -261,7 +261,7 @@ SAF_mil_industry3:0 "Maximize Production"
 SAF_heavy_engineering2:0 "Industrial Heart of Africa"
 SAF_Fast_Reamarment_i_desc:0 "The Effects will be lowered after completing YWar Measures Act!"
 #GER
-
+ZU_DEUTSCHLAND_KAPITULIERT_MEFO_FIX_PON:0 "Already taken Gold reserves !"
 GER_kdf_wagen_factories2:0 "Nationalize Saxon Industry"
 
 #MAN
