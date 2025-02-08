@@ -721,7 +721,19 @@ on_actions = {
 			# European States Array
 			every_country = { #Countries Germany can seize gold reserves from
 				limit = {
-					capital_scope = { is_on_continent = europe }
+					OR = {
+						tag = POL
+						tag = FRA
+						tag = BEL
+						tag = DEN
+						tag = NOR
+						tag = YUG
+						tag = SOV
+						tag = ENG
+						
+					}
+					
+					
 				}
 				add_to_array = { 
 					array = GER.GER_european_targets_array 

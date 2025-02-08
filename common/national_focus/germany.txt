@@ -8179,18 +8179,20 @@ focus_tree = {
 	
 	focus = {
 		id = GER_danzig_or_war
-
 		icon = GFX_focus_GER_danzig_or_war
 		alternate_icon = GFX_focus_GER_danzig_or_war_historical
-
+		#cost = 10
 		prerequisite = { focus = GER_molotov_ribbentrop_pact }
 		x = 0
 		y = 2
 		relative_position_id = GER_reassert_eastern_claims
-		cost = 1
+		cost = 10
 
 		will_lead_to_war_with = POL
 		will_lead_to_war_with = ENG
+		will_lead_to_war_with = CAN
+		will_lead_to_war_with = SAF
+		will_lead_to_war_with = AST
 
 		bypass = {
 		}
@@ -8198,7 +8200,7 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		available = {
-			date > 1938.08.01
+			date > 1939.05.01
 		}
 		
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION }
