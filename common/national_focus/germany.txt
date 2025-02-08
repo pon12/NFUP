@@ -2249,13 +2249,20 @@ focus_tree = {
 		relative_position_id = GER_seize_foreign_industries
 		cost = 10
 		available = {
-			always = no
+			date > 1942.01.01
+			has_war_with = SOV
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			GER_autarky_achieved_effects = yes
+			#GER_autarky_achieved_effects = yes
+			GER_modify_industrial_modifier = yes
+			add_to_variable = { 
+				GER_industrial_consumer_goods_factor = -0.25
+				tooltip = consumer_goods_factor_tt
+			}
+				
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
@@ -2271,13 +2278,13 @@ focus_tree = {
 				}
 			}			
 
-			#custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
 
-			#custom_effect_tooltip = GER_modify_wehrwirtschaft_modifier_tt
-			#add_to_variable = { 
-			#	GER_wehrwirtschaft_production_speed_buildings_factor = 0.05
-			#	tooltip = production_speed_buildings_factor_tt
-			#}
+			custom_effect_tooltip = GER_modify_wehrwirtschaft_modifier_tt
+			add_to_variable = { 
+				GER_wehrwirtschaft_production_speed_buildings_factor = 0.05
+				tooltip = production_speed_buildings_factor_tt
+			}
 		}
 	}
 
@@ -8191,7 +8198,7 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		available = {
-			date > 1939.08.01
+			date > 1938.08.01
 		}
 		
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION }
