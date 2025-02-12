@@ -985,7 +985,7 @@ focus_tree = {
 		id = wuw_HUN_pass_statute_xix
 		icon = GFX_focus_generic_military_dictatorship
 		prerequisite = { focus = wuw_HUN_strengthen_horthys_reign }
-		x = -1
+		x = -3
 		y = 1
 		relative_position_id = wuw_HUN_strengthen_horthys_reign
 
@@ -1027,10 +1027,162 @@ focus_tree = {
 	}
 
 	focus = {
+		id = HUN_form_the_emp_guard
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = wuw_HUN_pass_statute_xix  }
+		x = 0
+		y = 1
+		relative_position_id = wuw_HUN_pass_statute_xix
+
+		cost = 5
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = {HUN_imp_guard}
+		}
+	}
+
+
+	focus = {
+		id = HUN_romanian_trade
+		icon = GFX_focus_invite_romania
+		prerequisite = { focus = HUN_form_the_emp_guard }
+		x = -1
+		y = 1
+		relative_position_id = HUN_form_the_emp_guard
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			ROM = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						is_core_of = ROM
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+
+	focus = {
+		id = HUN_bulgarian_trade
+		icon = GFX_focus_generic_befriend_bulgaria
+		prerequisite = { focus = HUN_form_the_emp_guard }
+		x = 1
+		y = 1
+		relative_position_id = HUN_form_the_emp_guard
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			BUL = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						is_core_of = BUL
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = HUN_home_defence2
+		icon = GFX_focus_POL_sanation_right
+		prerequisite = { focus = HUN_romanian_trade  }
+		prerequisite = {  focus = HUN_bulgarian_trade }
+		x = 0
+		y = 2
+		relative_position_id = HUN_form_the_emp_guard
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+#
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = hun_home_defence
+		}
+	}
+
+
+
+	focus = {
 		id = wuw_HUN_restrict_voting_rights
 		icon = GFX_focus_usa_voter_registration_act
 		prerequisite = { focus = wuw_HUN_pass_statute_xix }
-		x = 1
+		x = 3
 		y = 1
 		relative_position_id = wuw_HUN_pass_statute_xix
 
@@ -1080,7 +1232,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_restrict_voting_rights
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1125,7 +1277,7 @@ focus_tree = {
 		id = wuw_HUN_outlaw_the_party_of_national_will
 		icon = GFX_focus_HUN_outlaw_the_party_of_national_will
 		prerequisite = { focus = wuw_HUN_pass_statute_xix }
-		x = -1
+		x = -3
 		y = 1
 		relative_position_id = wuw_HUN_pass_statute_xix
 
@@ -1183,7 +1335,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_outlaw_the_party_of_national_will
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -1655,113 +1807,7 @@ custom_effect_tooltip = HUN_mob_1
 			
 		}
 	}
-	focus = {
-		id = HUN_romanian_trade
-		icon = GFX_focus_invite_romania
-		prerequisite = { focus = HUN_mobelize_the_Nation2 }
-		x = -2
-		y = 1
-		relative_position_id = HUN_mobelize_the_Nation2
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			ROM = {
-				random_owned_controlled_state = {
-					limit = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
-						is_core_of = ROM
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-		}
-	}
 	
-	focus = {
-		id = HUN_bulgarian_trade
-		icon = GFX_focus_generic_befriend_bulgaria
-		prerequisite = { focus = HUN_mobelize_the_Nation2 }
-		x = 0
-		y = 1
-		relative_position_id = HUN_mobelize_the_Nation2
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			BUL = {
-				random_owned_controlled_state = {
-					limit = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
-						is_core_of = BUL
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-		}
-	}
 	focus = {
 		id = wuw_HUN_seek_german_contracts
 		icon = GFX_focus_generic_german_trade
