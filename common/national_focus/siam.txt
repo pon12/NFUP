@@ -231,7 +231,7 @@ focus_tree = {
 
 		completion_reward = {
             JAP = {
-                country_event = { days = 2 id = siam.1 }
+                country_event = { days = 2 id = siam.2 }
             }
             add_state_core = 671
             add_state_core = 286
@@ -342,7 +342,7 @@ focus_tree = {
 		}
 	}
 	
-focus = {
+	focus = {
 		id = SIA_monarchy_question
 		icon = GFX_focus_rom_abdicate
 		prerequisite = { focus = SIA_khana_ratsadon }
@@ -357,25 +357,11 @@ focus = {
 		}
         
 		completion_reward = {
-           
-		   random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 3
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
+            ROOT = { country_event = { id = siam.1 } }
 		}
 	}	
 
+	
 	focus = {
 		id = SIA_rise_of_phibun
         icon = GFX_focus_rom_parties_end
