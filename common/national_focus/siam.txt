@@ -343,26 +343,6 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = SIA_monarchy_question
-		icon = GFX_focus_rom_abdicate
-		prerequisite = { focus = SIA_khana_ratsadon }
-		x = 1
-		y = 1
-		relative_position_id = SIA_khana_ratsadon
-        search_filters = { FOCUS_FILTER_POLITICAL }
-		cost = 10
-		
-		ai_will_do = {
-			factor = 11
-		}
-        
-		completion_reward = {
-            ROOT = { country_event = { id = siam.1 } }
-		}
-	}	
-
-	
-	focus = {
 		id = SIA_rise_of_phibun
         icon = GFX_focus_rom_parties_end
 		prerequisite = { focus = SIA_khana_ratsadon }
