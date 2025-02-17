@@ -251,10 +251,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -297,10 +297,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -514,7 +514,7 @@ focus_tree = {
 			modify_building_resources = {
         	   building = synthetic_refinery
         	   resource = rubber
-        	   amount = 2
+        	   amount = 3
         	}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -1311,10 +1311,10 @@ focus_tree = {
 
 					
 					65 = { 
-						add_extra_state_shared_building_slots = 1
+						add_extra_state_shared_building_slots = 2
 						add_building_construction = {
 							type = industrial_complex
-							level = 1
+							level = 2
 							instant_build = yes
 						}
 						add_resource = {
@@ -7525,7 +7525,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
-			add_manpower = 10000
+			add_manpower =2000000
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			#Spawn Penal divisions
@@ -8859,8 +8859,8 @@ focus_tree = {
 					}
 					add_tech_bonus = {
 						name = armor_bonus
-						bonus = 1.0
-						uses = 2
+						bonus = 2.0
+						uses = 1
 						category = armor
 					}
 				}
