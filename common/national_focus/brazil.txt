@@ -2725,4 +2725,40 @@ focus = {
 			custom_effect_tooltip = BRA_jungle_pioneers_tt
 		}
 	}
+
+
+
+	focus = {
+		id = BRA_join_the_war
+		icon = GFX_focus_generic_total_war
+		x = -3
+		y = 1
+		relative_position_id = BRA_reward_army_loyalty
+		prerequisite = { focus = BRA_reward_army_loyalty }
+		cost = 1
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_game_rule = {rule = No_Asia_game_rule option = NO_ASIA_JA}
+			date > 1940.06.1
+		}
+			
+		
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			ENG = {add_to_faction = BRA}
+			add_to_war = {
+				targeted_alliance = ENG
+				enemy = GER
+			}
+			add_to_war = {
+				targeted_alliance = ENG
+				enemy = ITA
+			}
+			
+		}
+	}
 }

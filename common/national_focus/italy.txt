@@ -6189,10 +6189,10 @@ focus_tree = {
 				}
 			}
 
-			custom_effect_tooltip = ITA_the_new_emperor_of_ethiopia_king_trait_tt
-			ITA_vittorio_emanuele_iii = { 
-				add_country_leader_trait = emperor_of_ethiopia
-			}
+			#custom_effect_tooltip = ITA_the_new_emperor_of_ethiopia_king_trait_tt
+			# ITA_vittorio_emanuele_iii = { 
+			# 	add_country_leader_trait = emperor_of_ethiopia
+			# }
 
 			unlock_decision_tooltip = ITA_discredit_haile_selassie
 
