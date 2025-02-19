@@ -20,6 +20,7 @@ if = {
     YUG = {remove_ideas = YUG_idea_serbian_general_staff }
     YUG = {remove_ideas = anti_german_military}
     YUG = {
+    country_lock_all_division_template = no
     send_embargo = ENG
     send_embargo = CAN
     send_embargo = SOV
