@@ -24,4 +24,17 @@ German_Overlord = {
 	ai_will_do = {
 		factor = 1
 	}
-}}
+}
+Ustasha = {
+	random = no
+	war_support_factor = 0.05
+	stability_factor = -0.1
+	conscription_factor = 0.10
+	cic_to_overlord_factor = 0.1
+	mic_to_overlord_factor= 0.1
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+}
