@@ -236,28 +236,15 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = MAN_kwantung_veto
 			army_experience = 75
-			MAN_low_legitimacy_level_down = yes
+			hidden_effect = {
+				add_to_variable = { var = MLL_stability value = 0.1 }
+				add_to_variable = { var = MLL_warsupport value = 0.1 }
+			}
+			custom_effect_tooltip = MLL_dynamic_modifer_tt
+
 		}
 	}
 
-		focus = {
-		id = MAN_five_people_armiesx
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		prerequisite = { focus = MAN_alliance_with_the_kwantung_armyx }
-		x = 0
-		y = 1
-		relative_position_id = MAN_alliance_with_the_kwantung_armyx
-
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = MAN_five_people_armies
-		}
-		
-		
-	}
 	
 	focus = {
 		id = MAN_chinese_leadershipx
@@ -282,7 +269,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			MAN_low_legitimacy_level_down = yes
+			hidden_effect = {
+				add_to_variable = { var = MLL_stability value = 0.1 }
+				add_to_variable = { var = MLL_warsupport value = 0.1 }
+			}
+			custom_effect_tooltip = MLL_dynamic_modifer_tt
 		}
 	}
 
@@ -311,13 +302,16 @@ focus_tree = {
 		}
 
 		completion_reward = {	
-			MAN_low_legitimacy_level_down = yes
+			hidden_effect = {
+				add_to_variable = { var = MLL_stability value = 0.1 }
+				add_to_variable = { var = MLL_warsupport value = 0.1 }
+			}
+			custom_effect_tooltip = MLL_dynamic_modifer_tt
 
 			every_state = {
 				limit = { is_core_of = CHI }
 				add_core_of = ROOT
 			}
-			
 		}
 	}
 
@@ -345,9 +339,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			MAN_low_legitimacy_clear_all = yes
+			hidden_effect = {
+				remove_dynamic_modifier = { modifier = MAN_low_legitimacy_modifier }
+			}
+			custom_effect_tooltip = MLL_remove_tt
 		}
 	}
+
 	
 		
 	focus = {
