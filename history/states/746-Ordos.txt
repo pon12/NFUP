@@ -7,14 +7,27 @@ state={
 	state_category = pastoral
 	
 	
-	history = {
+	history=
+	{
 		owner = CHI
-		
 		add_core_of = CHI
-		
+		add_core_of = CHI
+		add_core_of = CHI
+		add_core_of = MAN
 		
 		buildings = {
 			infrastructure = 1
+		}
+
+		1938.10.25 = {
+			controller = JAP
+		}
+		
+		1939.1.1 = {
+			
+			owner = CHI
+			controller = MEN
+
 		}
 	}
 	manpower=500000

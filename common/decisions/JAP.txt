@@ -1180,7 +1180,7 @@ JAP_pacific_guardian = {
 				#has_capitulated = yes
 				NOT =  { has_war_with = ROOT}
 			}
-			MAL = {
+			NIX = {
 				is_puppet_of = ENG
 			}
 		}
