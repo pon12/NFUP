@@ -1437,8 +1437,25 @@ focus = {
 				transfer_state = 298
 				transfer_state = 514
 				transfer_state = 899
-				transfer_state = 898				
+				transfer_state = 898	
 			}
+			557 = { add_core_of = FRA }
+			272 = { add_core_of = FRA }
+			780 = { add_core_of = FRA }
+			556 = { add_core_of = FRA }
+			779 = { add_core_of = FRA }
+			778 = { add_core_of = FRA }
+			777 = { add_core_of = FRA }
+			776 = { add_core_of = FRA }
+			781 = { add_core_of = FRA }
+			782 = { add_core_of = FRA }
+			786 = { add_core_of = FRA }
+			515 = { add_core_of = FRA }
+			775 = { add_core_of = FRA }
+			298 = { add_core_of = FRA }
+			514 = { add_core_of = FRA }
+			899 = { add_core_of = FRA }
+			898 = { add_core_of = FRA }
 		}
 	}
 	focus = {
