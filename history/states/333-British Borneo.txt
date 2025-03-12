@@ -4,7 +4,7 @@ state=
 	name="STATE_333"
 	manpower = 889800
 	resources={
-		rubber=40 # was: 72
+		rubber=100 # was: 150
 		oil=12 # was: 18
 	}
 	
@@ -28,7 +28,7 @@ state=
 				naval_base = 2
 			}
 		}
-		#add_core_of = NIX
+		#add_core_of = ENG
 	}
 
 	provinces={

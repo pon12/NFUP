@@ -570,16 +570,15 @@ characters = {
 					small = "GFX_idea_HUN_geza_lakatos"
 				}
 			}
-
-			corps_commander = {
-				skill = 3
-				attack_skill = 3
-				defense_skill = 2
-				planning_skill = 3
-				logistics_skill = 2
-				legacy_id = -1 
-			}
-
+corps_commander = {
+            traits = { brilliant_strategist armor_officer trickster trait_engineer }
+            skill = 4
+            attack_skill = 3
+            defense_skill = 3
+            planning_skill = 3
+            logistics_skill = 3
+            legacy_id = 6
+        }
 		}
 		instance = {
 			allowed = {
@@ -631,17 +630,15 @@ characters = {
 				}
 			}
 
-			corps_commander = {
-				traits = { trickster }
-				skill = 4
-				attack_skill = 3
-				defense_skill = 4
-				planning_skill = 2
-				logistics_skill = 4
-				legacy_id = -1
-			}
-
-		}
+		corps_commander = {
+            skill = 4
+            attack_skill = 3
+            defense_skill = 3
+            planning_skill = 4
+            logistics_skill = 3
+            legacy_id = 6
+        }
+    }
 		instance = {
 			allowed = {
 				has_dlc = "Gotterdammerung"
@@ -743,30 +740,6 @@ characters = {
 							has_government = democratic
 						}
 					}
-				}
-			}
-
-			advisor = {
-				slot = army_chief
-				idea_token = HUN_karoly_beregfy
-				allowed = {
-					original_tag = HUN
-				}
-				available = {
-					has_completed_focus = wuw_HUN_invest_in_ludovica_academy
-					NOT = {
-						OR = {
-							has_government = communism
-							has_government = democratic
-						}
-					}
-				}
-				traits = {
-					army_chief_drill_2
-				}
-				cost =  100
-				ai_will_do = {
-					base = 1
 				}
 			}
 
