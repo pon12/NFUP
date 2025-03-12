@@ -4,15 +4,11 @@ state = {
 	manpower = 964700
 	
 	state_category = town
-	
-	resources = {
-		tungsten = 95 #was 150 # was: 300
-	}
 
 	history = {
 
-		owner = NIX
-		add_core_of = NIX
+		owner = SPR
+		add_core_of = SPR
 
 		victory_points = {
 			9787 1 # Viseu

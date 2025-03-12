@@ -6,11 +6,11 @@ state={
 	state_category = pastoral
 	
 	resources={
-		aluminium=64 # was: 112
+		aluminium=180 # was: 250
 	}
 
 	history={
-		add_core_of = GYA
+		add_core_of = ENG
 		owner = ENG
 		victory_points = {
 			4982 1

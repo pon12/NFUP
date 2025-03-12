@@ -1,12 +1,10 @@
 state={
 	id=112
 	name="STATE_112"
-	resources={
-		tungsten= 32 #was: 50.000
-	}
 
 	history={
-		owner = NIX
+		owner = SPR
+	    add_core_of = SPR	
 		victory_points = {
 			11805 20 
 		}
