@@ -14,10 +14,6 @@ state={
 		victory_points = {
 			4098 3
 		}
-		buildings = {
-			infrastructure = 3 #was: 6
-			dockyard = 1
-			air_base = 3
 			6906 = {
 				naval_base = 3
 			}
@@ -33,4 +29,4 @@ state={
 	}
 
 	local_supplies=0.0 
-}
+
