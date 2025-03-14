@@ -22,7 +22,7 @@ state={
 			}
 		}
 		add_core_of = SPR
-	}
+	
 buildings = {
 			infrastructure = 3 #was: 6
 			dockyard = 1
@@ -34,3 +34,4 @@ buildings = {
 
 	local_supplies=0.0 
 
+}

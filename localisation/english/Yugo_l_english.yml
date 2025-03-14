@@ -1,5 +1,5 @@
 ﻿l_english:
-#YUG
+
   YUG_united_yugoslavia_1:0 "United Yugoslavia"
   YUG_united_yugoslavia_2:0 "United Yugoslavia"
   YUG_united_yugoslavia_3:0 "United Yugoslavia"
@@ -52,12 +52,12 @@
  general_staff2:0 "General Staff"
  Yugoslavian_Army:0 "Yugoslavian Army"
 
- #HUN
+ 
  HUN_devleope_slovakia:0 "Expand Livingspace in Slovakia"
  HUN_mobelize_the_Nation:0 "Kickstart the War Economy"
  HUN_mobelize_the_Nation2:0 "Expand the Consription"
 
- #Soviet
+
  Mongolia_labor:0 "Exploit Mongolian Labour"
  SOV_claims_in_balitc2.tt:0 "\nRAnnex! the YUnited Baltics! ! \n\n"
  SOV_Bessarabia2.tt:0 "\nRAnnex! YBessarabia! from LRomania! ! \n\n"
@@ -72,9 +72,8 @@
  Winter_War_Mission:0 "R Countdown of the !CWinter War!"
  Winter_War_Timeout:0 "R Start of the !CWinter War!"
  
-#No Asia
-ENG_No_Asia_Test:0 "No Asia"
- #Canada
+
+ ENG_No_Asia_Test:0 "No Asia"
  CAN_IND1:0 "Industrial Focus"
  CAN_Develope_Ontario:0 "Develope Ontario"
  CAN_Develope_Quebec:0 "Develope Quebec"
@@ -89,7 +88,7 @@ ENG_No_Asia_Test:0 "No Asia"
  CAN_Resources_Columbia:0 "Mine Ressources in Columbia"
  CAN_Industrie_Idee:0 "Civil Investment"
  CAN_Industrie2_Idee:0 "Military Investment"
- #FRA FIX
+
  FRA_the_maquis2:0 "The Maquis"
  FRA_the_civil_and_military_organization2:0 "The Civil and Military Organizations"
  FRA_national_council_of_the_resistance2:0 "National Council of the Resistance"
@@ -101,7 +100,7 @@ ENG_No_Asia_Test:0 "No Asia"
  FRA_intervention_in_madagascar2:0 "Intervention in Madagascar"
  FRA_intervention_in_syria2:0 "Intervention in Syria"
 
-#SOV FOCUS TREE
+
  SOV_Great_War:0 "The Great Patriotic War"
  SOV_Mec_IC_Bonus:0 "Mechanized Industry"
  SOV_Tank_IC_Bonus:0 "Tank Industry"
@@ -111,16 +110,16 @@ ENG_No_Asia_Test:0 "No Asia"
  SOV_coordinate_industry_nfu:0 "Coordinate Industry"
  SOV_last_stand_of_communism_nfu:0 "Last Stand of Communism"
  SOV_american_tool_deliveries_nfu:0 "American Tool Deliveries"
-SOV_Continuation_War:0 "Continuation War"
-SOV_development_of_tankograd_factories_tt2:0 "In Every State with atleast Y3! GMilitary Factorys!:\n Y1! GMilitary Factory! and Y1! YBuilding Slot! will appear.\nRThis Effect will only be applied to a maximum of Y10 States!!"
+ SOV_Continuation_War:0 "Continuation War"
+ SOV_development_of_tankograd_factories_tt2:0 "In Every State with atleast Y3! GMilitary Factorys!:\n Y1! GMilitary Factory! and Y1! YBuilding Slot! will appear.\nRThis Effect will only be applied to a maximum of Y10 States!!"
 
-#SOV IDEAS
+
  SOV_Tank_IC_Reduction:0 "Tank Industry"
  SOV_Mec_IC_Reduction:0 "Mechanized Industry"
  SOV_Last_Stand:0 "Last Stand of Communism"
  Sov_Fighter_Group:0 "Fighter Group"
 
-#HUN
+
 HUN_imp_guard:0 "Imperial Guard"
 HUN_form_the_emp_guard:0 "Form the Imperial Guard"
 HUN_suffrage_reforms:0 "Suffrage Reforms"
