@@ -18,9 +18,10 @@ state=
 			}
 		}
 		add_claim_by = SPR
+		add_core_of = eng
 	}
 	provinces={
-		4135 
+		4135 13228
 	}
 
 	local_supplies=0.0 

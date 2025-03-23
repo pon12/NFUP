@@ -1,4 +1,5 @@
-﻿focus_tree = {
+﻿
+focus_tree = {
 	id = japan_wtt_focus
 	
 	country = {
@@ -548,6 +549,26 @@
 			}
 		}
 	}
+focus = {
+		id = JAP_Völkermord_Erforschung
+		icon = GFX_focus_research
+		prerequisite = { focus =JAP_purge_the_kodoha_faction  }
+		x = 3
+		y = 1
+		relative_position_id = JAP_purge_the_kodoha_faction
+
+		cost = 5
+
+
+		available = { MAN = { exists = no }}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
 
 	focus = {
 		id = JAP_develope_man
@@ -954,29 +975,8 @@
 				specialization = specialization_land
 				value = 0.5
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			IF = {
-				limit = { 
-					531 = {
-						is_fully_controlled_by = ROOT
-						air_facility < 1
-						land_facility < 1
-						naval_facility < 1
-						nuclear_facility < 1
-					}
-				}
-				531 = {
-					add_building_construction = {
-						type = land_facility
-						level = 1
-						instant_build = yes
-						province = 6710 
-					}
-				}
-			}		
 		}
 	}
-
 	focus = {
 		id = JAP_small_arms_modernization
 		icon = GFX_JAPAN_ARMY

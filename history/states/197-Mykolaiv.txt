@@ -5,7 +5,6 @@ state={
 	manpower = 896311
 	
 	state_category = rural
-	impassable = yes
 	history={
 		victory_points = {
 			11683 3

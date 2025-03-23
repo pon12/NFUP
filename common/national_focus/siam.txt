@@ -13,5 +13,5 @@ focus_tree = {
 	continuous_focus_position = { x = 20 y = 800 }
 
 # Start Political 1
-
+}
 	

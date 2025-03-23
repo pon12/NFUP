@@ -5523,9 +5523,10 @@ focus = {
 			hidden_effect = {
 				news_event = { id = news.199 days = 1}
 				annex_country = { target = LIT  }
+						}
+					}
 			}
-		}
-	}
+	
 	focus = {
 		id = SOV_Winter_War
 		icon = GFX_focus_generic_attack_finland

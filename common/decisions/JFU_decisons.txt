@@ -136,7 +136,7 @@ political_actions1 = {
 			}
 			if = {
 				limit = {
-					date < 1941.9.1	
+					date <1941.6.22
 				}
 				GER = { add_timed_idea = { idea = axis_barbarossa days = 120 } }
 			}
@@ -895,13 +895,33 @@ political_actions1 = {
 					transfer_state = 413 
 					transfer_state = 417 
 					transfer_state = 515 
-				}
+				    transfer_state = 1010
+				    transfer_state = 675
+					transfer_state = 1011
+					transfer_state = 1006
+					transfer_state = 1008
+					transfer_state = 1009
+					transfer_state = 1003
+					transfer_state = 1002
+					transfer_state = 676 
+					transfer_state = 291
+					transfer_state = 1001
+					
+					
+					}
 				SOV = {
 					transfer_state = 420
 					transfer_state = 266 
 					transfer_state = 416 
 					transfer_state = 418 
 					transfer_state = 419
+					transfer_state = 7573
+					transfer_state = 1000
+					transfer_state = 1005
+					transfer_state = 267
+					transfer_state = 415
+					transfer_state = 1007
+					transfer_state = 1004
 				}
 				news_event = { id = news.5002 }
 				if = {
