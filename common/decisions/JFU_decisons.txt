@@ -136,7 +136,7 @@ political_actions1 = {
 			}
 			if = {
 				limit = {
-					date <1941.6.22
+					date <1941.9.1
 				}
 				GER = { add_timed_idea = { idea = axis_barbarossa days = 120 } }
 			}
