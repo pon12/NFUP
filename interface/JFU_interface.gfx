@@ -1,0 +1,7 @@
+spriteTypes = {
+		# JUGGLE TECH
+	SpriteType = {
+		name = "GFX_Juggle1_medium"
+		texturefile = "gfx/interface/technologies/juggle.dds"
+	}
+}
