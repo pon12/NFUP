@@ -237,7 +237,25 @@ ideas = {
 				consumer_goods_factor = 0.10
 			}
 		}
+		JAP_Goes_for_the_Voelkermord = {
 
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+
+			picture = jap_zaibatsu
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
 
 		JAP_militarism = {
 			allowed = {
