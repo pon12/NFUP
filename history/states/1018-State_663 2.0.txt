@@ -1,0 +1,21 @@
+state={
+	id=1018
+	name="STATE_1018"
+	manpower = 1
+
+	state_category =  wasteland
+
+
+	history = {
+		owner = ITA
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = LBA
+	}
+	provinces={
+		1060 11951 
+	}
+	
+	local_supplies=0.0
+}

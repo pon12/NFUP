@@ -602,10 +602,10 @@ focus = {
 	focus = {
 		id = JAP_Kriegsplan
 		icon = GFX_R56_GOAL_MAN_KANTO_SHU
-		prerequisite = { focus = JAP_Bauplan }
-		x = -1
+		prerequisite = { focus = Jap_Bauplan }
+		x = 0
 		y = 1
-	    relative_position_id = JAP_Bauplan
+	    relative_position_id = Jap_Bauplan
 		cost = 5
 		completion_reward = {
 			535 = {
@@ -1146,6 +1146,7 @@ focus = {
 					is_fully_controlled_by = MAN
 				}
 			}
+			
 		}
 		ai_will_do = {
 			factor = 1

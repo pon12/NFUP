@@ -1752,11 +1752,11 @@ JFU_pregrinded_effect = {
 		}	
 	}
 	HUN = {
-		HUN_geza_lakatos = { add_skill_level = 3}
-		HUN_geza_lakatos = { add_attack = 4 }
+		HUN_geza_lakatos = { add_skill_level = 4 }
+		HUN_geza_lakatos = { add_attack = 5 }
         HUN_geza_lakatos = { add_defense = 3 }
-        HUN_geza_lakatos = { add_planning = 1 }
-		HUN_geza_lakatos = { add_logistics = 1 }
+        HUN_geza_lakatos = { add_planning = 3 }
+		HUN_geza_lakatos = { add_logistics = 3 }
         HUN_geza_lakatos = {
         	add_unit_leader_trait = pre_grinded
             add_unit_leader_trait = panzer_leader
@@ -1787,10 +1787,10 @@ JFU_pregrinded_effect = {
             add_unit_leader_trait = logistics_wizard
 			add_unit_leader_trait = thorough_planner
 		}
-		HUN_karoly_beregfy = { add_skill_level = 4 }
-		HUN_karoly_beregfy = { add_attack = 1 }
+		HUN_karoly_beregfy = { add_skill_level = 3 }
+		HUN_karoly_beregfy = { add_attack = 5 }
         #HUN_karoly_beregfy = { add_defense = 4 }
-        HUN_karoly_beregfy = { add_planning = 4 }
+        HUN_karoly_beregfy = { add_planning = 3 }
 		HUN_karoly_beregfy = { add_logistics = 4 }
         HUN_karoly_beregfy = {
         	add_unit_leader_trait = pre_grinded
@@ -1809,7 +1809,7 @@ JFU_pregrinded_effect = {
 		}
 
 		HUN_lajos_veress = { add_skill_level = 2 }
-		HUN_lajos_veress = { add_attack = 3 }
+		HUN_lajos_veress = { add_attack = 5 }
         HUN_lajos_veress = { add_defense = 2 }
         #HUN_lajos_veress = { add_planning = 1 }
 		HUN_lajos_veress = { add_logistics = 2 }
@@ -2399,7 +2399,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = trickster	
 			add_unit_leader_trait = organizer		
 		}
-		SOV_dmitry_lelyushenko = { add_skill_level = 3}
+		SOV_dmitry_lelyushenko = { add_skill_level = 2 }
 		SOV_dmitry_lelyushenko = { add_attack = 3 }
 		SOV_dmitry_lelyushenko = { add_defense = 3 }
 		SOV_dmitry_lelyushenko = { add_logistics = 4 }	
@@ -2429,7 +2429,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = cavalry_leader	
 			add_unit_leader_trait = cavalry_expert				
 		}
-		SOV_vasily_chuykov = { add_skill_level = 3 }
+		SOV_vasily_chuykov = { add_skill_level = 2 }
 		SOV_vasily_chuykov = { add_attack = 1 }
 		SOV_vasily_chuykov = { add_defense = 3 }
 		SOV_vasily_chuykov = { add_planning = 1 }
