@@ -1,0 +1,114 @@
+on_actions = {
+on_startup = {
+effect = {
+#every_country = {army_experience = 10 navy_experience = 10 air_experience = 10}
+
+JAP = {add_ideas = JAP_eco_closed_fickdichgame}
+JAP = { set_power_balance = {id = JAP_power_balance}}
+JAP = { remove_ideas = JAP_interservice_rivalry_balanced}
+
+if = { 
+    limit = {YUG = {is_ai = no}}
+    YUG = {remove_ideas = ai_limiter} 
+    YUG = {add_timed_idea = {idea = JFU_no_tradeback  days = 1277}}
+    YUG = {add_timed_idea = {idea = peace_training  days = 1277}}
+    YUG = {add_ideas = NO_SF_CAP}
+    YUG = {add_ideas = NO_GRINDING}
+    YUG = {remove_ideas = YUG_idea_croatian_opposition}
+    YUG = {remove_ideas = YUG_idea_macedonian_opposition }
+    YUG = {remove_ideas = YUG_idea_slovene_nationalism }
+    YUG = {remove_ideas = YUG_idea_serbian_general_staff }
+    YUG = {remove_ideas = anti_german_military}
+    YUG = {
+    country_lock_all_division_template = no
+    send_embargo = ENG
+    send_embargo = CAN
+    send_embargo = SOV
+    send_embargo = USA
+    send_embargo = SAF
+    send_embargo = FRA
+    send_embargo = RAJ
+    send_embargo = AUS
+    send_embargo = NZL
+    send_embargo = POL
+    send_embargo = NOR
+    send_embargo = MEX
+    send_embargo = BRA}
+    ENG = {send_embargo = YUG}
+    USA = {send_embargo = YUG}
+    SOV = {send_embargo = YUG}
+    POL = {send_embargo = YUG}
+    MEX = {send_embargo = YUG}
+    NOR = {send_embargo = YUG}
+    BRA = {send_embargo = YUG}
+    FRA = {send_embargo = YUG}
+    
+    YUG = { 
+
+        add_dynamic_modifier = {modifier = YUG_Yugoslavian_cooperation} 
+    add_to_variable = {
+        var = var_YUG_stab
+        value = -0.3
+    }
+    add_to_variable = {
+        var = var_YUG_pp
+        value = -0.1
+    }
+    add_to_variable = {
+        var = var_YUG_wars
+        value = -0.1
+    }
+    add_to_variable = {
+        var = var_YUG_eff_max
+        value = -0.1
+    }
+    add_to_variable = {
+        var = var_YUG_eff_gain
+        value = -0.1
+    }
+    add_to_variable = {
+        var = var_YUG_build_speed
+        value = -0.1
+    }
+}
+ }
+YUG = {add_ideas = Yugoslavian_Army }
+AST = {add_ideas = AST_great_depression_1}
+CAN = {add_ideas = CAN_great_depression_1}
+SAF = {
+    set_variable = { SAF_1_Support = 10}
+    set_variable = { SAF_1_Influence = 20}
+    
+    add_to_variable = {
+        var_SAF_stab = 0.05
+    }
+    
+    set_variable = { SAF_2_Support = 50}
+    set_variable = { SAF_2_Influence = 60}
+
+    set_variable = { SAF_3_Support = 5}
+    set_variable = { SAF_3_Influence = 10}
+
+add_to_variable = {
+    var = var_SAF_2_stab
+    value = -0.1
+}
+add_to_variable = {
+    var = var_SAF_2_wars
+    value = 0.05
+}
+add_to_variable = {
+    var = var_SAF_2_factoryspeed
+    value = 0.2
+}
+add_to_variable = {
+    var = var_SAF_2_civspeed
+    value = -0.05
+}}
+}
+}
+
+
+
+
+}

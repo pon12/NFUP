@@ -1,0 +1,17 @@
+focus_tree = {
+	id = siam_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = SIA
+		}
+	}
+	
+	default = no
+	continuous_focus_position = { x = 20 y = 800 }
+
+# Start Political 1
+}
+	

@@ -1,0 +1,45 @@
+
+
+technology_sharing_group = {
+
+	id = BRA_USA_tech_sharing_group
+	name = BRA_USA_tech_sharing_group_name
+	desc = BRA_USA_tech_sharing_group_desc
+	picture = GFX_technology_sharing_default
+	research_sharing_per_country_bonus = 0.15
+
+	available = {
+		has_government = democratic	
+		NOT = { has_war_with = USA }
+	}
+}
+
+technology_sharing_group = {
+
+	id = BRA_commonwealth_tech_sharing
+	name = BRA_commonwealth_tech_sharing_name
+	desc = BRA_commonwealth_tech_sharing_desc
+	picture = GFX_technology_sharing_default
+	research_sharing_per_country_bonus = 0.20
+
+	available = {
+		has_idea = BRA_commonwealth_idea
+	}
+}
+
+technology_sharing_group = {
+
+	id = BRA_south_american_tech_sharing_group
+	name = BRA_south_american_tech_sharing_group_name
+	desc = BRA_south_american_tech_sharing_group_desc
+	picture = GFX_technology_sharing_default
+	research_sharing_per_country_bonus = 0.15
+
+	available = {
+		OR = {
+			has_government = neutrality
+			has_government = democratic	
+		}
+		is_in_faction_with = BRA
+	}
+}
