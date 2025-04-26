@@ -550,7 +550,7 @@ focus_tree = {
 		}
 	}
 focus = {
-		id = JAP_Völkermord_Erforschung
+		id = JAP_Voelkermord_Erforschung
 		icon = GFX_focus_research
 		prerequisite = { focus =JAP_purge_the_kodoha_faction  }
 		x = 1
@@ -577,9 +577,9 @@ focus = {
 
 		cost = 5
 
-		prerequisite = { focus = JAP_Völkermord_Erforschung }
+		prerequisite = { focus = JAP_Voelkermord_Erforschung }
 
-		relative_position_id = JAP_Völkermord_Erforschung
+		relative_position_id = JAP_Voelkermord_Erforschung
 		
 
 		completion_reward = {

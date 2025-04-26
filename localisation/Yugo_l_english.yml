@@ -1,5 +1,4 @@
 ﻿l_english:
-
   YUG_united_yugoslavia_1:0 "United Yugoslavia"
   YUG_united_yugoslavia_2:0 "United Yugoslavia"
   YUG_united_yugoslavia_3:0 "United Yugoslavia"
@@ -101,25 +100,6 @@
  FRA_intervention_in_syria2:0 "Intervention in Syria"
 
 
- SOV_Great_War:0 "The Great Patriotic War"
- SOV_Mec_IC_Bonus:0 "Mechanized Industry"
- SOV_Tank_IC_Bonus:0 "Tank Industry"
- SOV_persian_corridor_nfu:0 "The Persian Corridor"
- SOV_american_assistance:0 "American Assistance"
- SOV_allied_lend_lease_nfu:0 "Allied Lend-Lease"
- SOV_coordinate_industry_nfu:0 "Coordinate Industry"
- SOV_last_stand_of_communism_nfu:0 "Last Stand of Communism"
- SOV_american_tool_deliveries_nfu:0 "American Tool Deliveries"
- SOV_Continuation_War:0 "Continuation War"
- SOV_development_of_tankograd_factories_tt2:0 "In Every State with atleast Y3! GMilitary Factorys!:\n Y1! GMilitary Factory! and Y1! YBuilding Slot! will appear.\nRThis Effect will only be applied to a maximum of Y10 States!!"
-
-
- SOV_Tank_IC_Reduction:0 "Tank Industry"
- SOV_Mec_IC_Reduction:0 "Mechanized Industry"
- SOV_Last_Stand:0 "Last Stand of Communism"
- Sov_Fighter_Group:0 "Fighter Group"
-
-
 HUN_imp_guard:0 "Imperial Guard"
 HUN_form_the_emp_guard:0 "Form the Imperial Guard"
 HUN_suffrage_reforms:0 "Suffrage Reforms"
@@ -165,9 +145,6 @@ Australia_rats_tt:0 "If the CAllies! control YDerna (![ITA.GetNameWithFlag]
 AST_civ_1:0 "Encourage Entrepreneurship"
 AST_civ_2:0 "Expand Public Sector"
 
-#Romania
-ROM_kings_guard:0 "Karol´s Guard"
-ROM_the_kings_government:0 "The Kings Government"
 
 #SAF
 JFU_SAF_desc:0 "To Pass our Bills we need Politcal Support of some Groups in our Country\nSupport and Influence of Politcal Movements:\n\ngOssewabrandwag!:\n GSupport!: [?SAF_1_Support]\n YInfluence!: [?SAF_1_Influence]\n\ntBritish Loyalists!:\n GSupport!: [?SAF_2_Support]\n YInfluence!: [?SAF_2_Influence]\n\n3Equality Movement!:\n GSupport!: [?SAF_3_Support]\n YInfluence!: [?SAF_3_Influence]\n\ng4Every 30 Days! for the YPoint differences! between YInfluence! and GSupport!\nY0.1 Stability! will be Gadded! if the GSupport! is Yhigher! than the YInflunece! and Rremoved! if YInfluence! is Yhigher! than GSupport! \nThe Min is -20 Stability and the Max ist +10 Stability!"
@@ -281,14 +258,10 @@ ENG_annex_indenesien:0 "Annex Indonesia"
 #JAP
 JAP_develope_siam:0 "Develope Siam"
 JAP_develope_man:0 "Develope Manchuria"
-JAP_Völkermord_Erforschung:0 "JAP_Völkermord_Erforschung"
-JAP_Bauplan:0 "JAP_Bauplan"
-JAP_Kriegsplan:0 "JAP_Kriegsplan"
 
-
-
-
-
+JAP_Voelkermord_Erforschung:0 "Völkermord Erforschung"
+JAP_Bauplan:0 "Bauplan"
+JAP_Kriegsplan:0 "Kriegsplan"
 
 FRA_no_manchu:0 "No Manchu Player Balance"
 JAP_eco_closed_fickdichgame:0 "Japanese Economy"
@@ -300,6 +273,7 @@ JAP_very_low_trust_range:0 "Navy Dominant"
 JAP_medium_trust_range:0 "Balanced"
 JAP_high_trust_range:0 "Army Strengthened"
 JAP_very_high_trust_range:0 "Army Dominant"
+
 NEUENG_British_Influnence:0 "British Influence"
 
 #ROM
@@ -330,4 +304,4 @@ YUG_centrelaize_constricution_works2:0 "Reorganize Argiculture"
 YUG_centrelaize_tooling_workshops:0 "Centralize Tooling Workshops"
 YUG_centrelaize_tooling_workshops2:0 "Expand Civilian Industry"
 
- PMMM_RAJ_nosplit:0 "RNFUP Note: India will not split appart once Independence is gained !!\n\n"
+PMMM_RAJ_nosplit:0 "RNFUP Note: India will not split appart once Independence is gained !!\n\n"
