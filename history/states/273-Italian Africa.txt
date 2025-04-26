@@ -1,13 +1,13 @@
 state={
 	id=273
 	name="STATE_273"
-	
+	impassable = yes
 	history = {
-		owner = NIX
+		owner = ITA
 		buildings = {
 			infrastructure = 1
 		}
-		add_core_of = NIX
+
 	}
 	
 	provinces={

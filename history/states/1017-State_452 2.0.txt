@@ -1,7 +1,7 @@
 state={
 	id=1017
 	name="STATE_1017"
-	manpower = 1
+	manpower = 6049
 
 	state_category =  wasteland
 
@@ -11,7 +11,7 @@ state={
 		buildings = {
 			infrastructure = 1
 		}
-		add_core_of = ENG
+		
 	}
 	provinces={
 		1143 10127 12764 
