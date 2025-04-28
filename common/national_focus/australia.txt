@@ -623,9 +623,10 @@ cost = 5
 		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
-		completion_reward = {
-			add_ideas = AST_man
-		}
+
+completion_reward = {
+			add_manpower =200000
+}
 	}
 
 	############################
