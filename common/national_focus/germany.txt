@@ -8247,6 +8247,7 @@ focus_tree = {
 				EFR = { remove_ideas = JFU_no_tradeback }
 				JAP = { remove_ideas = JFU_no_tradeback }
 				MAN = { remove_ideas = JFU_no_tradeback }
+				SIA = { remove_ideas = JFU_no_tradeback }
 			}
 			custom_effect_tooltip = GER_danzig_or_war_tt
 			add_named_threat = { threat = 5 name = GER_danzig_or_war }

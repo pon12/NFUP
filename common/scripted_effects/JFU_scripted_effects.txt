@@ -639,6 +639,7 @@ JFU_comp_startup_effect = {
 	EFR = { add_ideas = JFU_no_tradeback }
 	JAP = { add_ideas = JFU_no_tradeback }
 	MAN = { add_ideas = JFU_no_tradeback }
+	SIA = { add_ideas = JFU_no_tradeback }
 	#ENG = { add_timed_idea = { idea = JFU_no_tradeback days = 730 } }
 	#USA = { add_timed_idea = { idea = JFU_no_tradeback days = 730 } }
 	#FRA = { add_timed_idea = { idea = JFU_no_tradeback days = 730 } }
