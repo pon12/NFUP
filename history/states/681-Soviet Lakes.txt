@@ -21,7 +21,9 @@ state = {
 
 			# Woodhead Dam
 			12589 = { dam = 1 }
-
+		12589 = {
+					land_facility = 1
+				}
 		}
 
 		victory_points = {
