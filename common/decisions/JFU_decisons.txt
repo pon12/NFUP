@@ -1088,6 +1088,8 @@ political_actions1 = {
 					}				
 		}
 	}
+	}
+
 	"Annex Manchu" = {
 		icon = generic_operation
 		fire_only_once = yes
