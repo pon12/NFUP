@@ -64,6 +64,8 @@
  SOV_claims_in_finnland2.tt:0 "\nRIf this YFocus! isnt Completet until! Y01.06.1940! CFollowing Effects! will be applied: \n R-20! YStability! \n R-20! YWar Support!"
  SOV_Winter_War:0 "CWinter War!"
  SOV_winter_war_d:0 "CWinter War!"
+ SOV_Continuation_War:0 "Continuation War"
+ SOV_preemtive_strike:0 "Preemptive Strike"
  SOV_finnland_lose.tt:0 "RYou lose the !CWinter War! !"
  SOV_finnland_win.tt:0 "GYou Win the !CWinter War! !"
  SOV_WW_udssr_Victory:0 "GForce Peace to !CFinnland!"

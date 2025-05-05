@@ -5592,6 +5592,46 @@ focus = {
 			}}
 		}
 	}
+
+	focus = {
+		id = SOV_preemtive_strike
+		icon = GFX_focus_attack_germany
+		prerequisite = { focus = SOV_Winter_War }
+		x = 4
+		y = 2
+		relative_position_id = SOV_the_comintern
+		cost = 5
+
+		available = {
+	
+			date > 1942.03.1
+			NOT = {has_war_with = GER}
+	
+		}
+
+		bypass = {
+		}
+		
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {
+			 declare_war_on = {
+                	target = GER
+                    type = annex_everything
+            }
+
+			every_country = {
+				limit = { is_in_faction_with = GER }
+				add_to_war = {
+					targeted_alliance = GER
+					enemy = SOV
+				}
+			}
+
+
+
+		}
+	}
 	focus = {
 		id = SOV_Bessarabia
 		icon = GFX_focus_generic_attack_romania
