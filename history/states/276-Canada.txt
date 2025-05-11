@@ -15,14 +15,9 @@ state = {
 			arms_factory = 2
 			industrial_complex = 4
 			air_base = 5
-
-			# Queenston-Chippawa Hydroelectric Plant
-			749 = { dam = 1 }
-
-			3778 = {
+	3778 = {
 					land_facility = 1 
-				}
-		
+				}	
 		}
 		
 		victory_points = {

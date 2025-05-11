@@ -20,8 +20,6 @@ state = {
 
 			5187 = {
 				naval_base = 2
-				# The Great Lake Scheme
-				dam = 1
 			}
 	5181 = {
 					land_facility = 1 

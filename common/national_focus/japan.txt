@@ -566,6 +566,14 @@ focus = {
 
 		completion_reward = {
 			add_research_slot = 1
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+			add_tech_bonus = {
+				name = JAP_armored_divisions
+				bonus = 2.0
+				uses = 2
+				category = motorized_equipment
+			}
 		}
 	}
 	
@@ -1015,10 +1023,9 @@ focus = {
 
 
 		completion_reward = {
-			army_experience = 50
-		}
+			army_experience = 50	
 	}
-
+	}
 	focus = {
 		id = JAP_supremacy_of_technology
 		icon = GFX_goal_generic_production
@@ -1058,8 +1065,8 @@ focus = {
 			add_breakthrough_progress = {
 				specialization = specialization_land
 				value = 0.5
-			}
 		}
+	}
 	}
 	focus = {
 		id = JAP_small_arms_modernization

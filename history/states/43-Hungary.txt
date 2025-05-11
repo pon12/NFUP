@@ -17,11 +17,19 @@ state={
 			arms_factory = 4
 			industrial_complex = 4
 			air_base = 4
+		
+		9660 = {
+					land_facility = 1 
+				}
 		}
 		victory_points = {
 			9660 20 
 		}
 		add_core_of = HUN
+	
+	9660 = {
+					land_facility = 1 
+				}
 	}
 
 	provinces={
