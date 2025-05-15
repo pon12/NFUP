@@ -1403,7 +1403,7 @@ focus = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_ideas = { ENG_colonial_elite }
-		}
+		
 	
 	452 = {
 		add_building_construction = {
@@ -1413,7 +1413,7 @@ focus = {
 		province = 10061
 		instant_build = yes
 	 }
-
+	}
 
 	 1017 = {
 		add_building_construction = {
@@ -1424,7 +1424,7 @@ focus = {
 	 }
 
 	}
-}
+		}
 }
 
 
