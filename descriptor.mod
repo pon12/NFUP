@@ -6,6 +6,6 @@ tags={
 	"Map"
 	"Balance"
 }
-name="Serto"
+name="NFUP - Dev"
 supported_version="1.16.7"
 remote_file_id="3485429766"
