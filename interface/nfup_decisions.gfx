@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_decision_faction_saf_1"
+		texturefile = "gfx/interface/decisions/faction_saf_1.dds"
+	}
+		spriteType = {
+		name = "GFX_decision_faction_saf_2"
+		texturefile = "gfx/interface/decisions/faction_saf_2.dds"
+	}
+		spriteType = {
+		name = "GFX_decision_faction_saf_3"
+		texturefile = "gfx/interface/decisions/faction_saf_3.dds"
+	}
+}

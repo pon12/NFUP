@@ -1,3 +1,140 @@
+JFU_SAF_2 = {
+	SAF_IF_1 = {
+		icon = eng_trade_unions_demand
+		fire_only_once = yes
+		allowed = { tag = SAF }	
+		available = { 
+			has_completed_focus = SAF_seek_political_support
+			OR = {
+				has_war = yes
+	
+				custom_trigger_tooltip = {
+					tooltip = SAF_2_influence_max_50
+					check_variable = {
+						SAF_2_Influence < 50
+					}
+				}
+			}
+		}		
+		cost = 0
+		complete_effect = { 
+			hidden_effect = {recruit_character = SAF_jan_smuts}	
+			promote_character = SAF_jan_smuts
+			add_political_power = 100
+			hidden_effect = {retire_character = SAF_j_b_m_hertzog}
+			add_country_leader_trait = democratic_crusader
+		}
+	}
+
+	SAF_IF_1_1 = {
+		icon = eng_trade_unions_demand
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 120
+		
+		allowed = { tag = SAF }	
+		available = { 
+
+	
+				# custom_trigger_tooltip = {
+				# 	tooltip = SAF_IF_OSE_LOYALTY_0
+				# 	check_variable = {
+				# 		VAR_SAF_IF_OSE_LOYALTY < 50
+				# 	}
+				# }
+			
+		}		
+		cost = 25
+		remove_effect = { 
+			add_to_variable = {
+				var = VAR_SAF_IF_OSE_LOYALTY
+				value = 5
+				tooltip = SAF_IF_OSE_LOYALTY_5
+			}
+			add_to_variable = {
+				var = VAR_SAF_IF_OSE_POPULARITY
+				value = 10
+				tooltip = SAF_IF_OSE_POPULARITY_10
+			}
+		}
+	}
+		SAF_IF_2_1 = {
+		icon = eng_trade_unions_demand
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 120
+		allowed = { tag = SAF }	
+		available = { 
+
+	
+				# custom_trigger_tooltip = {
+				# 	tooltip = SAF_IF_OSE_LOYALTY_0
+				# 	check_variable = {
+				# 		VAR_SAF_IF_OSE_LOYALTY < 50
+				# 	}
+				# }
+			
+		}		
+		cost = 25
+		remove_effect = { 
+			add_to_variable = {
+				var = VAR_SAF_IF_EL_LOYALTY
+				value = 5
+				tooltip = SAF_IF_EL_LOYALTY_5
+			}
+			add_to_variable = {
+				var = VAR_SAF_IF_EL_POPULARITY
+				value = 10
+				tooltip = SAF_IF_EL_POPULARITY_10
+			}
+		}
+	}
+		SAF_IF_3_1 = {
+		icon = eng_trade_unions_demand
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 120
+		allowed = { tag = SAF }	
+		available = { 
+
+	
+				# custom_trigger_tooltip = {
+				# 	tooltip = SAF_IF_OSE_LOYALTY_0
+				# 	check_variable = {
+				# 		VAR_SAF_IF_OSE_LOYALTY < 50
+				# 	}
+				# }
+			
+		}		
+		cost = 25
+		
+		remove_effect = { 
+			add_to_variable = {
+				var = VAR_SAF_IF_EM_LOYALTY
+				value = 5
+				tooltip = SAF_IF_EM_LOYALTY_5
+			}
+			add_to_variable = {
+				var = VAR_SAF_IF_EM_POPULARITY
+				value = 10
+				tooltip = SAF_IF_EM_POPULARITY_10
+			}
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 JFU_SAF = {
 	
 	SAF_D_PM_appoint_new_prime_minister = { 

@@ -307,3 +307,70 @@ YUG_centrelaize_tooling_workshops:0 "Centralize Tooling Workshops"
 YUG_centrelaize_tooling_workshops2:0 "Expand Civilian Industry"
 
 PMMM_RAJ_nosplit:0 "RNFUP Note: India will not split appart once Independence is gained !!\n\n"
+
+
+#SAF 2
+JFU_SAF_2:0 "Internal Factions"
+JFU_SAF_2_desc:0 "The Stability of South Africa is depending on the Loyalty and Popularity of our Internal Factions we need to always keep their interest in mind."
+
+SAF_IF_1_1:0 "Bolster £faction_saf_1 §YOssewabrandwag§!"
+SAF_IF_2_1:0 "Bolster £faction_saf_2 §YBritish Loyalists§!"
+SAF_IF_3_1:0 "Bolster £faction_saf_3 §YEquality Movement§!"
+
+#  £faction_saf_1 §YOssewabrandwag§!
+#  £faction_saf_2 §YBritish Loyalists§!
+#  £faction_saf_3 §YEquality Movement§!
+
+#OSE
+SAF_IF_OSE:0 "Ossewabrandwag"
+SAF_IF_OSE_TOOLTIP:0 "The £faction_saf_1 §YOssewabrandwag§! is a Nationalist Organisation their Interest allign in keeping the European minority in power and preserving their status."
+
+SAF_IF_OSE_Loyalty_Value:0 "[?VAR_SAF_IF_OSE_LOYALTY]"
+SAF_IF_OSE_Popularity_Value:0 "[?VAR_SAF_IF_OSE_POPULARITY]"
+
+SAF_IF_OSE_LOYALTY_5:0 "£faction_saf_1 §YOssewabrandwag§!:\n  §G+5§! Faction §YLoyalty§!"
+SAF_IF_OSE_LOYALTY_10:0 "£faction_saf_1 §YOssewabrandwag§!:\n  §G+10§! Faction §YLoyalty§!"
+SAF_IF_OSE_LOYALTY_-5:0 "£faction_saf_1 §YOssewabrandwag§!:\n  §R-5§! Faction §YLoyalty§!"
+SAF_IF_OSE_LOYALTY_-10:0 "£faction_saf_1 §YOssewabrandwag§!:\n  §R-10§! Faction §YLoyalty§!"
+
+SAF_IF_OSE_POPULARITY_5:0 "£faction_saf_1 §YOssewabrandwag§!:\n  §G+5§! Faction §YPopularity§!"
+SAF_IF_OSE_POPULARITY_10:0 "£faction_saf_1 §YOssewabrandwag§!:\n  §G+10§! Faction §YPopularity§!"
+SAF_IF_OSE_POPULARITY_-5:0 "£faction_saf_1 §YOssewabrandwag§!:\n  §R-5§! Faction §YPopularity§!"
+SAF_IF_OSE_POPULARITY_-10:0 "£faction_saf_1 §YOssewabrandwag§!:\n  §R-10§! Faction §YLPopularity§!"
+
+
+SAF_IF_OSE_LOYALTY_0:0 "§YLoyalty§! of £faction_saf_1 §YOssewabrandwag§! is less than §Y50§!"
+
+#Britsh Loyalists
+SAF_IF_EL:0 "British Loyalists"
+SAF_IF_EL_TOOLTIP:0 "The £faction_saf_2 §YBritish Loyalists§! are a faction of High-ranking Aristocrats and Capitalists their Interest it is to keep South Africa under British authority."
+
+SAF_IF_EL_Loyalty_Value:0 "[?VAR_SAF_IF_EL_LOYALTY]"
+SAF_IF_EL_Popularity_Value:0 "[?VAR_SAF_IF_EL_POPULARITY]"
+
+SAF_IF_EL_LOYALTY_5:0 "£faction_saf_2 §YBritish Loyalists§!:\n  §G+5§! Faction §YLoyalty§!"
+SAF_IF_EL_LOYALTY_10:0 "£faction_saf_2 §YBritish Loyalists§!:\n  §G+10§! Faction §YLoyalty§!"
+SAF_IF_EL_LOYALTY_-5:0 "£faction_saf_2 §YBritish Loyalists§!:\n  §R-5§! Faction §YLoyalty§!"
+SAF_IF_EL_LOYALTY_-10:0 "£faction_saf_2 §YBritish Loyalists§!:\n  §R-10§! Faction §YLoyalty§!"
+
+SAF_IF_EL_POPULARITY_5:0 "£faction_saf_2 §YBritish Loyalists§!:\n  §G+5§! Faction §YPopularity§!"
+SAF_IF_EL_POPULARITY_10:0 "£faction_saf_2 §YBritish Loyalists§!:\n  §G+10§! Faction §YPopularity§!"
+SAF_IF_EL_POPULARITY_-5:0 "£faction_saf_2 §YBritish Loyalists§!:\n  §R-5§! Faction §YPopularity§!"
+SAF_IF_EL_POPULARITY_-10:0 "£faction_saf_2 §YBritish Loyalists§!:\n  §R-10§! Faction §YLPopularity§!"
+
+#Equality Movement
+SAF_IF_EM:0 "Equality Movement"
+SAF_IF_EM_TOOLTIP:0 "The £faction_saf_3 §YEquality Movement§! is a movement that seeks to empower the Minoreties and create a Equal Democratic Society."
+
+SAF_IF_EM_Loyalty_Value:0 "[?VAR_SAF_IF_EM_LOYALTY]"
+SAF_IF_EM_Popularity_Value:0 "[?VAR_SAF_IF_EM_POPULARITY]"
+
+SAF_IF_EM_LOYALTY_5:0 "£faction_saf_3 §YEquality Movement§!:\n  §G+5§! Faction §YLoyalty§!"
+SAF_IF_EM_LOYALTY_10:0 "£faction_saf_3 §YEquality Movement§!:\n  §G+10§! Faction §YLoyalty§!"
+SAF_IF_EM_LOYALTY_-5:0 "£faction_saf_3 §YEquality Movement§!:\n  §R-5§! Faction §YLoyalty§!"
+SAF_IF_EM_LOYALTY_-10:0 "£faction_saf_3 §YEquality Movement§!:\n  §R-10§! Faction §YLoyalty§!"
+
+SAF_IF_EM_POPULARITY_5:0 "£faction_saf_3 §YEquality Movement§!:\n  §G+5§! Faction §YPopularity§!"
+SAF_IF_EM_POPULARITY_10:0 "£faction_saf_3 §YEquality Movement§!:\n  §G+10§! Faction §YPopularity§!"
+SAF_IF_EM_POPULARITY_-5:0 "£faction_saf_3 §YEquality Movement§!:\n  §R-5§! Faction §YPopularity§!"
+SAF_IF_EM_POPULARITY_-10:0 "£faction_saf_3 §YEquality Movement§!:\n  §R-10§! Faction §YLPopularity§!"
