@@ -27,6 +27,9 @@ state={
 				# United States Naval Research Laboratory (NRL)
 				naval_facility = 1
 			}
+		11892 = {
+					land_facility = 1 
+				}	
 		}
 		add_core_of = USA
 
