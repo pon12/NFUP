@@ -314,8 +314,14 @@ JFU_SAF_2:0 "Internal Factions"
 JFU_SAF_2_desc:0 "The Stability of South Africa is depending on the Loyalty and Popularity of our Internal Factions we need to always keep their interest in mind."
 
 SAF_IF_1_1:0 "Bolster £faction_saf_1 §YOssewabrandwag§!"
+SAF_IF_1_2:0 "Suppress £faction_saf_1 §YOssewabrandwag§!"
+SAF_IF_1_3:0 "Integrate £faction_saf_1 §YOssewabrandwag§!"
+SAF_IF_1_4:0 "Crush £faction_saf_1 §YOssewabrandwag§!"
+
 SAF_IF_2_1:0 "Bolster £faction_saf_2 §YBritish Loyalists§!"
 SAF_IF_3_1:0 "Bolster £faction_saf_3 §YEquality Movement§!"
+
+
 
 #  £faction_saf_1 §YOssewabrandwag§!
 #  £faction_saf_2 §YBritish Loyalists§!
@@ -325,8 +331,14 @@ SAF_IF_3_1:0 "Bolster £faction_saf_3 §YEquality Movement§!"
 SAF_IF_OSE:0 "Ossewabrandwag"
 SAF_IF_OSE_TOOLTIP:0 "The £faction_saf_1 §YOssewabrandwag§! is a Nationalist Organisation their Interest allign in keeping the European minority in power and preserving their status."
 
-SAF_IF_OSE_Loyalty_Value:0 "[?VAR_SAF_IF_OSE_LOYALTY]"
-SAF_IF_OSE_Popularity_Value:0 "[?VAR_SAF_IF_OSE_POPULARITY]"
+SAF_IF_OSE_SCRIPTED_LOC_ZAHL:0 "[?VAR_SAF_IF_OSE_LOYALTY]"
+SAF_IF_OSE_SCRIPTED_LOC_CRUSHED:0 "§RCrushed§!"
+SAF_IF_OSE_SCRIPTED_LOC_INTEGRATED:0 "§GIntegrated§!"
+
+SAF_IF_OSE_SCRIPTED_LOC_ZAHL_2:0 "[?VAR_SAF_IF_OSE_POPULARITY]"
+#Scripted Localisation
+SAF_IF_OSE_Loyalty_Value:0 "[SAF_IF_OSE_SCRIPTED_LOC]"
+SAF_IF_OSE_Popularity_Value:0 "[SAF_IF_OSE_SCRIPTED_LOC_2]"
 
 SAF_IF_OSE_LOYALTY_5:0 "£faction_saf_1 §YOssewabrandwag§!:\n  §G+5§! Faction §YLoyalty§!"
 SAF_IF_OSE_LOYALTY_10:0 "£faction_saf_1 §YOssewabrandwag§!:\n  §G+10§! Faction §YLoyalty§!"
@@ -336,10 +348,13 @@ SAF_IF_OSE_LOYALTY_-10:0 "£faction_saf_1 §YOssewabrandwag§!:\n  §R-10§! Fac
 SAF_IF_OSE_POPULARITY_5:0 "£faction_saf_1 §YOssewabrandwag§!:\n  §G+5§! Faction §YPopularity§!"
 SAF_IF_OSE_POPULARITY_10:0 "£faction_saf_1 §YOssewabrandwag§!:\n  §G+10§! Faction §YPopularity§!"
 SAF_IF_OSE_POPULARITY_-5:0 "£faction_saf_1 §YOssewabrandwag§!:\n  §R-5§! Faction §YPopularity§!"
-SAF_IF_OSE_POPULARITY_-10:0 "£faction_saf_1 §YOssewabrandwag§!:\n  §R-10§! Faction §YLPopularity§!"
+SAF_IF_OSE_POPULARITY_-10:0 "£faction_saf_1 §YOssewabrandwag§!:\n  §R-10§! Faction §YPopularity§!"
 
 
-SAF_IF_OSE_LOYALTY_0:0 "§YLoyalty§! of £faction_saf_1 §YOssewabrandwag§! is less than §Y50§!"
+SAF_IF_OSE_LOYALTY_0:0 "§YLoyalty§! of £faction_saf_1 §YOssewabrandwag§! is §Y100§!"
+SAF_IF_OSE_POPULARITY_0:0 "§YPopularity§! of £faction_saf_1 §YOssewabrandwag§! is §Y0§!"
+SAF_IF_OSE_INTEG_TT:0 "£faction_saf_1 §YOssewabrandwag§! will be §GIntegrated§!"
+SAF_IF_OSE_CRUSH_TT:0 "£faction_saf_1 §YOssewabrandwag§! will be §tCrushed§!"
 
 #Britsh Loyalists
 SAF_IF_EL:0 "British Loyalists"

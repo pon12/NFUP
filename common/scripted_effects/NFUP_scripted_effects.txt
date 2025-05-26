@@ -1,0 +1,303 @@
+SAF_IF_OSE_ADD_5_POPULARETY = {
+	add_to_variable = {
+		var = VAR_SAF_IF_OSE_POPULARITY
+			value = 5
+			tooltip = SAF_IF_OSE_POPULARITY_5
+		}
+    	clamp_variable = {
+		var = VAR_SAF_IF_OSE_POPULARITY
+		min = 0
+		max = 100
+	}
+}
+SAF_IF_OSE_ADD_10_POPULARETY = {
+	add_to_variable = {
+		var = VAR_SAF_IF_OSE_POPULARITY
+			value = 10
+			tooltip = SAF_IF_OSE_POPULARITY_10
+		}
+    	clamp_variable = {
+		var = VAR_SAF_IF_OSE_POPULARITY
+		min = 0
+		max = 100
+	}
+}
+SAF_IF_OSE_REMOVE_5_POPULARETY = {
+	subtract_from_variable = {
+		var = VAR_SAF_IF_OSE_POPULARITY
+			value = 5
+			tooltip = SAF_IF_OSE_POPULARITY_-5
+		}
+    	clamp_variable = {
+		var = VAR_SAF_IF_OSE_POPULARITY
+		min = 0
+		max = 100
+	}
+}
+SAF_IF_OSE_REMOVE_10_POPULARETY = {
+	subtract_from_variable = {
+		var = VAR_SAF_IF_OSE_POPULARITY
+			value = -10
+			tooltip = SAF_IF_OSE_POPULARITY_-10
+		}
+    	clamp_variable = {
+		var = VAR_SAF_IF_OSE_POPULARITY
+		min = 0
+		max = 100
+	}
+}
+
+SAF_IF_OSE_ADD_5_LOYALTY = {
+	add_to_variable = {
+		var = VAR_SAF_IF_OSE_LOYALTY
+		value = 5
+		tooltip = SAF_IF_OSE_LOYALTY_5
+	}
+	clamp_variable = {
+		var = VAR_SAF_IF_OSE_LOYALTY
+		min = 0
+		max = 100
+	}
+
+}
+SAF_IF_OSE_ADD_10_LOYALTY = {
+	add_to_variable = {
+		var = VAR_SAF_IF_OSE_LOYALTY
+		value = 10
+		tooltip = SAF_IF_OSE_LOYALTY_10
+	}
+	clamp_variable = {
+		var = VAR_SAF_IF_OSE_LOYALTY
+		min = 0
+		max = 100
+	}
+
+}
+SAF_IF_OSE_REMOVE_5_LOYALTY = {
+	subtract_from_variable = {
+		var = VAR_SAF_IF_OSE_LOYALTY
+		value = 5
+		tooltip = SAF_IF_OSE_LOYALTY_-5
+	}
+	clamp_variable = {
+		var = VAR_SAF_IF_OSE_LOYALTY
+		min = 0
+		max = 100
+	}
+}
+SAF_IF_OSE_REMOVE_10_LOYALTY = {
+	subtract_from_variable = {
+		var = VAR_SAF_IF_OSE_LOYALTY
+		value = 10
+		tooltip = SAF_IF_OSE_LOYALTY_-10
+	}
+	clamp_variable = {
+		var = VAR_SAF_IF_OSE_LOYALTY
+		min = 0
+		max = 100
+	}
+}
+
+#BRITISH LOYALIST
+
+SAF_IF_EL_ADD_5_POPULARETY = {
+	add_to_variable = {
+		var = VAR_SAF_IF_EL_POPULARITY
+			value = 5
+			tooltip = SAF_IF_EL_POPULARITY_5
+		}
+    	clamp_variable = {
+		var = VAR_SAF_IF_EL_POPULARITY
+		min = 0
+		max = 100
+	}
+}
+SAF_IF_EL_ADD_10_POPULARETY = {
+	add_to_variable = {
+		var = VAR_SAF_IF_EL_POPULARITY
+			value = 10
+			tooltip = SAF_IF_EL_POPULARITY_10
+		}
+    	clamp_variable = {
+		var = VAR_SAF_IF_EL_POPULARITY
+		min = 0
+		max = 100
+	}
+}
+SAF_IF_EL_REMOVE_5_POPULARETY = {
+	subtract_from_variable = {
+		var = VAR_SAF_IF_EL_POPULARITY
+			value = 5
+			tooltip = SAF_IF_EL_POPULARITY_-5
+		}
+    	clamp_variable = {
+		var = VAR_SAF_IF_EL_POPULARITY
+		min = 0
+		max = 100
+	}
+}
+SAF_IF_EL_REMOVE_10_POPULARETY = {
+	subtract_from_variable = {
+		var = VAR_SAF_IF_EL_POPULARITY
+			value = -10
+			tooltip = SAF_IF_EL_POPULARITY_-10
+		}
+    	clamp_variable = {
+		var = VAR_SAF_IF_EL_POPULARITY
+		min = 0
+		max = 100
+	}
+}
+
+SAF_IF_EL_ADD_5_LOYALTY = {
+	add_to_variable = {
+		var = VAR_SAF_IF_EL_LOYALTY
+		value = 5
+		tooltip = SAF_IF_EL_LOYALTY_5
+	}
+	clamp_variable = {
+		var = VAR_SAF_IF_EL_LOYALTY
+		min = 0
+		max = 100
+	}
+
+}
+SAF_IF_EL_ADD_10_LOYALTY = {
+	add_to_variable = {
+		var = VAR_SAF_IF_EL_LOYALTY
+		value = 10
+		tooltip = SAF_IF_EL_LOYALTY_10
+	}
+	clamp_variable = {
+		var = VAR_SAF_IF_EL_LOYALTY
+		min = 0
+		max = 100
+	}
+
+}
+SAF_IF_EL_REMOVE_5_LOYALTY = {
+	subtract_from_variable = {
+		var = VAR_SAF_IF_EL_LOYALTY
+		value = 5
+		tooltip = SAF_IF_EL_LOYALTY_-5
+	}
+	clamp_variable = {
+		var = VAR_SAF_IF_EL_LOYALTY
+		min = 0
+		max = 100
+	}
+}
+SAF_IF_EL_REMOVE_10_LOYALTY = {
+	subtract_from_variable = {
+		var = VAR_SAF_IF_EL_LOYALTY
+		value = 10
+		tooltip = SAF_IF_EL_LOYALTY_-10
+	}
+	clamp_variable = {
+		var = VAR_SAF_IF_EL_LOYALTY
+		min = 0
+		max = 100
+	}
+}
+
+#Equality Movement
+
+SAF_IF_EM_ADD_5_POPULARETY = {
+	add_to_variable = {
+		var = VAR_SAF_IF_EM_POPULARITY
+			value = 5
+			tooltip = SAF_IF_EM_POPULARITY_5
+		}
+    	clamp_variable = {
+		var = VAR_SAF_IF_EM_POPULARITY
+		min = 0
+		max = 100
+	}
+}
+SAF_IF_EM_ADD_10_POPULARETY = {
+	add_to_variable = {
+		var = VAR_SAF_IF_EM_POPULARITY
+			value = 10
+			tooltip = SAF_IF_EM_POPULARITY_10
+		}
+    	clamp_variable = {
+		var = VAR_SAF_IF_EM_POPULARITY
+		min = 0
+		max = 100
+	}
+}
+SAF_IF_EM_REMOVE_5_POPULARETY = {
+	subtract_from_variable = {
+		var = VAR_SAF_IF_EM_POPULARITY
+			value = 5
+			tooltip = SAF_IF_EM_POPULARITY_-5
+		}
+    	clamp_variable = {
+		var = VAR_SAF_IF_EM_POPULARITY
+		min = 0
+		max = 100
+	}
+}
+SAF_IF_EM_REMOVE_10_POPULARETY = {
+	subtract_from_variable = {
+		var = VAR_SAF_IF_EM_POPULARITY
+			value = -10
+			tooltip = SAF_IF_EM_POPULARITY_-10
+		}
+    	clamp_variable = {
+		var = VAR_SAF_IF_EM_POPULARITY
+		min = 0
+		max = 100
+	}
+}
+
+SAF_IF_EM_ADD_5_LOYALTY = {
+	add_to_variable = {
+		var = VAR_SAF_IF_EM_LOYALTY
+		value = 5
+		tooltip = SAF_IF_EM_LOYALTY_5
+	}
+	clamp_variable = {
+		var = VAR_SAF_IF_EM_LOYALTY
+		min = 0
+		max = 100
+	}
+
+}
+SAF_IF_EM_ADD_10_LOYALTY = {
+	add_to_variable = {
+		var = VAR_SAF_IF_EM_LOYALTY
+		value = 10
+		tooltip = SAF_IF_EM_LOYALTY_10
+	}
+	clamp_variable = {
+		var = VAR_SAF_IF_EM_LOYALTY
+		min = 0
+		max = 100
+	}
+
+}
+SAF_IF_EM_REMOVE_5_LOYALTY = {
+	subtract_from_variable = {
+		var = VAR_SAF_IF_EM_LOYALTY
+		value = 5
+		tooltip = SAF_IF_EM_LOYALTY_-5
+	}
+	clamp_variable = {
+		var = VAR_SAF_IF_EM_LOYALTY
+		min = 0
+		max = 100
+	}
+}
+SAF_IF_EM_REMOVE_10_LOYALTY = {
+	subtract_from_variable = {
+		var = VAR_SAF_IF_EM_LOYALTY
+		value = 10
+		tooltip = SAF_IF_EM_LOYALTY_-10
+	}
+	clamp_variable = {
+		var = VAR_SAF_IF_EM_LOYALTY
+		min = 0
+		max = 100
+	}
+}

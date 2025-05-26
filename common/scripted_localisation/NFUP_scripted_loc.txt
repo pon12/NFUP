@@ -1,0 +1,42 @@
+#OSE LOYALTY
+defined_text = {
+	name = SAF_IF_OSE_SCRIPTED_LOC
+	text = {
+		trigger = {
+			SAF = { has_country_flag = IF_OSE_CRUSHED }
+		}
+		localization_key = SAF_IF_OSE_SCRIPTED_LOC_CRUSHED
+	}
+	text = {
+		trigger = {
+			SAF = { has_country_flag = IF_OSE_INTEGRATED }
+		}
+		localization_key = SAF_IF_OSE_SCRIPTED_LOC_INTEGRATED
+	}
+
+		text = {
+		localization_key = SAF_IF_OSE_SCRIPTED_LOC_ZAHL
+	}
+
+}
+#OSE POPULARITY
+defined_text = {
+	name = SAF_IF_OSE_SCRIPTED_LOC_2
+	text = {
+		trigger = {
+			SAF = { has_country_flag = IF_OSE_CRUSHED }
+		}
+		localization_key = SAF_IF_OSE_SCRIPTED_LOC_CRUSHED
+	}
+	text = {
+		trigger = {
+			SAF = { has_country_flag = IF_OSE_INTEGRATED }
+		}
+		localization_key = SAF_IF_OSE_SCRIPTED_LOC_INTEGRATED
+	}
+	
+		text = {
+		localization_key = SAF_IF_OSE_SCRIPTED_LOC_ZAHL_2
+	}
+
+}
