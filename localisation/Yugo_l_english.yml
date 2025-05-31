@@ -319,9 +319,14 @@ SAF_IF_1_3:0 "Integrate £faction_saf_1 §YOssewabrandwag§!"
 SAF_IF_1_4:0 "Crush £faction_saf_1 §YOssewabrandwag§!"
 
 SAF_IF_2_1:0 "Bolster £faction_saf_2 §YBritish Loyalists§!"
+SAF_IF_2_2:0 "Suppress £faction_saf_2 §YBritish Loyalists§!"
+SAF_IF_2_3:0 "Integrate £faction_saf_2 §YBritish Loyalists§!"
+SAF_IF_2_4:0 "Crush £faction_saf_2 §YBritish Loyalists§!"
+
 SAF_IF_3_1:0 "Bolster £faction_saf_3 §YEquality Movement§!"
-
-
+SAF_IF_3_2:0 "Suppress £faction_saf_3 §YEquality Movement§!"
+SAF_IF_3_3:0 "Integrate £faction_saf_3 §YEquality Movement§!"
+SAF_IF_3_4:0 "Crush £faction_saf_3 §YEquality Movement§!"
 
 #  £faction_saf_1 §YOssewabrandwag§!
 #  £faction_saf_2 §YBritish Loyalists§!
@@ -360,8 +365,16 @@ SAF_IF_OSE_CRUSH_TT:0 "£faction_saf_1 §YOssewabrandwag§! will be §tCrushed§
 SAF_IF_EL:0 "British Loyalists"
 SAF_IF_EL_TOOLTIP:0 "The £faction_saf_2 §YBritish Loyalists§! are a faction of High-ranking Aristocrats and Capitalists their Interest it is to keep South Africa under British authority."
 
-SAF_IF_EL_Loyalty_Value:0 "[?VAR_SAF_IF_EL_LOYALTY]"
-SAF_IF_EL_Popularity_Value:0 "[?VAR_SAF_IF_EL_POPULARITY]"
+SAF_IF_EL_SCRIPTED_LOC_ZAHL:0 "[?VAR_SAF_IF_EL_LOYALTY]"
+SAF_IF_EL_SCRIPTED_LOC_CRUSHED:0 "§RCrushed§!"
+SAF_IF_EL_SCRIPTED_LOC_INTEGRATED:0 "§GIntegrated§!"
+
+SAF_IF_EL_SCRIPTED_LOC_ZAHL_2:0 "[?VAR_SAF_IF_EL_POPULARITY]"
+#Scripted Localisation
+SAF_IF_EL_Loyalty_Value:0 "[SAF_IF_EL_SCRIPTED_LOC]"
+SAF_IF_EL_Popularity_Value:0 "[SAF_IF_EL_SCRIPTED_LOC_2]"
+
+
 
 SAF_IF_EL_LOYALTY_5:0 "£faction_saf_2 §YBritish Loyalists§!:\n  §G+5§! Faction §YLoyalty§!"
 SAF_IF_EL_LOYALTY_10:0 "£faction_saf_2 §YBritish Loyalists§!:\n  §G+10§! Faction §YLoyalty§!"
@@ -373,12 +386,24 @@ SAF_IF_EL_POPULARITY_10:0 "£faction_saf_2 §YBritish Loyalists§!:\n  §G+10§!
 SAF_IF_EL_POPULARITY_-5:0 "£faction_saf_2 §YBritish Loyalists§!:\n  §R-5§! Faction §YPopularity§!"
 SAF_IF_EL_POPULARITY_-10:0 "£faction_saf_2 §YBritish Loyalists§!:\n  §R-10§! Faction §YLPopularity§!"
 
+SAF_IF_EL_LOYALTY_0:0 "§YLoyalty§! of £faction_saf_2 §YBritish Loyalists§! is §Y100§!"
+SAF_IF_EL_POPULARITY_0:0 "§YPopularity§! of £faction_saf_2 §YBritish Loyalists§! is §Y0§!"
+SAF_IF_EL_INTEG_TT:0 "£faction_saf_2 §YBritish Loyalists§! will be §GIntegrated§!"
+SAF_IF_EL_CRUSH_TT:0 "£faction_saf_2 §YBritish Loyalists§! will be §tCrushed§!"
+
 #Equality Movement
 SAF_IF_EM:0 "Equality Movement"
 SAF_IF_EM_TOOLTIP:0 "The £faction_saf_3 §YEquality Movement§! is a movement that seeks to empower the Minoreties and create a Equal Democratic Society."
 
-SAF_IF_EM_Loyalty_Value:0 "[?VAR_SAF_IF_EM_LOYALTY]"
-SAF_IF_EM_Popularity_Value:0 "[?VAR_SAF_IF_EM_POPULARITY]"
+SAF_IF_EM_SCRIPTED_LOC_ZAHL:0 "[?VAR_SAF_IF_EM_LOYALTY]"
+SAF_IF_EM_SCRIPTED_LOC_CRUSHED:0 "§RCrushed§!"
+SAF_IF_EM_SCRIPTED_LOC_INTEGRATED:0 "§GIntegrated§!"
+
+SAF_IF_EM_SCRIPTED_LOC_ZAHL_2:0 "[?VAR_SAF_IF_EM_POPULARITY]"
+#Scripted Localisation
+SAF_IF_EM_Loyalty_Value:0 "[SAF_IF_EM_SCRIPTED_LOC]"
+SAF_IF_EM_Popularity_Value:0 "[SAF_IF_EM_SCRIPTED_LOC_2]"
+
 
 SAF_IF_EM_LOYALTY_5:0 "£faction_saf_3 §YEquality Movement§!:\n  §G+5§! Faction §YLoyalty§!"
 SAF_IF_EM_LOYALTY_10:0 "£faction_saf_3 §YEquality Movement§!:\n  §G+10§! Faction §YLoyalty§!"
@@ -389,3 +414,8 @@ SAF_IF_EM_POPULARITY_5:0 "£faction_saf_3 §YEquality Movement§!:\n  §G+5§! F
 SAF_IF_EM_POPULARITY_10:0 "£faction_saf_3 §YEquality Movement§!:\n  §G+10§! Faction §YPopularity§!"
 SAF_IF_EM_POPULARITY_-5:0 "£faction_saf_3 §YEquality Movement§!:\n  §R-5§! Faction §YPopularity§!"
 SAF_IF_EM_POPULARITY_-10:0 "£faction_saf_3 §YEquality Movement§!:\n  §R-10§! Faction §YLPopularity§!"
+
+SAF_IF_EM_LOYALTY_0:0 "§YLoyalty§! of £faction_saf_3 §YEquality Movement§! is §Y100§!"
+SAF_IF_EM_POPULARITY_0:0 "§YPopularity§! of £faction_saf_3 §YEquality Movement§! is §Y0§!"
+SAF_IF_EM_INTEG_TT:0 "£faction_saf_3 §YEquality Movement§! will be §GIntegrated§!"
+SAF_IF_EM_CRUSH_TT:0 "£faction_saf_3 §YEquality Movement§! will be §tCrushed§!"

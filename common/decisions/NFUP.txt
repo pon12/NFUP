@@ -30,7 +30,7 @@ JFU_SAF_2 = {
 		icon = GFX_decision_generic_political_address
 		fire_only_once = no
 		days_remove = 30
-		days_re_enable = 120
+		days_re_enable = 90
 		visible = {
 			SAF = {
 				NOT = { has_country_flag = IF_OSE_INTEGRATED }
@@ -39,17 +39,9 @@ JFU_SAF_2 = {
 		}			
 		allowed = { tag = SAF }	
 		available = { 
-
-	
-				# custom_trigger_tooltip = {
-				# 	tooltip = SAF_IF_OSE_LOYALTY_0
-				# 	check_variable = {
-				# 		VAR_SAF_IF_OSE_LOYALTY < 50
-				# 	}
-				# }
 			
 		}		
-		cost = 25
+		cost = 10
 		remove_effect = { 
 			SAF_IF_OSE_ADD_5_LOYALTY = yes
 			SAF_IF_OSE_ADD_10_POPULARETY = yes
@@ -57,7 +49,7 @@ JFU_SAF_2 = {
 	}
 	SAF_IF_1_2 = {
 		icon = GFX_decision_generic_arrest
-		fire_only_once = yes
+		fire_only_once = no
 		days_remove = 30
 		days_re_enable = 120
 
@@ -69,23 +61,14 @@ JFU_SAF_2 = {
 		}	
 		allowed = { tag = SAF }	
 		available = { 
-				#  custom_trigger_tooltip = {
-				#  	tooltip = SAF_IF_OSE_LOYALTY_0
-				#  	check_variable = {
-				# 		VAR_SAF_IF_OSE_LOYALTY = 100
-				# 	}
-				#  }
+
 		}	
-		visible = {
-			SAF = {
-				NOT = { has_country_flag = IF_OSE_INTEGRATED }
-				NOT = { has_country_flag = IF_OSE_CRUSHED }
-			}
-		}	
-		cost = 25
+
+		cost = 10
 		remove_effect = { 
-		 SAF_IF_OSE_REMOVE_5_POPULARETY = yes
-		 SAF_IF_OSE_REMOVE_10_LOYALTY = yes
+			SAF_IF_OSE_REMOVE_10_LOYALTY = yes
+			SAF_IF_OSE_REMOVE_5_POPULARETY = yes
+
 		}
 	}
 
@@ -100,6 +83,12 @@ JFU_SAF_2 = {
 				NOT = { has_country_flag = IF_OSE_INTEGRATED }
 				NOT = { has_country_flag = IF_OSE_CRUSHED }
 			}
+			 custom_trigger_tooltip = {
+				 	tooltip = SAF_IF_OSE_LOYALTY_0
+				 	check_variable = {
+						VAR_SAF_IF_OSE_LOYALTY = 100
+					}
+				 }
 		}	
 		available = { 
 
@@ -115,6 +104,7 @@ JFU_SAF_2 = {
 		cost = 50
 		remove_effect = { 
 			custom_effect_tooltip = SAF_IF_OSE_INTEG_TT
+			add_stability = 0.1
 			SAF = { set_country_flag = IF_OSE_INTEGRATED }
 		}
 	}
@@ -125,9 +115,16 @@ JFU_SAF_2 = {
 		days_remove = 60
 		visible = {
 			SAF = {
+				
 				NOT = { has_country_flag = IF_OSE_INTEGRATED }
 				NOT = { has_country_flag = IF_OSE_CRUSHED }
 			}
+			custom_trigger_tooltip = {
+				 	tooltip = SAF_IF_OSE_POPULARITY_0
+				 	check_variable = {
+						VAR_SAF_IF_OSE_POPULARITY = 0
+					}
+				 }
 		}			
 		allowed = { tag = SAF }	
 		available = {
@@ -141,6 +138,7 @@ JFU_SAF_2 = {
 		cost = 50
 		remove_effect = { 
 			custom_effect_tooltip = SAF_IF_OSE_CRUSH_TT
+			add_stability = 0.1
 			SAF = { set_country_flag = IF_OSE_CRUSHED }
 
 		}
@@ -158,8 +156,14 @@ JFU_SAF_2 = {
 		icon = GFX_decision_generic_political_address
 		fire_only_once = no
 		days_remove = 30
-		days_re_enable = 120
+		days_re_enable = 90
 		allowed = { tag = SAF }	
+				visible = {
+			SAF = {
+				NOT = { has_country_flag = IF_EL_INTEGRATED }
+				NOT = { has_country_flag = IF_EL_CRUSHED }
+			}
+		}
 		available = { 
 
 	
@@ -171,25 +175,116 @@ JFU_SAF_2 = {
 				# }
 			
 		}		
-		cost = 25
+		cost = 10
 		remove_effect = { 
-			add_to_variable = {
-				var = VAR_SAF_IF_EL_LOYALTY
-				value = 5
-				tooltip = SAF_IF_EL_LOYALTY_5
-			}
-			add_to_variable = {
-				var = VAR_SAF_IF_EL_POPULARITY
-				value = 10
-				tooltip = SAF_IF_EL_POPULARITY_10
-			}
+			SAF_IF_EL_ADD_5_LOYALTY = yes
+		 	SAF_IF_EL_ADD_10_POPULARETY = yes
 		}
 	}
+	SAF_IF_2_2 = {
+		icon = GFX_decision_generic_arrest
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 90
+
+		visible = {
+			SAF = {
+				NOT = { has_country_flag = IF_EL_INTEGRATED }
+				NOT = { has_country_flag = IF_EL_CRUSHED }
+			}
+		}	
+		allowed = { tag = SAF }	
+		available = { 
+
+		}	
+
+		cost = 10
+		remove_effect = { 
+			SAF_IF_EL_REMOVE_10_LOYALTY = yes
+		 	SAF_IF_EL_REMOVE_5_POPULARETY = yes
+		}
+	}
+
+	SAF_IF_2_3 = {
+		icon = GFX_decision_generic_military
+		fire_only_once = yes
+		days_remove = 60
+		
+		allowed = { tag = SAF }	
+		visible = {
+			SAF = {
+				NOT = { has_country_flag = IF_EL_INTEGRATED }
+				NOT = { has_country_flag = IF_EL_CRUSHED }
+			}
+			custom_trigger_tooltip = {
+				 	tooltip = SAF_IF_EL_LOYALTY_0
+				 	check_variable = {
+						VAR_SAF_IF_EL_LOYALTY = 100
+					}
+				 }
+		}	
+		available = { 
+
+	
+				 custom_trigger_tooltip = {
+				 	tooltip = SAF_IF_EL_LOYALTY_0
+				 	check_variable = {
+						VAR_SAF_IF_EL_LOYALTY = 100
+					}
+				 }
+			
+		}		
+		cost = 50
+		remove_effect = { 
+			custom_effect_tooltip = SAF_IF_EL_INTEG_TT
+			add_stability = 0.1
+			SAF = { set_country_flag = IF_EL_INTEGRATED }
+		}
+	}
+
+	SAF_IF_2_4 = {
+		icon = GFX_decision_oppression
+		fire_only_once = yes
+		days_remove = 60
+		visible = {
+			SAF = {
+				
+				NOT = { has_country_flag = IF_EL_INTEGRATED }
+				NOT = { has_country_flag = IF_EL_CRUSHED }
+			}
+			 custom_trigger_tooltip = {
+				 	tooltip = SAF_IF_EL_POPULARITY_0
+				 	check_variable = {
+						VAR_SAF_IF_EL_POPULARITY = 0
+					}
+				 }
+		}			
+		allowed = { tag = SAF }	
+		available = {
+				 custom_trigger_tooltip = {
+				 	tooltip = SAF_IF_EL_POPULARITY_0
+				 	check_variable = {
+						VAR_SAF_IF_EL_POPULARITY = 0
+					}
+				 }
+		}		
+		cost = 50
+		remove_effect = { 
+			custom_effect_tooltip = SAF_IF_EL_CRUSH_TT
+			add_stability = 0.1
+			SAF = { set_country_flag = IF_EL_CRUSHED }
+
+		}
+	}
+
+
+
+
 		SAF_IF_3_1 = {
 		icon = GFX_decision_generic_political_address
 		fire_only_once = no
 		days_remove = 30
-		days_re_enable = 120
+		days_re_enable = 90
 		allowed = { tag = SAF }	
 		available = { 
 
@@ -202,21 +297,109 @@ JFU_SAF_2 = {
 				# }
 			
 		}		
-		cost = 25
-		
+		cost = 10
+
 		remove_effect = { 
-			add_to_variable = {
-				var = VAR_SAF_IF_EM_LOYALTY
-				value = 5
-				tooltip = SAF_IF_EM_LOYALTY_5
-			}
-			add_to_variable = {
-				var = VAR_SAF_IF_EM_POPULARITY
-				value = 10
-				tooltip = SAF_IF_EM_POPULARITY_10
-			}
+			SAF_IF_EM_ADD_5_LOYALTY = yes
+		 	SAF_IF_EM_ADD_10_POPULARETY = yes
 		}
 	}
+	SAF_IF_3_2 = {
+		icon = GFX_decision_generic_arrest
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 90
+
+		visible = {
+			SAF = {
+				NOT = { has_country_flag = IF_EM_INTEGRATED }
+				NOT = { has_country_flag = IF_EM_CRUSHED }
+			}
+		}	
+		allowed = { tag = SAF }	
+		available = { 
+
+		}	
+
+		cost = 10
+		remove_effect = { 
+			SAF_IF_EM_REMOVE_10_LOYALTY = yes
+		 	SAF_IF_EM_REMOVE_5_POPULARETY = yes
+		}
+	}
+
+	SAF_IF_3_3 = {
+		icon = GFX_decision_generic_military
+		fire_only_once = yes
+		days_remove = 60
+		
+		allowed = { tag = SAF }	
+		visible = {
+			SAF = {
+				NOT = { has_country_flag = IF_EM_INTEGRATED }
+				NOT = { has_country_flag = IF_EM_CRUSHED }
+			}
+			 custom_trigger_tooltip = {
+				 	tooltip = SAF_IF_EM_LOYALTY_0
+				 	check_variable = {
+						VAR_SAF_IF_EM_LOYALTY = 100
+					}
+				 }
+		}	
+		available = { 
+
+	
+				 custom_trigger_tooltip = {
+				 	tooltip = SAF_IF_EM_LOYALTY_0
+				 	check_variable = {
+						VAR_SAF_IF_EM_LOYALTY = 100
+					}
+				 }
+			
+		}		
+		cost = 50
+		remove_effect = { 
+			custom_effect_tooltip = SAF_IF_EM_INTEG_TT
+			add_stability = 0.1
+			SAF = { set_country_flag = IF_EM_INTEGRATED }
+		}
+	}
+
+	SAF_IF_3_4 = {
+		icon = GFX_decision_oppression
+		fire_only_once = yes
+		days_remove = 60
+		visible = {
+			SAF = {
+				
+				NOT = { has_country_flag = IF_EM_INTEGRATED }
+				NOT = { has_country_flag = IF_EM_CRUSHED }
+			}
+			custom_trigger_tooltip = {
+				 	tooltip = SAF_IF_EM_POPULARITY_0
+				 	check_variable = {
+						VAR_SAF_IF_EM_POPULARITY = 0
+					}
+				 }
+		}			
+		allowed = { tag = SAF }	
+		available = {
+				 custom_trigger_tooltip = {
+				 	tooltip = SAF_IF_EM_POPULARITY_0
+				 	check_variable = {
+						VAR_SAF_IF_EM_POPULARITY = 0
+					}
+				 }
+		}		
+		cost = 50
+		remove_effect = { 
+			custom_effect_tooltip = SAF_IF_EM_CRUSH_TT
+			add_stability = 0.1
+			SAF = { set_country_flag = IF_EM_CRUSHED }
+
+		}
+	}
+
 
 }
 

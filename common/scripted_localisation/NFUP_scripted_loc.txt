@@ -40,3 +40,89 @@ defined_text = {
 	}
 
 }
+
+#EL LOYALTY
+defined_text = {
+	name = SAF_IF_EL_SCRIPTED_LOC
+	text = {
+		trigger = {
+			SAF = { has_country_flag = IF_EL_CRUSHED }
+		}
+		localization_key = SAF_IF_EL_SCRIPTED_LOC_CRUSHED
+	}
+	text = {
+		trigger = {
+			SAF = { has_country_flag = IF_EL_INTEGRATED }
+		}
+		localization_key = SAF_IF_EL_SCRIPTED_LOC_INTEGRATED
+	}
+
+		text = {
+		localization_key = SAF_IF_EL_SCRIPTED_LOC_ZAHL
+	}
+
+}
+#EL POPULARITY
+defined_text = {
+	name = SAF_IF_EL_SCRIPTED_LOC_2
+	text = {
+		trigger = {
+			SAF = { has_country_flag = IF_EL_CRUSHED }
+		}
+		localization_key = SAF_IF_EL_SCRIPTED_LOC_CRUSHED
+	}
+	text = {
+		trigger = {
+			SAF = { has_country_flag = IF_EL_INTEGRATED }
+		}
+		localization_key = SAF_IF_EL_SCRIPTED_LOC_INTEGRATED
+	}
+	
+		text = {
+		localization_key = SAF_IF_EL_SCRIPTED_LOC_ZAHL_2
+	}
+
+}
+
+#EM LOYALTY
+defined_text = {
+	name = SAF_IF_EM_SCRIPTED_LOC
+	text = {
+		trigger = {
+			SAF = { has_country_flag = IF_EM_CRUSHED }
+		}
+		localization_key = SAF_IF_EM_SCRIPTED_LOC_CRUSHED
+	}
+	text = {
+		trigger = {
+			SAF = { has_country_flag = IF_EM_INTEGRATED }
+		}
+		localization_key = SAF_IF_EM_SCRIPTED_LOC_INTEGRATED
+	}
+
+		text = {
+		localization_key = SAF_IF_EM_SCRIPTED_LOC_ZAHL
+	}
+
+}
+#EM POPULARITY
+defined_text = {
+	name = SAF_IF_EM_SCRIPTED_LOC_2
+	text = {
+		trigger = {
+			SAF = { has_country_flag = IF_EM_CRUSHED }
+		}
+		localization_key = SAF_IF_EM_SCRIPTED_LOC_CRUSHED
+	}
+	text = {
+		trigger = {
+			SAF = { has_country_flag = IF_EM_INTEGRATED }
+		}
+		localization_key = SAF_IF_EM_SCRIPTED_LOC_INTEGRATED
+	}
+	
+		text = {
+		localization_key = SAF_IF_EM_SCRIPTED_LOC_ZAHL_2
+	}
+
+}
